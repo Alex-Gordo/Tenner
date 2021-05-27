@@ -5,6 +5,7 @@ const initialState = {
 export function gigReducer(state = initialState, action = {}) {
   switch (action.type) {
     case 'SET_GIGS':
+      console.log("in gig reducer SET_GIGS");
       return { ...state, gigs: action.gigs }
     case 'ADD_GIG':
       return { ...state, gigs: [...state.gigs, action.gig] }
@@ -21,3 +22,4 @@ export function gigReducer(state = initialState, action = {}) {
       return state
   }
 }
+

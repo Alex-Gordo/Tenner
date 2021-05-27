@@ -1,32 +1,30 @@
 import { HashRouter as Router, Switch, Route } from 'react-router-dom'
-import { AppHeader } from './cmps/AppHeader.jsx';
 import { TennerApp } from './pages/TennerApp';
-import { connect } from 'react-redux';
-import React, { Component } from 'react';
-import { onLogout } from './store/actions/userActions.js';
+//import { gigService } from '../../frontend/src/services/gigService.js';
+import { AppHeader } from './cmps/AppHeader.jsx';
+import { AppFooter } from './cmps/AppFooter';
 
 // import { gigService } from '../../frontend/src/services/gigService.js';
 
+export function App() {
+  return (
+    <div className="app">
+      <Router>
+        <AppHeader />
+        <Switch>
+          {/* <Route path="/tenner" component={TennerApp} /> */}
+          <Route path="/gigs" component={TennerApp} />
 
-class _App extends Component {
-  render() {
-    const { onLogout, loggedInUser } = this.props
-    return (
-
-      <div className="app">
-        <Router>
-          <AppHeader onLogout={onLogout} loggedInUser={loggedInUser} />
-          <Switch>
-            <Route path="/tenner" component={TennerApp} />
-          </Switch>
-          <h1>This is main, here we render gig list with gig previews</h1>
-          <footer>
-            <h5>this is footer yo</h5>
-          </footer>
-        </Router>
-      </div>
-    )
-  }
+        </Switch>
+        {/* <img className="hero img" src="https://cdn.pixabay.com/photo/2020/01/08/03/56/man-4749237_960_720.jpg"></img> */}
+        <img className="hero img" src="https://cdn.pixabay.com/photo/2019/04/25/14/43/workplace-4155023_960_720.jpg"></img>
+        <div className="main-container">
+          <h1>This is main, here we render the gig list with gig previews and mucho nice content that will help us get jobs</h1>
+        </div>
+        <AppFooter />
+      </Router>
+    </div>
+  )
 }
 
 function mapStateToProps(state) {
