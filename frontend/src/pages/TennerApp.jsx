@@ -36,4 +36,6 @@ const mapDispatchToProps = {
     loadGigs
 }
 
+
+
 export const TennerApp = connect(mapStateToProps,mapDispatchToProps)(_TennerApp)
