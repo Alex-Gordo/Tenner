@@ -21,10 +21,21 @@ export function onSaveGig(gig) {
     return async dispatch => {
         try {
             const savedGig = await gigService.save(gig)
-            console.log('TOY IN ACTION', savedGig)
-            dispatch({ type: gig._id ? 'UPDATE_TOY' : 'ADD_TOY', toy: savedGig })
+            console.log('GIG IN ACTION', savedGig)
+            dispatch({ type: gig._id ? 'UPDATE_GIG' : 'ADD_GIG', gig: savedGig })
         } catch (err) {
-            console.log(`ToysActions: err in ${gig._id ? 'update toy' : 'add toy'}${err}`)
+            console.log(`Gigs Actions: err in ${gig._id ? 'update gig' : 'add gig'}${err}`)
+        }
+    }
+}
+
+export function onRemoveGig(gigId) {
+    return async dispatch => {
+        try {
+            await gigService.remove(gigId)
+            dispatch({ type: 'REMOVE_GIG', gigId: gigId })
+        } catch (err) {
+            console.log('Gigs Actions: err in removeGig', err)
         }
     }
 }
