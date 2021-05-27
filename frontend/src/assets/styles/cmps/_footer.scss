@@ -1,0 +1,17 @@
+.footer-container {
+  background-color: $clr4;
+  color: $clr3;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.footer-logo {
+  font-family: five;
+  color: $clr3;
+  &::after {
+    content: ".";
+    color: $clr1;
+  }
+}

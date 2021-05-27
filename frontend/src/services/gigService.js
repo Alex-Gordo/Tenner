@@ -1,5 +1,5 @@
 // import {asyncStorageService} from './asyncStorageService.js';
-import {storageService} from './storageService.js';
+import { storageService } from './storageService.js';
 // import axios from 'axios';
 
 
@@ -14,21 +14,34 @@ var gGigs = require('../data/tenner.json')
 const KEY = 'gigs';
 
 // // const BASE_URL = process.env.NODE_ENV === 'my-app/src/services/gigs.json'
+// query()
 function query() {
+<<<<<<< HEAD
     console.log( "table for gGigs:")
     console.table( gGigs)
     console.log( "table for gGigs.gig:")
     console.table( gGigs.gig)
+=======
+    console.table(gGigs)
+    console.table(gGigs.gig)
+>>>>>>> ece10fbde23158bc58662ea0cd2d2ba7487f163c
     // if (!filterBy) return Promise.resolve(gGigs)
     if (!gGigs) return storageService.getFromStorage(KEY)
         .then((gigs) => {
             gGigs = gigs
             return gigs.gig
         });
+<<<<<<< HEAD
         else {
             storageService.saveToStorage(KEY, gGigs)
             return Promise.resolve(gGigs.gig)
         } 
+=======
+    else {
+        storageService.saveToStorage(KEY, gGigs)
+        return Promise.resolve(gGigs)
+    }
+>>>>>>> ece10fbde23158bc58662ea0cd2d2ba7487f163c
 };
 
 function getById(gigId) {
