@@ -16,10 +16,10 @@ export function App() {
           <Route path="/tenner" component={TennerApp} />
 
         </Switch>
-        <h1>This is main</h1>
+        <h1>This is main, here we render gig list with gig previews</h1>
 
         <footer>
-
+          <h5>this is footer yo</h5>
         </footer>
       </Router>
     </div>
