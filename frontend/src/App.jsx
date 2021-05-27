@@ -16,6 +16,10 @@ export function App() {
         </main>
         <footer>
           Tenner App
+
+
+
+          Alisa Alex Arik tAmir
         </footer>
       </Router>
     </div>
