@@ -49,7 +49,7 @@ export function signup(userCreds) {
     }
   }
 }
-export function logout() {
+export function onLogout() {
   return async dispatch => {
     try {
       await userService.logout()
