@@ -11,11 +11,9 @@ export function App() {
       <Router>
       <AppHeader/>
 
-        </header>
         <main className="app">
           <Switch>
             <Route path="/tenner" component={TennerApp} />
-
           </Switch>
           <h1>This is main</h1>
         </main>
