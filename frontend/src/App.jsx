@@ -12,13 +12,9 @@ export function App() {
       <Router>
         <AppHeader />
         <Switch>
-<<<<<<< HEAD
           {/* <Route path="/tenner" component={TennerApp} /> */}
           <Route path="/gigs" component={TennerApp} />
 
-=======
-          <Route path="/tenner" component={TennerApp} />
->>>>>>> ece10fbde23158bc58662ea0cd2d2ba7487f163c
         </Switch>
         <img className="hero img" src="https://cdn.pixabay.com/photo/2020/01/08/03/56/man-4749237_960_720.jpg"></img>
         <div className="main-container">
