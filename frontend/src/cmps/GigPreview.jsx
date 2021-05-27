@@ -2,7 +2,7 @@ import React from "react";
 // import { Link } from 'react-router-dom'
 
 
-export function gigPreview({ gig }) {
+export function GigPreview({ gig }) {
 
     return (
         <React.Fragment>

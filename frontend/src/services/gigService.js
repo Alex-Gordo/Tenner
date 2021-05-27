@@ -1,7 +1,6 @@
-// import {storageService} from './async-storage.service.js'
-// import {storageService} from '../services/storageService.js';
-import axios from 'axios';
-
+// import {asyncStorageService} from './asyncStorageService.js';
+import {storageService} from './storageService.js';
+// import axios from 'axios';
 
 
 export const gigService = {
@@ -11,21 +10,22 @@ export const gigService = {
     remove
 }
 
-const fs = require('fs');
-const gGigs = require('../data/tenner.json')
+var gGigs = require('../data/tenner.json')
 const KEY = 'gigs';
 
 // // const BASE_URL = process.env.NODE_ENV === 'my-app/src/services/gigs.json'
 function query() {
-    console.log('gGigs:' ,gGigs)
-    // // if (!filterBy) return Promise.resolve(gGigs)
-    // if (!gGigs) return storageService.query('gig')
-    //     .then((gigs) => {
-    //         gGigs = gigs
-    //         console.log('gGigs:', gGigs)
-    //         return gigs
-    //     });
-    // else return Promise.resolve(gGigs)
+    console.log('gGigs:', gGigs)
+    // if (!filterBy) return Promise.resolve(gGigs)
+    if (!gGigs) return storageService.getFromStorage(KEY)
+        .then((gigs) => {
+            gGigs = gigs
+            return gigs
+        });
+        else {
+            storageService.saveToStorage(KEY, gGigs)
+            return Promise.resolve(gGigs)
+        } 
 };
 
 function getById(gigId) {
@@ -36,7 +36,7 @@ function getById(gigId) {
 
 function save(gigInfo) {
     console.log('gigInfo:', gigInfo)
-    // saveToStorage(KEY, gGigs)
+    storageService.saveToStorage(KEY, gGigs)
 
     // if (gigInfo._id) {
     //     return axios.put(`${URL}/api/gig`, gigInfo).then(status => status.data);
