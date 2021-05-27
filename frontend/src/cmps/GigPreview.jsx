@@ -8,8 +8,8 @@ export function GigPreview({ gig }) {
         <React.Fragment>
             <article className="gig-card">
                 <div>
-                <p>{gig.category}</p>
-                <p>{gig.title}</p>
+                    <p>{gig.category}</p>
+                    <p>{gig.title}</p>
                 </div>
 
             </article>
