@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import {NavBar} from './NavBar.jsx';
+import { NavBar } from './NavBar.jsx';
 
 export class AppHeader extends Component {
 
@@ -10,8 +10,8 @@ export class AppHeader extends Component {
         const { onLogout, loggedInUser } = this.props
         return (
             <header className="header" >
-                <NavLink to="/"><h1 className="header-logo">Tenner.</h1></NavLink>
-                <NavBar>
+                <NavLink to="/"><h1 className="header-logo">tenner</h1></NavLink>
+                <NavBar className="nav">
                     {loggedInUser && <>
                         <li className="user-logIn">
                             <span>{`Hi ${loggedInUser.fullname}.`}</span>
