@@ -12,7 +12,9 @@ export function App() {
       <Router>
         <AppHeader />
         <Switch>
-          <Route path="/tenner" component={TennerApp} />
+          {/* <Route path="/tenner" component={TennerApp} /> */}
+          <Route path="/gigs" component={TennerApp} />
+
         </Switch>
         {/* <img className="hero img" src="https://cdn.pixabay.com/photo/2020/01/08/03/56/man-4749237_960_720.jpg"></img> */}
         <img className="hero img" src="https://cdn.pixabay.com/photo/2019/04/25/14/43/workplace-4155023_960_720.jpg"></img>

@@ -1,13 +1,39 @@
-import React, { Component } from 'react'
+import { Component } from 'react';
+import { connect } from 'react-redux';
+import { loadGigs } from '../store/actions/gigActions.js';
 import { GigList } from '../cmps/GigList.jsx'
 
-export class TennerApp extends Component {
+class _TennerApp extends Component {
+
+    state = {
+        gigs: []
+    }
+
+    componentDidMount() {
+        console.log("in componentDidMount"); 
+        this.props.loadGigs()
+    }
+
     render() {
+        console.log("render in tenner app")
         return (
-            <div>
-                <h1>HELLO APP YO</h1>
-                <GigList/>
-            </div>
+            <main className="gig-app">
+                <GigList gigs={this.props.gigs} />
+            </main>
         )
     }
 }
+
+
+
+function mapStateToProps({ gigModule }) {
+    return {
+        gigs: gigModule.gigs
+    }
+}
+
+const mapDispatchToProps = {
+    loadGigs
+}
+
+export const TennerApp = connect(mapStateToProps,mapDispatchToProps)(_TennerApp)

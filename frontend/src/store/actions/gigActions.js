@@ -7,7 +7,9 @@ export function loadGigs(filterBy = {
     features: '',
     sortBy: '',
 }) {
+    
     return async dispatch => {
+        console.log("in dispatch in gigActions")
         try {
             const gigs = await gigService.query(filterBy)
             dispatch({ type: 'SET_GIGS', gigs })

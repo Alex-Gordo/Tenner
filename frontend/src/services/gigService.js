@@ -16,18 +16,20 @@ const KEY = 'gigs';
 // // const BASE_URL = process.env.NODE_ENV === 'my-app/src/services/gigs.json'
 // query()
 function query() {
-    console.table(gGigs)
-    console.table(gGigs.gig)
+
+    console.table( gGigs)
+
+    console.table( gGigs.gig)
     // if (!filterBy) return Promise.resolve(gGigs)
     if (!gGigs) return storageService.getFromStorage(KEY)
         .then((gigs) => {
             gGigs = gigs
-            return gigs
+            return gigs.gig
         });
-    else {
-        storageService.saveToStorage(KEY, gGigs)
-        return Promise.resolve(gGigs)
-    }
+        else {
+            storageService.saveToStorage(KEY, gGigs)
+            return Promise.resolve(gGigs.gig)
+        } 
 };
 
 function getById(gigId) {
