@@ -11,20 +11,15 @@ export function App() {
       <Router>
       <AppHeader/>
 
-        <main>
+        </header>
+        <main className="app">
           <Switch>
             <Route path="/tenner" component={TennerApp} />
+
           </Switch>
+          <h1>This is main</h1>
         </main>
         <footer>
-          Tenner App
-          <br/>
-
-           <div><pre>{JSON.stringify(gigService.query(), null, 2) }</pre></div>
-
-          
-
-
 
         </footer>
       </Router>
