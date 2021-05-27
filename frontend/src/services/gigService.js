@@ -15,17 +15,19 @@ const KEY = 'gigs';
 
 // // const BASE_URL = process.env.NODE_ENV === 'my-app/src/services/gigs.json'
 function query() {
+    console.log( "table for gGigs:")
     console.table( gGigs)
+    console.log( "table for gGigs.gig:")
     console.table( gGigs.gig)
     // if (!filterBy) return Promise.resolve(gGigs)
     if (!gGigs) return storageService.getFromStorage(KEY)
         .then((gigs) => {
             gGigs = gigs
-            return gigs
+            return gigs.gig
         });
         else {
             storageService.saveToStorage(KEY, gGigs)
-            return Promise.resolve(gGigs)
+            return Promise.resolve(gGigs.gig)
         } 
 };
 

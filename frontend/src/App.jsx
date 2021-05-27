@@ -13,7 +13,8 @@ export function App() {
 
 
         <Switch>
-          <Route path="/tenner" component={TennerApp} />
+          {/* <Route path="/tenner" component={TennerApp} /> */}
+          <Route path="/gigs" component={TennerApp} />
 
         </Switch>
         <h1>This is main, here we render gig list with gig previews</h1>
