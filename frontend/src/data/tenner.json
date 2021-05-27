@@ -1,0 +1,73 @@
+{
+  "gig": [
+    {
+      "_id": "v140",
+      "title": "I will do 2 minimalist logo design for your business",
+      "price": 25,
+      "descriprion": "My name is Puki and I am a graphic designer based in India. I am an entrepreneur, wife, and mother of one dog. I am specialized in logo design and branding. I love what I do :)",
+      "category": "Design",
+      "deliveryTime": "8",
+      "revisions": "2",
+      "imgUrl": "['https://img1.jpg', 'https://img2.jpg', 'https://img3.jpg']",
+      "features": ["High res", "3D", "Professional"],
+      "gigOwner": {
+        "id": "u707",
+        "fullName": "Puki Ben Puki",
+        "imgUrl": "https://img.jpg"
+      },
+      "reviews": [
+        {
+          "id": "madeId",
+          "txt": "Best logo maker around",
+          "rate": 5,
+          "by": {
+            "_id": "u102",
+            "fullname": "David singer",
+            "imgUrl": "/img/img2.jpg"
+          }
+        }
+      ]
+    }
+  ],
+
+  "user": [
+    {
+      "_id": "u101",
+      "fullname": "User 1",
+      "imgUrl": "/img/img1.jpg",
+      "username": "user1",
+      "password": "secret",
+      "isAdmin": false,
+      "orders": []
+    },
+    {
+      "_id": "u102",
+      "fullname": "User 2",
+      "imgUrl": "/img/img2.jpg",
+      "username": "user2",
+      "password": "secret",
+      "isAdmin": false,
+      "orders": []
+    }
+  ],
+
+  "order": [
+    {
+      "_id": "o1225",
+      "createdAt": 9898989,
+      "buyer": "mini-user",
+      "price": 20,
+      "gigOwner": {
+        "_id": "v102",
+        "name": "Hapirat Hadebil",
+        "imgUrl": ""
+      },
+      "gig": {
+        "_id": "v140",
+        "title": "I will do 2 minimalist logo design for your business",
+        "price": 25
+      },
+      "status": "pending"
+    }
+  ]
+}

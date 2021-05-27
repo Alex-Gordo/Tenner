@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux'
-import { reviewReducer } from './reviewReducer'
+import { gigReducer } from './gigReducer'
 import { userReducer } from './userReducer'
 import { systemReducer } from './systemReducer'
+// import { orderReducer } from './orderReducer'
 
 export const rootReducer = combineReducers({
   systemModule: systemReducer,
-  reviewModule: reviewReducer,
+  gigModule: gigReducer,
   userModule: userReducer
+  // orderModule: orderReducer
 })

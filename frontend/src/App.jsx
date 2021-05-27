@@ -1,5 +1,6 @@
 import React from 'react'
 import { HashRouter as Router, Switch, Route } from 'react-router-dom'
+import { TennerApp } from './pages/TennerApp'
 
 
 
@@ -10,11 +11,11 @@ export function App() {
 
         <main>
           <Switch>
-
+            <Route path="/tenner" component={TennerApp} />
           </Switch>
         </main>
         <footer>
-          Starter
+          Tenner App
         </footer>
       </Router>
     </div>
