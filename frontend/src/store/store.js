@@ -1,26 +1,25 @@
-import { createStore, applyMiddleware, compose } from 'redux'
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
+import ReduxThunk from 'redux-thunk'
+import { gigReducer } from './reducers/gigReducer.js'
+import { userReducer } from './reducers/userReducer.js';
 
-import thunk from 'redux-thunk'
-import { rootReducer } from './reducers'
+// import { rootReducer } from './reducers'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
-export const store = createStore(
-  rootReducer,
-  composeEnhancers(applyMiddleware(thunk))
-)
+// export const store = createStore(
+//   appModule: appReducer,
+//   rootReducer,
+//   composeEnhancers(applyMiddleware(thunk))
+// )
 
 
+const rootReducer = combineReducers({
+  // reviewModule: reviewReducer,
+  userModule: userReducer,
+  gigModule: gigReducer,
+  // rootModule: rootReducer,
+})
 
-// import {createStore, applyMiddleware, combineReducers, compose} from 'redux';
-// import ReduxThunk from 'redux-thunk';
-// import {toyReducer} from './reducers/toy.reducer.js';
 
-// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-// const rootReducer = combineReducers({
-//     toyModule : toyReducer
-// })
-
-// export const store = createStore(rootReducer,
-//     composeEnhancers(applyMiddleware(ReduxThunk)));
+export const store = createStore(rootReducer, composeEnhancers(applyMiddleware(ReduxThunk))) //Passing the reducer

@@ -1,8 +1,10 @@
-let localLoggedinUser = null
-if (sessionStorage.loggedinUser) localLoggedinUser = JSON.parse(sessionStorage.loggedinUser)
+import {userService} from '../../services/userService.js';
+
+// let localLoggedinUser = null
+// if (sessionStorage.loggedinUser) localLoggedinUser = JSON.parse(sessionStorage.loggedinUser)
 
 const initialState = {
-  loggedInUser: localLoggedinUser,
+  loggedInUser: userService.getLoggedinUser(),
 }
 
 export function userReducer(state = initialState, action = {}) {

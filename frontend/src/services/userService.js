@@ -1,6 +1,6 @@
 // import { storageService } from './asyncStorageService'
 import { httpService } from './httpService'
-const SCORE_FOR_REVIEW = 10
+// const SCORE_FOR_REVIEW = 10
 
 export const userService = {
     login,
@@ -10,8 +10,8 @@ export const userService = {
     getById,
     remove,
     update,
-    getLoggedinUser,
-    increaseScore
+    getLoggedinUser
+    // increaseScore
 }
 
 window.userService = userService
@@ -40,12 +40,12 @@ async function update(user) {
     if (getLoggedinUser()._id === user._id) _saveLocalUser(user)
 }
 
-async function increaseScore(by = SCORE_FOR_REVIEW) {
-    const user = getLoggedinUser()
-    user.score = user.score + by || by
-    await update(user)
-    return user.score
-}
+// async function increaseScore(by = SCORE_FOR_REVIEW) {
+//     const user = getLoggedinUser()
+//     user.score = user.score + by || by
+//     await update(user)
+//     return user.score
+// }
 
 async function login(userCred) {
     // const users = await storageService.query('user')
@@ -70,6 +70,6 @@ function _saveLocalUser(user) {
 }
 
 function getLoggedinUser() {
-    return JSON.parse(sessionStorage.getItem('loggedinUser'))
+    return JSON.parse(sessionStorage.getItem('loggedinUser') || 'null')
 }
 
