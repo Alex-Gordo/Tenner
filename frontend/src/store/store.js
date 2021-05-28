@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import ReduxThunk from 'redux-thunk'
+import { gigReducer } from './reducers/gigReducer.js'
 import { userReducer } from './reducers/userReducer.js';
 
 // import { rootReducer } from './reducers'
@@ -16,6 +17,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const rootReducer = combineReducers({
   // reviewModule: reviewReducer,
   userModule: userReducer,
+  gigModule: gigReducer,
   // rootModule: rootReducer,
 })
 

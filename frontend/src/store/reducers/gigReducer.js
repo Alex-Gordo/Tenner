@@ -1,5 +1,5 @@
 const initialState = {
-  gigs: [],
+  gigs: []
 }
 
 export function gigReducer(state = initialState, action = {}) {
