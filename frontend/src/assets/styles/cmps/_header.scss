@@ -48,4 +48,7 @@ header {
   nav .active {
     color: $clr1;
   }
+  .navbar-list {
+    list-style-type: none;
+  }
 }
