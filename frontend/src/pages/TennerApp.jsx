@@ -10,12 +10,10 @@ class _TennerApp extends Component {
     }
 
     componentDidMount() {
-        console.log("in componentDidMount"); 
         this.props.loadGigs()
     }
 
     render() {
-        console.log("render in tenner app")
         return (
             <main className="gig-app">
                 <GigList gigs={this.props.gigs} />

@@ -10,7 +10,6 @@ export class AppHeader extends Component {
 
     render() {
         const { onLogout, loggedInUser } = this.props
-        console.log('loggedInUser:',loggedInUser)
         return (
             <header className="header" >
                 <NavLink to="/"><h1 className="header-logo">tenner</h1></NavLink>

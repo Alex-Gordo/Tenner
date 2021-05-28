@@ -33,7 +33,9 @@ function query() {
 };
 
 function getById(gigId) {
-    const gig = gGigs.find(gig => gig._id === +gigId);
+    console.log('gigId:', gigId)
+    console.log('gGigs:', gGigs)
+    const gig = gGigs.find(gig => gig._id === gigId);
     return Promise.resolve(gig)
 };
 

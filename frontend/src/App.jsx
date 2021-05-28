@@ -1,10 +1,12 @@
-import { connect } from 'react-redux';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom'
-import { TennerApp } from './pages/TennerApp';
+import { onLogout } from './store/actions/userActions'
+import { GigDetails } from './pages/GigDetails.jsx';
 import { AppHeader } from './cmps/AppHeader.jsx';
+import { TennerApp } from './pages/TennerApp';
 import { AppFooter } from './cmps/AppFooter';
 import React, { Component } from 'react';
-import { onLogout } from './store/actions/userActions'
+import { Home } from './pages/Home.jsx';
+import { connect } from 'react-redux';
 import { About } from './pages/About';
 // import { gigService } from '../../frontend/src/services/gigService.js';
 
@@ -15,19 +17,17 @@ class _App extends Component {
     return (
       <div className="app" >
         <Router>
-          <AppHeader />
-          <div className="hero">
-            <img className="img" src="https://cdn.pixabay.com/photo/2019/04/25/14/43/workplace-4155023_960_720.jpg" alt="hero"></img>
-          </div>
+            <AppHeader />
           <div className="main-container">
             <Switch>
+              <Route path='/' exact component={Home} />
               <Route path="/gigs" component={TennerApp} />
+              <Route path='/gig/:gig' component={GigDetails} />
               <Route path="/about" component={About} />
             </Switch>
-            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae quidem corporis ullam magni expedita! Laboriosam maxime quibusdam in et nemo natus id omnis dolores blanditiis neque iste rerum nam totam praesentium cupiditate dicta, at provident, fuga eveniet excepturi quisquam! Ad voluptatibus laborum dolores. Animi obcaecati praesentium officia debitis vel ea?</div>
           </div>
-          <AppFooter />
         </Router>
+        <AppFooter />
       </div>
     )
   }
