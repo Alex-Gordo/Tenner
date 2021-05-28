@@ -17,9 +17,9 @@ const KEY = 'gigs';
 // query()
 function query() {
 
-    console.table( gGigs)
+    // console.table( gGigs)
 
-    console.table( gGigs.gig)
+    // console.table( gGigs.gig)
     // if (!filterBy) return Promise.resolve(gGigs)
     if (!gGigs) return storageService.getFromStorage(KEY)
         .then((gigs) => {

@@ -24,8 +24,6 @@ class _TennerApp extends Component {
     }
 }
 
-
-
 function mapStateToProps({ gigModule }) {
     return {
         gigs: gigModule.gigs
@@ -35,5 +33,6 @@ function mapStateToProps({ gigModule }) {
 const mapDispatchToProps = {
     loadGigs
 }
+
 
 export const TennerApp = connect(mapStateToProps,mapDispatchToProps)(_TennerApp)
