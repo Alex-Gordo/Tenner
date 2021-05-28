@@ -25,6 +25,16 @@
             "fullname": "David singer",
             "imgUrl": "/img/img2.jpg"
           }
+        },
+        {
+          "id": "madeId",
+          "txt": "Great work , great price!",
+          "rate": 5,
+          "by": {
+            "_id": "u103",
+            "fullname": "Miri Ben Shushan",
+            "imgUrl": "/img/img3.jpg"
+          }
         }
       ]
     },
@@ -37,10 +47,10 @@
       "deliveryTime": "1",
       "revisions": "0",
       "imgUrl": "['https://img66.jpg', 'https://img77.jpg', 'https://img88.jpg']",
-      "features": ["DIY", "HD Video 1920x1080p", "surprise craft"],
+      "features": ["DIY", "HD Video 1920x1080p", "Surprise craft"],
       "gigOwner": {
         "id": "o808",
-        "fullName": "sanoara Levkovitz",
+        "fullName": "Sanoara Levkovitz",
         "imgUrl": "https://img444.jpg"
       },
       "reviews": [
@@ -52,6 +62,396 @@
             "_id": "u202",
             "fullname": "Shoko Yummi",
             "imgUrl": "/img/img22.jpg"
+          }
+        },
+        {
+          "id": "madeId",
+          "txt": "Seller was extremely communicative which was appreciated. While the mock-ups were within the original concept / spec, the style was a far departure from what we were looking for and won't be using the logo. We suggested the 'Talk Dog' logo as an example of what we were looking for in terms of general aesthetics (i.e., two-tone, flat, negative space) and received something very different. I think the designer has great work and might be what someone else is looking for, but the mock-ups did not work for us and the revisions requested where rejected as impracticable.",
+          "rate": 4,
+          "by": {
+            "_id": "u202",
+            "fullname": "Maria Tenant",
+            "imgUrl": "/img/img22.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "g151",
+      "title": "I will do japanese or anime streetwear tshirt design",
+      "price": 54,
+      "description": "I can do tees, hoodies design. deliver to you with high-resolution 300 dpi artwork in AI, PSD, PNG, JPG, EPS, or PDF.",
+      "category": "Design",
+      "deliveryTime": "7",
+      "revisions": "3",
+      "imgUrl": "['https://img1.jpg', 'https://img2.jpg', 'https://img3.jpg']",
+      "features": ["Initial concept", "Source file", "Commercial use"],
+      "gigOwner": {
+        "id": "o708",
+        "fullName": "Gustavo Mor",
+        "imgUrl": "https://img.jpg"
+      },
+      "reviews": [
+        {
+          "id": "madeId",
+          "txt": "I am very impressed with the design that I ordered, I did not need a revision because it was perfect.",
+          "rate": 5,
+          "by": {
+            "_id": "u104",
+            "fullname": "Dylan Gable",
+            "imgUrl": "/img/img2.jpg"
+          }
+        },
+        {
+          "id": "madeId",
+          "txt": "The art came out much better than I would have thought and the artist provided multiple high quality revisions as requested.",
+          "rate": 5,
+          "by": {
+            "_id": "u105",
+            "fullname": "Jay Marko",
+            "imgUrl": "/img/img2.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "g152",
+      "title": "I will create a custom mailchimp email template design",
+      "price": 99,
+      "description": "I can provide you with a custom-made email design - I am experienced not only in Mailchimp but also in Adobe Photoshop. Your next newsletter or email campaign could have visuals that will be tailored to your needs.",
+      "category": "Design",
+      "deliveryTime": "5",
+      "revisions": "10",
+      "imgUrl": "['https://img1.jpg', 'https://img2.jpg', 'https://img3.jpg']",
+      "features": ["Email Template Setup"],
+      "gigOwner": {
+        "id": "o709",
+        "fullName": "Martin Yeger",
+        "imgUrl": "https://img.jpg"
+      },
+      "reviews": [
+        {
+          "id": "madeId",
+          "txt": "Working with Marin was an absolute delight! I needed a redesign of a newsletter and gave him some topline ideas. He quickly presented a draft, and made a few changes at my request we presented to my client that they liked on the first pass. With a few minor tweaks, the job was done. I found him most proficient at his craft and would recommend to anyone working with him on your project.",
+          "rate": 5,
+          "by": {
+            "_id": "u106",
+            "fullname": "Dima Dallon",
+            "imgUrl": "/img/img2.jpg"
+          }
+        },
+        {
+          "id": "madeId",
+          "txt": "Marin knows how to design and make an email appealing. He is fast, makes great suggestions and makes my life so much easier! I look forward to using him time and time again for my projects.",
+          "rate": 5,
+          "by": {
+            "_id": "u107",
+            "fullname": "Kim Daniels",
+            "imgUrl": "/img/img2.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "g153",
+      "title": "I will web design,ui ux, landing page, app mobile, figma",
+      "price": 32,
+      "description": "Need FIGMA or PSD landing page or Website IN 24 HOURS! then I am here to help you. Hi there, I am a professional FIGMA and PSD website and landing page designer. I can design any kind of FIGMA or PSD Website Design, Figma or PSD Templates, Figma or PSD web page.I hold myself accountable to my customers by honoring my commitments and push for the highest quality. My main Moto is if my customer happy then I will be happy ever. ",
+      "category": "Design",
+      "deliveryTime": "4",
+      "revisions": "7",
+      "imgUrl": "['https://img1.jpg', 'https://img2.jpg', 'https://img3.jpg']",
+      "features": ["Source file", "Responsive design"],
+      "gigOwner": {
+        "id": "o710",
+        "fullName": "Andrey Webb",
+        "imgUrl": "https://img.jpg"
+      },
+      "reviews": [
+        {
+          "id": "madeId",
+          "txt": "My team needed something that didn't really belong in any of this seller's buying options and he was great to work with as he took what we needed and made a plan for it! Very happy to be able to get something unique to what my team needed.",
+          "rate": 5,
+          "by": {
+            "_id": "u108",
+            "fullname": "Space Guru",
+            "imgUrl": "/img/img2.jpg"
+          }
+        },
+        {
+          "id": "madeId",
+          "txt": "The communication is good, although it was sometimes difficult for the seller to understand perfectly what I wanted. Considering the price, The work quality is good.",
+          "rate": 4,
+          "by": {
+            "_id": "u109",
+            "fullname": "Bella Sweet",
+            "imgUrl": "/img/img2.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "g154",
+      "title": "I will do very fast internet research and accurate data entry",
+      "price": 7,
+      "description": "2 Hours High Quality Internet Research and Data Entry SMALL Task Delivery. 100% Satisfaction",
+      "category": "Data Entry",
+      "deliveryTime": "1",
+      "revisions": "1",
+      "imgUrl": "['https://img1.jpg', 'https://img2.jpg', 'https://img3.jpg']",
+      "features": ["2 Hours of work"],
+      "gigOwner": {
+        "id": "o711",
+        "fullName": "Jay Tulmur",
+        "imgUrl": "https://img.jpg"
+      },
+      "reviews": [
+        {
+          "id": "madeId",
+          "txt": "Gave his all to complete the task on time. Was flexible with unexpected changes and constantly communicative. Will work with again 100%.",
+          "rate": 5,
+          "by": {
+            "_id": "u110",
+            "fullname": "Ray Donovan",
+            "imgUrl": "/img/img2.jpg"
+          }
+        },
+        {
+          "id": "madeId",
+          "txt": "Very very fast, communicative, and clear understand of requirements. Will come back!",
+          "rate": 5,
+          "by": {
+            "_id": "u111",
+            "fullname": "Cameron Deville",
+            "imgUrl": "/img/img2.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "g155",
+      "title": "I will do data entry, admin support and finance support",
+      "price": 8,
+      "description": "For around 3 years now I have been freelancing my abilities to several clients where they have required any web-based work for admin needs. This includes, but is not limited to, Microsoft excel, word, powerpoint and extracting information from any documents and making it usable.",
+      "category": "Data Entry",
+      "deliveryTime": "2",
+      "revisions": "10",
+      "imgUrl": "['https://img1.jpg', 'https://img2.jpg', 'https://img3.jpg']",
+      "features": ["1 Hour of work"],
+      "gigOwner": {
+        "id": "o707",
+        "fullName": "Amy Weller",
+        "imgUrl": "https://img.jpg"
+      },
+      "reviews": [
+        {
+          "id": "madeId",
+          "txt": "Amy made our first Fiverr experience a breeze. We wanted her to download a large selection of files from our Quickbooks account, and organize them into Google Drive. She delivered precisely what we requested perfectly, ahead of schedule, and without a single problem. Would absolutely recommend her!",
+          "rate": 5,
+          "by": {
+            "_id": "u112",
+            "fullname": "Greg Wapak",
+            "imgUrl": "/img/img2.jpg"
+          }
+        },
+        {
+          "id": "madeId",
+          "txt": "Absolutely delighted - used overseas VAs before for half the price and had to redo the work myself or jobs were left incomplete after payment, Amy is a keeper!",
+          "rate": 5,
+          "by": {
+            "_id": "u113",
+            "fullname": "Kristy Lawson",
+            "imgUrl": "/img/img2.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "g156",
+      "title": "I will code any indicator or strategy in tradingview pinescript",
+      "price": 36,
+      "description": "Welcome to my service, Get your strategy or indicators converted to in one Indicator script.If you have any Strategy based on indicators or price action or opening range breakout strategy, then get converted into one indicator on tradingview.",
+      "category": "Data Entry",
+      "deliveryTime": "3",
+      "revisions": "2",
+      "imgUrl": "['https://img1.jpg', 'https://img2.jpg', 'https://img3.jpg']",
+      "features": [],
+      "gigOwner": {
+        "id": "o708",
+        "fullName": "Akashdr Sher",
+        "imgUrl": "https://img.jpg"
+      },
+      "reviews": [
+        {
+          "id": "madeId",
+          "txt": "Working with Akashdr has been absolutely amazing. Smart, cooperative, and attentive to detail. strongly recommend this seller for any of your projects. Hand's down the best on FIVERR",
+          "rate": 5,
+          "by": {
+            "_id": "u114",
+            "fullname": "Mudhar Shitrit",
+            "imgUrl": "/img/img2.jpg"
+          }
+        },
+        {
+          "id": "madeId",
+          "txt": "Aakash was amazing in the way we approached the project. He took time to understand what I required and through various meetings and message exchanges we hit the spot. I now have the perfect indicator for my needs. Will be working with Aakash in the future on other projects.",
+          "rate": 5,
+          "by": {
+            "_id": "u115",
+            "fullname": "Jordan Milfay",
+            "imgUrl": "/img/img2.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "g157",
+      "title": "I will do data entry, data mining and data collection",
+      "price": 10,
+      "description": "I will do Data Entry, Data Mining, Data Collection. We are a small freelance company with a perfect atmosphere to catch up your needs. We are pretty experienced in this field with a good client satisfaction rate. We are eagerly waiting for good clients to work with and I assure you will not be disappointed.you can see gig video for specifications of our services.",
+      "category": "Data Entry",
+      "deliveryTime": "3",
+      "revisions": "1",
+      "imgUrl": "['https://img1.jpg', 'https://img2.jpg', 'https://img3.jpg']",
+      "features": [],
+      "gigOwner": {
+        "id": "o709",
+        "fullName": "Stanislav Lopez",
+        "imgUrl": "https://img.jpg"
+      },
+      "reviews": [
+        {
+          "id": "madeId",
+          "txt": "Very prompt and easy to communicate with, they were tasked with obtaining information/research and the information returned was perfect - I will definitely use their services again!",
+          "rate": 5,
+          "by": {
+            "_id": "u116",
+            "fullname": "Olga Moneymaker",
+            "imgUrl": "/img/img2.jpg"
+          }
+        },
+        {
+          "id": "madeId",
+          "txt": "Fast and communicative.",
+          "rate": 5,
+          "by": {
+            "_id": "u117",
+            "fullname": "Amram Shushan",
+            "imgUrl": "/img/img2.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "g158",
+      "title": "I will be your virtual assistant for data entry, typing, copy paste and web research",
+      "price": 100,
+      "description": "I will do 6 hours of Data Entry, Data Mining, Web Research, Copy Paste & deliver on the next day.",
+      "category": "Data Entry",
+      "deliveryTime": "2",
+      "revisions": "10",
+      "imgUrl": "['https://img1.jpg', 'https://img2.jpg', 'https://img3.jpg']",
+      "features": ["6 Hours of work"],
+      "gigOwner": {
+        "id": "o710",
+        "fullName": "Habiba Morning",
+        "imgUrl": "https://img.jpg"
+      },
+      "reviews": [
+        {
+          "id": "madeId",
+          "txt": "The most amazing, efficient, & professional person on Fiverr. I would not go through anybody else ever again. The turn around time is magnificent & she remains extremely timely & responsive throughout the whole process. Above & beyond expectations!!!",
+          "rate": 5,
+          "by": {
+            "_id": "u118",
+            "fullname": "Lisa Feller",
+            "imgUrl": "/img/img2.jpg"
+          }
+        },
+        {
+          "id": "madeId",
+          "txt": "I asked her to find a list of scholarships so that I could apply to them. She found about 40 scholarships and listed them in an organized Excel sheet exactly as I requested. I look forward to working with her again.",
+          "rate": 5,
+          "by": {
+            "_id": "u119",
+            "fullname": "Alex Miller",
+            "imgUrl": "/img/img2.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "g159",
+      "title": "I will do data entry, copy paste and excel data entry work for you",
+      "price": 85,
+      "description": "I will do data entry. typing,copy paste, web research & product listing big project 16 hour work",
+      "category": "Data Entry",
+      "deliveryTime": "5",
+      "revisions": "8",
+      "imgUrl": "['https://img1.jpg', 'https://img2.jpg', 'https://img3.jpg']",
+      "features": ["16 Hours of work"],
+      "gigOwner": {
+        "id": "o711",
+        "fullName": "Masumi Takashi",
+        "imgUrl": "https://img.jpg"
+      },
+      "reviews": [
+        {
+          "id": "madeId",
+          "txt": "I hired him to complete an excel data entry project a few weeks ago, and he did a great job! So, I hired him again to copy and paste some URLs into my chatbot, and he did a great job again. I'm actually about to hire him to do another 5-10 projects for me. Very reliable and trustworthy - I had to provide my Facebook login details for one of the projects, and he was extremely responsible with the info.",
+          "rate": 5,
+          "by": {
+            "_id": "u120",
+            "fullname": "Debbie Morinho",
+            "imgUrl": "/img/img2.jpg"
+          }
+        },
+        {
+          "id": "madeId",
+          "txt": "Got the data I needed from the project. Took a day longer than expected but that wasn't a deal breaker.",
+          "rate": 3,
+          "by": {
+            "_id": "u121",
+            "fullname": "Jonathan Hoyt",
+            "imgUrl": "/img/img2.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "_id": "g160",
+      "title": "I will do perfect data entry and admin support work",
+      "price": 120,
+      "description": "I will assist you with Data Entry, Internet Research or Admin work for 15 hours.",
+      "category": "Data Entry",
+      "deliveryTime": "3",
+      "revisions": "10",
+      "imgUrl": "['https://img1.jpg', 'https://img2.jpg', 'https://img3.jpg']",
+      "features": [],
+      "gigOwner": {
+        "id": "o712",
+        "fullName": "Imram Amirm ",
+        "imgUrl": "https://img.jpg"
+      },
+      "reviews": [
+        {
+          "id": "madeId",
+          "txt": "Total life saver! Aaimran managed to finish an extensive data entry project in little time and no errors regardless of me sending the wrong file in the first place. He excels at providing quick service for relatively a low price. I will be considering him for my future projects.",
+          "rate": 5,
+          "by": {
+            "_id": "u122",
+            "fullname": "Dolly Parton",
+            "imgUrl": "/img/img2.jpg"
+          }
+        },
+        {
+          "id": "madeId",
+          "txt": "Was good communication, managed to deliver about 50% of the work in the agreed timeframe, but kept me updated as he went along",
+          "rate": 3,
+          "by": {
+            "_id": "u102",
+            "fullname": "Maximilian Maximus",
+            "imgUrl": "/img/img2.jpg"
           }
         }
       ]
