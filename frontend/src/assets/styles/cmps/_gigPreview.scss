@@ -1,0 +1,54 @@
+.gig-card {
+  list-style: none;
+  flex-direction: column;
+  border: 0.5px solid lightgray;
+  color: $clr3;
+
+  li {
+    color: $clr6;
+    padding: 5px;
+    margin: 5px;
+  }
+  a {
+    color: $clr4;
+    text-decoration: none;
+  }
+  h3 {
+    padding: 10px 5px;
+    margin: 5px;
+  }
+
+  .gig-img {
+    width: 100%;
+  }
+
+  .owner-name-pic {
+    justify-content: start;
+  }
+  .gig-title {
+    padding: 10px 5px;
+    margin: 5px;
+  }
+
+  .sml-round-img {
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+  .review-rate {
+    color: $clr6;
+  }
+  .review-count {
+    font-size: 0.7rem;
+    color: $clr2;
+  }
+  .card-fav-price {
+    border-top: 0.5px solid lightgray;
+    color: $clr2;
+    justify-content: space-between;
+  }
+  .fav-btn {
+    margin: 0;
+  }
+}
