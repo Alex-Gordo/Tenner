@@ -7,7 +7,7 @@ export function loadGigs(filterBy = {
     features: '',
     sortBy: '',
 }) {
-    
+
     return async dispatch => {
         console.log("in dispatch in gigActions")
         try {
