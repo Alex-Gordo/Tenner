@@ -3,7 +3,6 @@ import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 import { TennerApp } from './pages/TennerApp';
 import { AppHeader } from './cmps/AppHeader.jsx';
 import { AppFooter } from './cmps/AppFooter';
-import { connect } from 'react-redux'
 import React, { Component } from 'react';
 import { onLogout } from './store/actions/userActions'
 
