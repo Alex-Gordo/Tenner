@@ -4,7 +4,7 @@
 
 ::selection {
   background-color: $clr1;
-  color: $clr6;
+  color: $clr3;
 }
 
 html {
@@ -24,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: caveat;
+  font-family: montserrat;
   margin: 0 0 0.6em;
   line-height: 1;
 }
@@ -47,6 +47,6 @@ p {
 a {
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
-}
+// a:hover {
+//   text-decoration: underline;
+// }
