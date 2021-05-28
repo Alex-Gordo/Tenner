@@ -5,10 +5,6 @@ import { AppHeader } from './cmps/AppHeader.jsx';
 import { AppFooter } from './cmps/AppFooter';
 import React, { Component } from 'react';
 import { onLogout } from './store/actions/userActions'
-
-
-
-
 // import { gigService } from '../../frontend/src/services/gigService.js';
 
 class _App extends Component {
@@ -40,7 +36,7 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-  // onLogout
+  onLogout
 }
 
 export const App = connect(mapStateToProps, mapDispatchToProps)(_App)
