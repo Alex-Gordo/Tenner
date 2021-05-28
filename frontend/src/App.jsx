@@ -24,7 +24,7 @@ class _App extends Component {
               <Route path="/gigs" component={TennerApp} />
               <Route path="/about" component={About} />
             </Switch>
-            <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae quidem corporis ullam magni expedita! Laboriosam maxime quibusdam in et nemo natus id omnis dolores blanditiis neque iste rerum nam totam praesentium cupiditate dicta, at provident, fuga eveniet excepturi quisquam! Ad voluptatibus laborum dolores. Animi obcaecati praesentium officia debitis vel ea?</h1>
+            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae quidem corporis ullam magni expedita! Laboriosam maxime quibusdam in et nemo natus id omnis dolores blanditiis neque iste rerum nam totam praesentium cupiditate dicta, at provident, fuga eveniet excepturi quisquam! Ad voluptatibus laborum dolores. Animi obcaecati praesentium officia debitis vel ea?</div>
           </div>
           <AppFooter />
         </Router>
