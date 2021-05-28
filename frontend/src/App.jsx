@@ -5,6 +5,7 @@ import { AppHeader } from './cmps/AppHeader.jsx';
 import { AppFooter } from './cmps/AppFooter';
 import React, { Component } from 'react';
 import { onLogout } from './store/actions/userActions'
+import { About } from './pages/About';
 
 
 
@@ -18,13 +19,15 @@ class _App extends Component {
       <div className="app" >
         <Router>
           <AppHeader />
-          {/* <Switch> */}
-          {/* <Route path="/tenner" component={TennerApp} /> */}
-          <Route path="/gigs" component={TennerApp} />
-          {/* </Switch> */}
-          <img className="hero img" src="https://cdn.pixabay.com/photo/2019/04/25/14/43/workplace-4155023_960_720.jpg"></img>
+          <div className="hero">
+            <img className="img" src="https://cdn.pixabay.com/photo/2019/04/25/14/43/workplace-4155023_960_720.jpg" alt="hero"></img>
+          </div>
           <div className="main-container">
-            <h1>This is main, here we render the gig list with gig previews and mucho nice content that will help us get jobs</h1>
+            <Switch>
+              <Route path="/gigs" component={TennerApp} />
+              <Route path="/about" component={About} />
+            </Switch>
+            <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae quidem corporis ullam magni expedita! Laboriosam maxime quibusdam in et nemo natus id omnis dolores blanditiis neque iste rerum nam totam praesentium cupiditate dicta, at provident, fuga eveniet excepturi quisquam! Ad voluptatibus laborum dolores. Animi obcaecati praesentium officia debitis vel ea?</h1>
           </div>
           <AppFooter />
         </Router>
