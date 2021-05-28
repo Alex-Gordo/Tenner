@@ -9,11 +9,11 @@ export function GigList({ gigs }) {
 
     return (
         <React.Fragment>
-            <div className="gig-list container">
+            <main className="gig-list flex">
                 {gigs.map(gig => {
                     return <GigPreview key={gig._id} gig={gig} />
                 })}
-            </div>
+            </main>
         </React.Fragment>
     )
 }
