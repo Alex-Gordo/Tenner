@@ -9,7 +9,7 @@ export function GigCategories() {
     return (
         <section className="categories">
             <h3>Popular professional services</h3>
-            <div className="nav-categories flex">
+            <div className="nav-categories flex space-between">
                 <NavLink to="/gigs:design"><img src={design} alt="design" /></NavLink>
                 <NavLink to="/gigs:digital"><img src={digital} alt="digital" /></NavLink>
                 <NavLink to="/gigs:programming"><img src={programming} alt="programming" /></NavLink>
