@@ -15,7 +15,7 @@ export class AppHeader extends Component {
             <React.Fragment>
                 <header className="header" >
                     <NavLink to="/"><h1 className="header-logo">tenner</h1></NavLink>
-                    <NavBar className="nav">
+                    <NavBar className="nav flex">
                         {loggedInUser && <>
                             <li className="user-logIn">
                                 <span>aaaa{`Hi ${loggedInUser.fullname}.`}</span>
