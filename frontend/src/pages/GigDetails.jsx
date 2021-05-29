@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { gigService } from '../services/gigService.js';
+import { gigService } from '../services/gigService.js'
+import { GigReview } from '../cmps/GigReview'
 
 export class GigDetails extends Component {
 
@@ -73,22 +74,25 @@ export class GigDetails extends Component {
                                 Contact Me
                             </button>
                             <p>From: Israel
-                                Member Since: 2 month ago
-                                Avg response time: 3 hours
-                                Last Deliviry: About 2 Hours ago
+                            Member Since: 2 month ago
+                            Avg response time 3 hours
+                            Last Deliviry About 2 Hours ago
                             </p>
                         </div>
                     </section>
 
                     <div className="suggested">
-                                <h3>For You</h3>
-                                <p>render more from same category</p>
+                        <h3>For You</h3>
+                        <p>render more from same category</p>
                     </div>
 
                     <section className="reviews">
-                       <h3>{gig.reviews.length} Reviews kohavim</h3> 
-                        {gig.reviews.map(review =>{
-                            return <gigReview key={review.id} review={review}/>
+                        <h3>{gig.reviews.length} Reviews kohavim</h3>
+                        {gig.reviews.map(review => {
+                            console.log(review);
+                            return <ul>
+                                <GigReview key={review.id} review={review} />
+                                   </ul>
                         })}
 
                         <button className="add-review">
