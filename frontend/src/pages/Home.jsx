@@ -23,7 +23,9 @@ class _Home extends Component {
                     <img src={hero} alt="hero"></img>
                     <h1 className="hero-title">Find the perfect freelance services for your business</h1>
                 </div>
-                <GigTopRated gigs={this.props.gigs} />
+                <div className="home-filters-container">
+                    <GigTopRated gigs={this.props.gigs} />
+                </div>
             </React.Fragment>
         )
     }
