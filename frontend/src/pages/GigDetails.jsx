@@ -21,9 +21,15 @@ export class GigDetails extends Component {
         if (!gig) return 'no gigs';
 
         console.log('gig:', gig)
+        
         return (
-            <div>
-            </div>
+            <main className="toy-details">
+
+            <div>{gig.category}</div>
+         
+
+
+            </main>
         )
     }
 }
