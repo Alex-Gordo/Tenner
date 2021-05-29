@@ -3,6 +3,14 @@
   flex-direction: column;
   border: 0.5px solid lightgray;
   color: $clr3;
+  z-index: 1;
+  &:hover {
+    opacity: 0.8;
+    transition: 0.4s;
+    .gig-title {
+      color: $clr1;
+    }
+  }
 
   li {
     color: $clr6;
@@ -23,14 +31,15 @@
     height: 100%;
     margin-bottom: 0;
   }
-  .owner-name{
-  margin: 0 5px;
+
+  .owner-name {
+    margin: 0 5px;
   }
   .owner-name-pic {
     justify-content: start;
     margin: 0;
     padding-bottom: 0;
-    height:100%;
+    height: 100%;
   }
   .gig-title {
     padding: 0 5px;
@@ -44,9 +53,9 @@
     height: 30px;
     margin-right: 5px;
   }
-  .review-line{
+  .review-line {
     margin: 1px;
-    font-size:.9rem;
+    font-size: 0.9rem;
   }
   .review-rate {
     color: $clr6;
@@ -59,31 +68,30 @@
     border-top: 0.5px solid lightgray;
     color: $clr2;
     justify-content: space-between;
-    font-size:1rem;
-    
-    .h4{ 
+    font-size: 1rem;
+
+    .h4 {
       margin: 0 10px;
       margin-bottom: 0;
-      // padding: 0 5px;
     }
-    
-    .fav-btn, .gig-price {
-      margin:0 5px;
-      padding:0;
-      background-color:white;
+
+    .fav-btn,
+    .gig-price {
+      margin: 0 5px;
+      padding: 0;
+      background-color: white;
       color: $clr2;
     }
-    
+
     .fav-btn {
-      margin:0 3px;
+      margin: 0 3px;
       color: lightgray;
     }
-    .fav-btn:hover{
+    .fav-btn:hover {
       color: $clr2;
     }
-    .fav-btn:active{
+    .fav-btn:active {
       color: red;
     }
- 
   }
 }

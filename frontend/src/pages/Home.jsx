@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { Component } from 'react';
 import { GigTopRated } from '../cmps/GigTopRated.jsx';
 import { loadGigs } from '../store/actions/gigActions.js';
+import hero from '../assets/img/bg-hero-1.png'
+
 
 
 class _Home extends Component {
@@ -17,8 +19,9 @@ class _Home extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="hero">
-                    <img className="img" src="https://cdn.pixabay.com/photo/2019/04/25/14/43/workplace-4155023_960_720.jpg" alt="hero"></img>
+                <div className="hero hero-container">
+                    <img src={hero} alt="hero"></img>
+                    <h1 className="hero-title">Find the perfect freelance services for your business</h1>
                 </div>
                 <GigTopRated gigs={this.props.gigs} />
             </React.Fragment>
