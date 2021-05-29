@@ -12,7 +12,7 @@
       "features": ["High res", "3D", "Professional"],
       "gigOwner": {
         "id": "o707",
-        "fullName": "Marco Polo",
+        "fullname": "Puki Ben Puki",
         "imgUrl": "https://robohash.org/100?set=set5"
       },
       "reviews": [
@@ -50,8 +50,8 @@
       "features": ["DIY", "HD Video 1920x1080p", "Surprise craft"],
       "gigOwner": {
         "id": "o808",
-        "fullName": "Sanoara Levkovitz",
-        "imgUrl": "https://robohash.org/1?set=set5"
+        "fullname": "Sanoara Levkovitz",
+        "imgUrl": "https://robohash.org/99?set=set5"
       },
       "reviews": [
         {
@@ -88,7 +88,7 @@
       "features": ["Initial concept", "Source file", "Commercial use"],
       "gigOwner": {
         "id": "o708",
-        "fullName": "Gustavo Mor",
+        "fullname": "Gustavo Mor",
         "imgUrl": "https://robohash.org/98?set=set5"
       },
       "reviews": [
@@ -126,7 +126,7 @@
       "features": ["Email Template Setup"],
       "gigOwner": {
         "id": "o709",
-        "fullName": "Martin Yeger",
+        "fullname": "Martin Yeger",
         "imgUrl": "https://robohash.org/96?set=set5"
       },
       "reviews": [
@@ -164,7 +164,7 @@
       "features": ["Source file", "Responsive design"],
       "gigOwner": {
         "id": "o710",
-        "fullName": "Andrey Webb",
+        "fullname": "Andrey Webb",
         "imgUrl": "https://robohash.org/97?set=set5"
       },
       "reviews": [
@@ -202,7 +202,7 @@
       "features": ["2 Hours of work"],
       "gigOwner": {
         "id": "o711",
-        "fullName": "Jay Tulmur",
+        "fullname": "Jay Tulmur",
         "imgUrl": "https://robohash.org/95?set=set5"
       },
       "reviews": [
@@ -240,7 +240,7 @@
       "features": ["1 Hour of work"],
       "gigOwner": {
         "id": "o707",
-        "fullName": "Amy Weller",
+        "fullname": "Amy Weller",
         "imgUrl": "https://robohash.org/94?set=set5"
       },
       "reviews": [
