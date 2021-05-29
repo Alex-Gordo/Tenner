@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { gigService} from '../services/gigService.js';
+import { gigService } from '../services/gigService.js';
 
 export class GigDetails extends Component {
 
@@ -21,12 +21,20 @@ export class GigDetails extends Component {
         if (!gig) return 'no gigs';
 
         console.log('gig:', gig)
-        
-        return (
-            <main className="toy-details">
 
-            <div>{gig.category}</div>
-         
+        return (
+            <main className="gig-details">
+                <section className="gig-info">
+                    <h1>{gig.title}</h1>
+               
+                </section>
+                <section className="call-to-action">
+                   
+                    <div className="order-info">
+
+                    </div>
+
+                </section>
 
 
             </main>
