@@ -29,7 +29,7 @@ export function GigPreview({ gig }) {
                 </h3>
                 <section className="flex card-fav-price">
                     <button className="fav-btn flex">❤</button>
-                    <h4 className="gig-price">${gig.price}</h4>
+                    <h4 className="gig-price"><span>Starting at </span>${gig.price}</h4>
                 </section>
             </article>
         </React.Fragment >

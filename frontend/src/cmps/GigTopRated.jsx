@@ -11,7 +11,7 @@ export function GigTopRated({ gigs }) {
 
     return (
         <React.Fragment>
-            <h1>Top rated gigs:</h1>
+            <h3>Top rated gigs:</h3>
             <main className="gig-list flex">
                 {topGigs.map(gig => {
                     return <GigPreview key={gig._id} gig={gig} />

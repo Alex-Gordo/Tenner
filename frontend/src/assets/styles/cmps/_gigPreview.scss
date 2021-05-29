@@ -4,6 +4,7 @@
   border: 0.5px solid lightgray;
   color: $clr3;
   z-index: 1;
+  margin-bottom: 1.5rem;
   &:hover {
     opacity: 0.8;
     transition: 0.4s;
@@ -73,6 +74,9 @@
     .h4 {
       margin: 0 10px;
       margin-bottom: 0;
+    }
+    span {
+      font-size: 0.8rem;
     }
 
     .fav-btn,
