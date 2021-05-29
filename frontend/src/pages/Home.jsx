@@ -4,6 +4,7 @@ import { Component } from 'react';
 import { GigTopRated } from '../cmps/GigTopRated.jsx';
 import { loadGigs } from '../store/actions/gigActions.js';
 import hero from '../assets/img/bg-hero-1.png'
+import { GigCategories } from '../cmps/GigCategories.jsx';
 
 
 
@@ -24,6 +25,8 @@ class _Home extends Component {
                     <h1 className="hero-title">Find the perfect freelance services for your business</h1>
                 </div>
                 <GigTopRated gigs={this.props.gigs} />
+                <GigCategories/>
+
             </React.Fragment>
         )
     }
