@@ -1,13 +1,14 @@
 import { HashRouter as Router, Switch, Route } from 'react-router-dom'
-import { onLogout } from './store/actions/userActions'
-import { GigDetails } from './pages/GigDetails.jsx';
-import { AppHeader } from './cmps/AppHeader.jsx';
-import { TennerApp } from './pages/TennerApp';
-import { AppFooter } from './cmps/AppFooter';
 import React, { Component } from 'react';
-import { Home } from './pages/Home.jsx';
 import { connect } from 'react-redux';
+import { onLogout } from './store/actions/userActions'
+import { AppHeader } from './cmps/AppHeader.jsx';
+import { AppFooter } from './cmps/AppFooter';
+import { TennerApp } from './pages/TennerApp';
+import { Home } from './pages/Home.jsx';
 import { About } from './pages/About';
+import { GigDetails } from './pages/GigDetails.jsx';
+
 // import { gigService } from '../../frontend/src/services/gigService.js';
 
 
