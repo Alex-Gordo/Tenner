@@ -18,15 +18,15 @@ class _App extends Component {
     return (
       <div className="app" >
         <Router>
-          <div className="main-container">
-            <AppHeader />
-            <Switch>
-              <Route path='/' exact component={Home} />
+          <AppHeader />
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <div className="main-container">
               <Route path="/gigs" component={TennerApp} />
               <Route path='/gig/:gig' component={GigDetails} />
               <Route path="/about" component={About} />
-            </Switch>
-          </div>
+            </div>
+          </Switch>
         </Router>
         <AppFooter />
       </div>
