@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { gigService } from '../services/gigService.js'
 import { GigReview } from '../cmps/GigReview'
+import { NavLink } from 'react-router-dom';
 
 export class GigDetails extends Component {
 
@@ -56,7 +57,7 @@ export class GigDetails extends Component {
                                 })}
                             </div>
 
-                            <button className="checkout">Continue to Checkout ({gig.price}$)</button>
+                            <NavLink to={`/gig/${gig._id}/checkout`}><button className="checkout">Continue to Checkout ({gig.price}$)</button></NavLink>
                         </div>
                     </section>
                     <section className="about-details">
