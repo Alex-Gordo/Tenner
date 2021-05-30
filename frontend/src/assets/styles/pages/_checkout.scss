@@ -1,11 +1,49 @@
+.package-details{
+    margin-top: 100px;
+    background-color:red;
+    flex-direction: column;
+}
+
+
+
+
+
 .order-summary{
     position: fixed;
-    right: 5%;
-    top: 17%;
-    padding:10px;
+    right: 10%;
+    top: 14%;
+    padding:20px;
     width:25%;
     border: 1px double $clr1;
+    margin-bottom: 10px;
+    h2{
+        color: $clr4;
+        margin-bottom:30px;
+    }
+    
+    .price, .fee, hr, .total, .delivery{ 
+        justify-content: space-between;
+        margin-bottom:20px;
+    }
+    .total{ 
+        color: $clr4;
+    }
+
+    .btn-purchase{
+        font-size:1.5rem;
+        width:100%;
+        padding: 15px;
+        border-radius:5px;
+    }
 }
+.payment-img{
+    position: fixed;
+    right: 10%;
+    top: 75%;
+    width: 25%;
+        
+}
+
 
 
 // .package-details{

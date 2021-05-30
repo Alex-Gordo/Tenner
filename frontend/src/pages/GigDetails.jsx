@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
 import { gigService } from '../services/gigService.js'
 import { GigReview } from '../cmps/GigReview'
 import { NavLink } from 'react-router-dom';
+import React, { Component } from 'react';
 
 export class GigDetails extends Component {
 
@@ -66,10 +66,10 @@ export class GigDetails extends Component {
                         </div>
                     </section>
 
-                    <section className="about-details flex">
+                    <section className="about-details flex main-layout">
                         <h3 className="about-title">About this Gig</h3>
                         <h4 className="description">{gig.description}</h4>
-                        <card className="about-seller">
+                        <article className="about-seller">
                             <h3 className="about-title">About this Seller</h3>
                             <div className="owner-card flex">
                                 <img className="md-round-img"
@@ -85,13 +85,12 @@ export class GigDetails extends Component {
                             </div>
 
                             <div className="owner-info">
-                                <p>From: Israel
-                                Member Since: 2 month ago
-                                Avg response time 3 hours
-                                Last Deliviry About 2 Hours ago
-                            </p>
+                                <p>From: Israel</p>
+                                <p>Member Since: 2 month ago</p>
+                                <p>Avg response time 3 hours</p>
+                                <p>Last Deliviry About 2 Hours ago</p>
                             </div>
-                        </card>
+                        </article>
                     </section>
 
                     <div className="suggested">
@@ -100,20 +99,17 @@ export class GigDetails extends Component {
                     </div>
 
                     <section className="reviews">
-                        <h3>{gig.reviews.length} Reviews kohavim</h3>
+                        <h3 className="reviews-headline" >⭐⭐⭐⭐{gig.reviews[0].rate} ({gig.reviews.length} reviews)</h3>
+                        <div className="reviews-rate-bars"></div>
                         {gig.reviews.map(review => {
-                            console.log(review);
-                            return <ul>
+                            return <article>
                                 <GigReview key={review.id} review={review} />
-                            </ul>
+                            </article>
                         })}
-
                         <button className="add-review">
                             Add review
                         </button>
                     </section>
-
-
                 </main>
             </React.Fragment>
         )

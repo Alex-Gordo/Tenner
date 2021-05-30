@@ -6,17 +6,21 @@ export class GigReview extends Component {
     // }
 
     render() {
-        const {review} = this.props
-        console.log(review);
+        const { review } = this.props
         return (
             <React.Fragment>
-                
-                <li>
-                    <h3>{review.by.fullname}</h3>
-                    <p>{review.rate} kohavim</p>
-                    <p>{review.txt}</p>
-
-                </li>
+                <article className="review-card flex">
+                    <div className="flex">
+                        <img className="sml-review-img flex"
+                            src={review.by.imgUrl} alt="">
+                        </img>&nbsp;
+                        <h2>&nbsp;      {review.by.fullname}&nbsp;  </h2>
+                        <h3>&nbsp;⭐{review.rate}</h3>
+                    </div>
+                </article>
+                    <div className="review-txt">
+                        <p >{review.txt}</p>
+                    </div>
             </React.Fragment>
         )
     }
