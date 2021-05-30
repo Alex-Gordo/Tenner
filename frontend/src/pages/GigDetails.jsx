@@ -82,35 +82,6 @@ export class GigDetails extends Component {
                                 </div>
                             </div>
 
-<<<<<<< HEAD
-                            <p>{gig.title}</p>
-                            <h4>Delivery time: {gig.deliveryTime} Days</h4>
-
-                            <div className="features">
-                                {gig.features.map(feature => {
-                                    return <h4>V{feature}</h4>
-                                })}
-                            </div>
-
-                            <NavLink to={`/gig/${gig._id}/checkout`}><button className="checkout">Continue to Checkout ({gig.price}$)</button></NavLink>
-                        </div>
-                    </section>
-                    <section className="about-details">
-                        <h3>About this Gig</h3>
-                        <p>{gig.description}</p>
-
-                        <h3>About this Seller</h3>
-                        <div className="about-seller">
-                            <img className="gig-details-img"
-                                src={`https://robohash.org/${~~(Math.random() * 100)}?set=set3`} alt="">
-                            </img>
-                            <h3>{gig.gigOwner.fullName}</h3>
-                            kohavim 5 ({gig.reviews.length} reviews)
-                            <button className="contact-owner">
-                                Contact Me
-                            </button>
-=======
->>>>>>> 06cb674e9fd9b0f79ace1a6f8af7a7fd5dc63143
                             <p>From: Israel
                             Member Since: 2 month ago
                             Avg response time 3 hours

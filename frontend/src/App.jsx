@@ -19,26 +19,14 @@ class _App extends Component {
     return (
       <div className="app" >
         <Router>
-<<<<<<< HEAD
-          <div className="main-container">
-            <AppHeader />
-            <Switch>
-              <Route path='/' exact component={Home} />
-              <Route path="/gigs" component={TennerApp} />
-              <Route path='/gig/:gig/checkout' component={GigCheckout} />
-              <Route path='/gig/:gig' component={GigDetails} />
-              <Route path="/about" component={About} />
-            </Switch>
-          </div>
-=======
           <AppHeader />
           <Switch>
             <Route path='/' exact component={Home} />
             <Route path="/gigs" component={TennerApp} />
+            <Route path='/gig/:gig/checkout' component={GigCheckout} />
             <Route path='/gig/:gig' component={GigDetails} />
             <Route path="/about" component={About} />
           </Switch>
->>>>>>> 06cb674e9fd9b0f79ace1a6f8af7a7fd5dc63143
         </Router>
         <AppFooter />
       </div>
