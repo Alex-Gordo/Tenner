@@ -34,7 +34,9 @@ export class GigDetails extends Component {
                             })}
                         </div>
                         <div className="btn-section">
-                            <button className="checkout-btn">Continue to Checkout ({gig.price}$)</button>
+                            <NavLink to={`/gig/${gig._id}/checkout`}>
+                                <button className="checkout-btn">Continue to Checkout (${gig.price})</button>
+                            </NavLink>
                         </div>
                     </div>
                 </side>
@@ -82,11 +84,13 @@ export class GigDetails extends Component {
                                 </div>
                             </div>
 
-                            <p>From: Israel
-                            Member Since: 2 month ago
-                            Avg response time 3 hours
-                            Last Deliviry About 2 Hours ago
+                            <div className="owner-info">
+                                <p>From: Israel
+                                Member Since: 2 month ago
+                                Avg response time 3 hours
+                                Last Deliviry About 2 Hours ago
                             </p>
+                            </div>
                         </card>
                     </section>
 

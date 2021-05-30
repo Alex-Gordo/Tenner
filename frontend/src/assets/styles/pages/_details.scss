@@ -1,6 +1,5 @@
 .gig-details {
     width: 66%;
-    // background-color: red;
 
     h1{
         color:$clr4;
@@ -22,6 +21,7 @@
 
     .gig-info{
         border-bottom: 5px solid $clr1;
+        margin-top: 100px;
     }
 
     .about-title{
@@ -53,17 +53,17 @@
     .contact-owner{
         margin: 0 0 10px;
         font-size: 1.2rem;
-        
     }
 
 
+    .owner-info{
+        border: 1px solid $clr1;
+    }
 }
-
-
 
 .call-to-action{
     position: fixed;
-    right: 12%;
+    right: 5%;
     top: 17%;
     padding:10px;
     width:25%;

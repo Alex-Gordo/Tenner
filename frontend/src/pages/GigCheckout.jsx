@@ -9,12 +9,7 @@ export class GigCheckout extends Component {
 
         return (
             <React.Fragment>
-                <section className="package-details">
-
-                    <h3>Customize Your Package</h3>
-
-                </section>
-                <section className="order-summary">
+             <side className="order-summary">
                     <h4>Summary</h4>
                     Subtotal
                     Service Fee
@@ -23,10 +18,15 @@ export class GigCheckout extends Component {
                    Delivery Time
                    <button className="btn-purchase">
                        Purchase now</button>     
+                </side>
+        
+                <main className="package-details">
 
-                    
-                    
-                </section>
+                    <h3>Customize Your Package</h3>
+
+                </main>
+
+   
             </React.Fragment>
         )
     }
