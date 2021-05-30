@@ -1,9 +1,48 @@
 import React from 'react'
+import { connect } from 'react-redux';
+import { Component } from 'react';
+import { GigTopRated } from '../cmps/GigTopRated.jsx';
+import { loadGigs } from '../store/actions/gigActions.js';
+import hero from '../assets/img/bg-hero-1.png'
+import { GigCategories } from '../cmps/GigCategories.jsx';
 
-export function Home() {
-    return (
-        <div className="hero">
-        <img className="img" src="https://cdn.pixabay.com/photo/2019/04/25/14/43/workplace-4155023_960_720.jpg" alt="hero"></img>
-        </div>
-    )
+
+
+class _Home extends Component {
+    state = {
+        gigs: []
+    }
+
+    componentDidMount() {
+        this.props.loadGigs()
+    }
+
+    render() {
+        return (
+            <React.Fragment>
+                <div className="hero hero-container">
+                    <img src={hero} alt="hero"></img>
+                    <h1 className="hero-title">Find the perfect freelance services for your business</h1>
+                </div>             
+
+                <div className="home-filters-container">
+                    <GigTopRated gigs={this.props.gigs} />
+                    <GigCategories/>
+                </div>
+            </React.Fragment>
+        )
+    }
 }
+
+
+function mapStateToProps({ gigModule }) {
+    return {
+        gigs: gigModule.gigs
+    }
+}
+
+const mapDispatchToProps = {
+    loadGigs
+}
+
+export const Home = connect(mapStateToProps, mapDispatchToProps)(_Home)

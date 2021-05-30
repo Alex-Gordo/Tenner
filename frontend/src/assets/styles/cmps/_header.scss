@@ -1,14 +1,18 @@
 header {
-  background-color: $clr3;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   font-size: 1rem;
   user-select: none;
+  z-index: 1;
+  background-color: inherit;
 
   .header-logo {
     font-family: five;
-    color: $clr4;
+    color: $clr3;
+    letter-spacing: 0.08rem;
+    font-weight: 100;
+    margin: 0;
     &::after {
       content: ".";
       color: $clr1;
@@ -35,15 +39,10 @@ header {
     padding: 5px 0;
   }
   nav a {
-    color: $clr4;
+    color: $clr3;
     &:hover {
-      text-decoration: underline;
+      color: $clr1;
     }
-  }
-  nav a:not(:first-child) {
-    border-top: 1px solid $clr1;
-    padding: 0 5px;
-    margin: 10px;
   }
   nav .active {
     color: $clr1;
