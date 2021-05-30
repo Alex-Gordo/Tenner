@@ -21,7 +21,7 @@ class _Home extends Component {
         return (
             <React.Fragment>
                 <Hero />
-                <div className="home-filters-container main-container">
+                <div className="home-filters-container main-layout">
                     <GigTopRated gigs={this.props.gigs} />
                     <GigCategories />
                 </div>

@@ -1,53 +1,68 @@
 header {
+  position: fixed;
   padding: 10px;
-  display: flex;
-  justify-content: space-between;
   font-size: 1rem;
   user-select: none;
+  width: 100vw;
   z-index: 1;
+  // background: linear-gradient(#013a15, #013e18);
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-logo {
+      font-family: five;
+      color: $clr3;
+      letter-spacing: 0.08rem;
+      font-weight: 100;
+      margin: 0;
+      &::after {
+        content: ".";
+        color: $clr1;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .loggedin-user {
+      background-color: $clr1;
+      padding: 2px 8px;
+      border-radius: 1em;
+      align-self: flex-end;
+      color: whitesmoke;
+      span {
+        background-color: $clr2;
+        padding: 4px;
+        margin: 10px;
+        border-radius: 50%;
+      }
+    }
+    nav {
+      padding: 5px 0;
+    }
+    nav a {
+      color: $clr3;
+      &:hover {
+        color: $clr1;
+      }
+    }
+    nav .active {
+      color: $clr1;
+    }
+    .navbar-list {
+      list-style-type: none;
+
+      li {
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+.header-colored {
+  // background-color: blue;
   background: linear-gradient(#013a15, #013e18);
-
-  .header-logo {
-    font-family: five;
-    color: $clr3;
-    letter-spacing: 0.08rem;
-    font-weight: 100;
-    margin: 0;
-    &::after {
-      content: ".";
-      color: $clr1;
-    }
-    &:hover {
-      text-decoration: none;
-    }
-  }
-
-  .loggedin-user {
-    background-color: $clr1;
-    padding: 2px 8px;
-    border-radius: 1em;
-    align-self: flex-end;
-    color: whitesmoke;
-    span {
-      background-color: $clr2;
-      padding: 4px;
-      margin: 10px;
-      border-radius: 50%;
-    }
-  }
-  nav {
-    padding: 5px 0;
-  }
-  nav a {
-    color: $clr3;
-    &:hover {
-      color: $clr1;
-    }
-  }
-  nav .active {
-    color: $clr1;
-  }
-  .navbar-list {
-    list-style-type: none;
-  }
+  z-index: 10;
 }
