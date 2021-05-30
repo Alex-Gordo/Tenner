@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { gigService } from '../services/gigService.js'
 import { GigReview } from '../cmps/GigReview'
+import { NavLink } from 'react-router-dom';
 
 export class GigDetails extends Component {
 

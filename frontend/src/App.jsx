@@ -8,6 +8,7 @@ import { TennerApp } from './pages/TennerApp';
 import { Home } from './pages/Home.jsx';
 import { About } from './pages/About';
 import { GigDetails } from './pages/GigDetails.jsx';
+import { GigCheckout } from './pages/GigCheckout.jsx'
 
 // import { gigService } from '../../frontend/src/services/gigService.js';
 
@@ -22,6 +23,7 @@ class _App extends Component {
           <Switch>
             <Route path='/' exact component={Home} />
             <Route path="/gigs" component={TennerApp} />
+            <Route path='/gig/:gig/checkout' component={GigCheckout} />
             <Route path='/gig/:gig' component={GigDetails} />
             <Route path="/about" component={About} />
           </Switch>
