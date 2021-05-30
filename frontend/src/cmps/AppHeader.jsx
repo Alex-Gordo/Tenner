@@ -32,8 +32,8 @@ class AppHeader extends Component {
         const { isScrolled, isExplore } = this.state
         return (
             <React.Fragment>
-                <header className="header" >
-                    <div className={`header-content main-layout ${isScrolled || this.props.location.pathname !== '/' ? 'header-colored' : ''}`}>
+                <header className={`header ${isScrolled || this.props.location.pathname !== '/' ? 'header-colored' : ''}`}>
+                    <div className="header-content main-layout">
                         <NavLink to="/"><h1 className="header-logo">tenner</h1></NavLink>
                         <NavBar className="nav flex">
                             {loggedInUser && <>
