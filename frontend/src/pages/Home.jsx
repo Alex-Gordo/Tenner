@@ -2,8 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux';
 import { Component } from 'react';
 import { GigTopRated } from '../cmps/GigTopRated.jsx';
+import { Hero } from '../cmps/Hero.jsx';
 import { loadGigs } from '../store/actions/gigActions.js';
-import hero from '../assets/img/bg-hero-1.png'
 import { GigCategories } from '../cmps/GigCategories.jsx';
 
 
@@ -20,14 +20,10 @@ class _Home extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="hero hero-container">
-                    <img src={hero} alt="hero"></img>
-                    <h1 className="hero-title">Find the perfect freelance services for your business</h1>
-                </div>             
-
-                <div className="home-filters-container">
+                <Hero />
+                <div className="home-filters-container main-layout">
                     <GigTopRated gigs={this.props.gigs} />
-                    <GigCategories/>
+                    <GigCategories />
                 </div>
             </React.Fragment>
         )

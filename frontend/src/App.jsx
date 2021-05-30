@@ -2,7 +2,7 @@ import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { onLogout } from './store/actions/userActions'
-import { AppHeader } from './cmps/AppHeader.jsx';
+import AppHeader from './cmps/AppHeader.jsx';
 import { AppFooter } from './cmps/AppFooter';
 import { TennerApp } from './pages/TennerApp';
 import { Home } from './pages/Home.jsx';
@@ -19,6 +19,7 @@ class _App extends Component {
     return (
       <div className="app" >
         <Router>
+<<<<<<< HEAD
           <div className="main-container">
             <AppHeader />
             <Switch>
@@ -29,6 +30,15 @@ class _App extends Component {
               <Route path="/about" component={About} />
             </Switch>
           </div>
+=======
+          <AppHeader />
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path="/gigs" component={TennerApp} />
+            <Route path='/gig/:gig' component={GigDetails} />
+            <Route path="/about" component={About} />
+          </Switch>
+>>>>>>> 06cb674e9fd9b0f79ace1a6f8af7a7fd5dc63143
         </Router>
         <AppFooter />
       </div>

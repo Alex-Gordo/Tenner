@@ -11,11 +11,12 @@ class _TennerApp extends Component {
 
     componentDidMount() {
         this.props.loadGigs()
+
     }
 
     render() {
         return (
-            <main className="gig-app">
+            <main className="tenner-app main-layout">
                 <GigList gigs={this.props.gigs} />
             </main>
         )
@@ -33,4 +34,4 @@ const mapDispatchToProps = {
 }
 
 
-export const TennerApp = connect(mapStateToProps,mapDispatchToProps)(_TennerApp)
+export const TennerApp = connect(mapStateToProps, mapDispatchToProps)(_TennerApp)
