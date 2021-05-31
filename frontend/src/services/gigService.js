@@ -26,10 +26,10 @@ function query() {
             gGigs = gigs
             return gigs.gig
         });
-        else {
-            storageService.saveToStorage(KEY, gGigs)
-            return Promise.resolve(gGigs.gig)
-        } 
+    else {
+        storageService.saveToStorage(KEY, gGigs)
+        return Promise.resolve(gGigs.gig)
+    }
 };
 
 function getById(gigId) {
