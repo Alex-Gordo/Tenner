@@ -55,9 +55,23 @@
         font-size: 1.2rem;
     }
 
-
     .owner-info{
         border: 1px solid $clr1;
+        display: grid;
+    }
+
+    .reviews-headline{
+        color:$clr4;
+    }
+
+    .reviews-rate-bars{
+        background-color:red;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    .add-review{
+        font-size:1.2rem;
+        margin-left: 0;
     }
 }
 
