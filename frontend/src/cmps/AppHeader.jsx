@@ -7,7 +7,6 @@ class AppHeader extends Component {
     state = {
         loggedInUser: 'aaa',
         isScrolled: false,
-        // isExplore: true
     }
     componentDidMount() {
         window.addEventListener("scroll", (e) => this.handleNavigation(e));
@@ -29,7 +28,7 @@ class AppHeader extends Component {
 
     render() {
         const { onLogout, loggedInUser } = this.props
-        const { isScrolled, isExplore } = this.state
+        const { isScrolled } = this.state
         return (
             <React.Fragment>
                 <header className={`header ${isScrolled || this.props.location.pathname !== '/' ? 'header-colored' : ''}`}>
