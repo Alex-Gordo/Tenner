@@ -18,7 +18,8 @@ export class _Hero extends Component {
         return (
             <div className="hero hero-container">
                 <main className="content main-layout">
-                    <h1 className="hero-title">Find the perfect <span>freelance</span> services for your business</h1>
+                    <h1 className="hero-title-main">Find the perfect <span>freelance</span></h1>
+                    <h1 className="hero-title-secondary">services for your business</h1>
                     <div className="search-container">
                         <GigFilter onSetFilter={this.onSetFilter} />
                     </div>
