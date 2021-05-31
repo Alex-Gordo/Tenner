@@ -1,11 +1,9 @@
 import { gigService } from '../../services/gigService'
 
 export function loadGigs(filterBy = {
-    keyword: '',
-    description: '',
+    searchTxt: '',
     category: '',
-    features: '',
-    sortBy: '',
+    budget: '',
 }) {
 
     return async dispatch => {
