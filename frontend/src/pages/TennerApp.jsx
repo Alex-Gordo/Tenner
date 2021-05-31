@@ -14,11 +14,18 @@ class _TennerApp extends Component {
         this.props.loadGigs()
     }
 
+    onSetFilter = (filterBy) => {
+        this.props.loadGigs(filterBy)
+    }
+
+
     render() {
+        const { gigs } = this.props
+        if (!gigs) return <h1>Loading...</h1> //TODO : loading component
         return (
             <main className="tenner-app main-layout">
                 <div className="search-container">
-                    <GigFilter gigs={this.props.gigs} />
+                    <GigFilter onSetFilter={this.onSetFilter} />
                 </div>
 
                 <GigList gigs={this.props.gigs} />

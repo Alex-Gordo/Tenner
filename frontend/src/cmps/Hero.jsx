@@ -3,8 +3,6 @@ import React from 'react'
 import { GigFilter } from './GigFilter';
 
 export class Hero extends Component {
-
-
     render() {
         return (
             <div className="hero hero-container">
@@ -16,8 +14,5 @@ export class Hero extends Component {
                 </main>
             </div>
         )
-
-
-
     }
 }
