@@ -16,11 +16,14 @@ export class GigDetails extends Component {
             this.setState({ gig })
         })
     }
-
-
+    
+    
     render() {
         const { gig } = this.state
         if (!gig) return 'no gigs';
+        console.log('gig:', gig)
+        console.log( gig.imgUrl)
+
         return (
             <React.Fragment>
                 <div className="main-layout">
@@ -51,14 +54,14 @@ export class GigDetails extends Component {
                                 <p> &nbsp;⭐⭐⭐⭐{gig.reviews[0].rate} ({gig.reviews.length} reviews)</p>
                             </div>
                             <img className="gig-details-img"
-                                src={`https://res.cloudinary.com/dzocvtwca/image/upload/v1611223461/vhdtgbyzzp1ttirln1zj.jpg`} alt=""/>
+                                src={gig.imgUrl[0]} alt=""/>
                             <div className="gig-gallery flex">
                                 <img className="gig-gallery-img"
-                                    src={`https://res.cloudinary.com/dzocvtwca/image/upload/v1611223461/vhdtgbyzzp1ttirln1zj.jpg`} alt=""/>
+                                    src={gig.imgUrl[1]} alt=""/>
                                 <img className="gig-gallery-img"
-                                    src={`https://res.cloudinary.com/dzocvtwca/image/upload/v1611223461/vhdtgbyzzp1ttirln1zj.jpg`} alt=""/>
+                                    src={gig.imgUrl[2]} alt=""/>
                                 <img className="gig-gallery-img"
-                                    src={`https://res.cloudinary.com/dzocvtwca/image/upload/v1611223461/vhdtgbyzzp1ttirln1zj.jpg`} alt=""/>
+                                    src={gig.imgUrl[3]} alt=""/>
                             </div>
                         </section>
                         <section className="about-details flex ">

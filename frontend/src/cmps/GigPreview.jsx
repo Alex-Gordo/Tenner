@@ -9,15 +9,10 @@ export function GigPreview({ gig }) {
             <article className="gig-card flex">
                 <NavLink to={`/gig/${gig._id}`}>
                     <img className="gig-img"
-                        // src={`https://robohash.org/${~~(Math.random() * 100)}?set=set3`}
-                        src={`https://res.cloudinary.com/dzocvtwca/image/upload/v1611223461/vhdtgbyzzp1ttirln1zj.jpg`}
-                        alt="">
-                    </img>
+                        src={gig.imgUrl[0]} alt=""/>
                     <section className="owner-name-pic flex">
                         <img className="sml-round-img"
-                            src={gig.gigOwner.imgUrl} alt="">
-                            {/* src={`https://robohash.org/${~~(Math.random() * 100)}?set=set5`} alt=""> */}
-                        </img>
+                            src={gig.gigOwner.imgUrl} alt=""/>
                         <p className="owner-name">{gig.gigOwner.fullName}</p>
                     </section>
                     <p className="gig-title">{gig.title.substr(0, 40)}...</p>

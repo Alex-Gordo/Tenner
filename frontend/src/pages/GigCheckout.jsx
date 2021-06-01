@@ -58,7 +58,7 @@ export class GigCheckout extends Component {
                     <main className="package-details flex">
                         <h1>Customize Your Package</h1>
                         <div className="package-info flex">
-                            <img src={`https://res.cloudinary.com/dzocvtwca/image/upload/v1611223461/vhdtgbyzzp1ttirln1zj.jpg`} alt="" />
+                            <img src={gig.imgUrl[0]} alt="" />
                             <div className="gig-info flex">
                                 <p className="title"><b>{gig.title}</b></p>
                                 <p>⭐⭐⭐⭐{gig.reviews[0].rate} ({gig.reviews.length} reviews)</p>
