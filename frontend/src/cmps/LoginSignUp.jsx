@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { onLogin, onSignup } from '../store/actions/userActions.js'
-import { TextField } from '@material-ui/core'
+// import { Modal, TextField } from '@material-ui/core'
+import {NewModal} from './Modal'
 
 export class _LoginSignUp extends Component {
 
@@ -23,7 +24,9 @@ export class _LoginSignUp extends Component {
     };
 
     onLoginClick = () => {
+        this.props.onloginprop(this.state)
         console.log("User: " + this.state.username + " password: " + this.state.password)
+        this.props.handleClose()
     }
 
     render() {
@@ -31,31 +34,33 @@ export class _LoginSignUp extends Component {
 
         return (
             <React.Fragment>
+                
                 <div>
                     <h3>Login</h3>
-                    <h3>Login</h3>
-                    <h3>Login</h3>
-                    <h3>Login</h3>
-                    <form noValidate autoComplete="off">
+              
+    
                         <input id="username" onChange={this.handleUsernameInput} type="text" placeholder="Username" />
                         <input id="password" onChange={this.handlePasswordInput} type="password" placeholder="Password" />
                         <button class="btn-login" onClick={this.onLoginClick}>Login</button>
-                    </form>
+          
+                    {/* <NewModal/> */}
                 </div>
             </React.Fragment>
         )
     }
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = state => {
     return {
+        users: state.userModule.users,
+        loggedInUser: state.userModule.loggedInUser,
+        isLoading: state.systemModule.isLoading
+      }
     }
-}
-
 
 const mapDispatchToProps = {
-    onLogin,
-    onSignup,
+    onloginprop:onLogin
+    // onSignup,
 }
 
-export const LoginSignUp = connect(mapStateToProps, mapDispatchToProps)(_LoginSignUp)
+export const LoginSignUp = connect(null, mapDispatchToProps)(_LoginSignUp)
