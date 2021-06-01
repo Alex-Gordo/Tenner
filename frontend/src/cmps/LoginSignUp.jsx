@@ -29,6 +29,9 @@ export class _LoginSignUp extends Component {
         this.props.handleClose()
     }
 
+
+
+    
     render() {
         console.log("login render");
         return (

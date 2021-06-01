@@ -50,7 +50,6 @@ async function update(user) {
 
 async function login(userCred) {
 
-    console.log('login22222', userCred);
     const gigs = await storageService.query('gigs')
     const users = gigs.user
     const user = users.find(user => user.username === userCred.username && user.password === userCred.password)
