@@ -29,7 +29,7 @@ export function removeUser(userId) {
 }
 
 
-export function login(userCreds) {
+export function onLogin(userCreds) {
   return async dispatch => {
     try {
       const user = await userService.login(userCreds)
@@ -39,7 +39,7 @@ export function login(userCreds) {
     }
   }
 }
-export function signup(userCreds) {
+export function onSignup(userCreds) {
   return async dispatch => {
     try {
       const user = await userService.signup(userCreds)
