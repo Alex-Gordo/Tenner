@@ -1,6 +1,5 @@
 
-
-export const asyncStorageService = {
+export const storageService = {
     query,
     get,
     post,
@@ -9,8 +8,9 @@ export const asyncStorageService = {
 }
 
 function query(entityType) {
-    // var entities = JSON.parse(localStorage.getItem(entityType)) || []
-    // return Promise.resolve(entities)
+    console.log('entity45454545', entityType );
+    var entities = JSON.parse(localStorage.getItem(entityType)) || []
+    return Promise.resolve(entities)
 }
 
 

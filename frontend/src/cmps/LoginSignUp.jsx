@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { onLogin, onSignup } from '../store/actions/userActions.js'
 // import { Modal, TextField } from '@material-ui/core'
-import { NewModal } from './Modal'
+// import { NewModal } from './Modal'
 
 export class _LoginSignUp extends Component {
 
