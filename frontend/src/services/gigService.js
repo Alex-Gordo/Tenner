@@ -26,7 +26,7 @@ function query(filterBy) {
         });
     else {
         getFilterBy(filterBy)
-        //storageService.saveToStorage(KEY, gGigs)
+        storageService.saveToStorage(KEY, gGigs)
         return Promise.resolve(gGigs.gig)
     }
 };

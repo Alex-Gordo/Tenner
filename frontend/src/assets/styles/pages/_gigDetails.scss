@@ -17,14 +17,18 @@
     width: 30px;
     height: 30px;
     border-radius: 50px;
-    // border: 0.7px solid $clr2;
     margin-bottom: 1rem;
+  }
+
+  .img-container {
+    width: 80%;
   }
   .gig-gallery {
     justify-content: space-between;
   }
   .gig-gallery-img {
     width: 32%;
+    object-fit: contain;
   }
 
   .gig-info {
@@ -76,7 +80,7 @@
   }
 
   .reviews-rate-bars {
-    background-color: red;
+    background-color: rgb(255, 228, 228);
     height: 300px;
     margin-bottom: 20px;
   }
@@ -89,7 +93,7 @@
 .call-to-action {
   position: fixed;
   right: 7%;
-  top: 17%;
+  top: 27%;
   padding: 10px;
   width: 25%;
   border: 1px double $clr1;
