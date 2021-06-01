@@ -9,13 +9,9 @@ export function GigPreview({ gig }) {
             <article className="gig-card flex">
                 <NavLink to={`/gig/${gig._id}`}>
                     <img className="gig-img"
-                        src={gig.imgUrl[0]} alt=""/>
+                        src={gig.imgUrl[0]} alt="" />
                     <section className="owner-name-pic flex">
                         <img className="sml-round-img"
-<<<<<<< HEAD
-                            src={gig.gigOwner.imgUrl} alt=""/>
-                        <p className="owner-name">{gig.gigOwner.fullName}</p>
-=======
                             src={gig.gigOwner.imgUrl} alt="">
                             {/* src={`https://robohash.org/${~~(Math.random() * 100)}?set=set5`} alt=""> */}
                         </img>
@@ -23,7 +19,6 @@ export function GigPreview({ gig }) {
                             <p className="owner-name">{gig.gigOwner.fullName}</p>
                             <p className="owner-rating">Level 2 Seller</p>
                         </section>
->>>>>>> cb07b97ebaa0615fff6e7bb91e00ca4163243e72
                     </section>
                     <p className="gig-title">{gig.title.substr(0, 45)}...</p>
                 </NavLink>
