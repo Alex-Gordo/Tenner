@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import { NavBar } from './NavBar.jsx';
-import {NewModal} from './Modal'
+import { NewModal } from './Modal'
 
 
 class AppHeader extends Component {
@@ -50,7 +50,7 @@ class AppHeader extends Component {
                                 </>
                             } */}
                         </NavBar >
-                        
+
                     </div >
                 </header >
             </React.Fragment >

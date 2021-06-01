@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { onLogin, onSignup } from '../store/actions/userActions.js'
 // import { Modal, TextField } from '@material-ui/core'
-import {NewModal} from './Modal'
+import { NewModal } from './Modal'
 
 export class _LoginSignUp extends Component {
 
@@ -31,18 +31,13 @@ export class _LoginSignUp extends Component {
 
     render() {
         console.log("login render");
-
         return (
             <React.Fragment>
-                
                 <div>
                     <h3>Login</h3>
-              
-    
-                        <input id="username" onChange={this.handleUsernameInput} type="text" placeholder="Username" />
-                        <input id="password" onChange={this.handlePasswordInput} type="password" placeholder="Password" />
-                        <button class="btn-login" onClick={this.onLoginClick}>Login</button>
-          
+                    <input id="username" onChange={this.handleUsernameInput} type="text" placeholder="Username" />
+                    <input id="password" onChange={this.handlePasswordInput} type="password" placeholder="Password" />
+                    <button className="btn-login" onClick={this.onLoginClick}>Login</button>
                     {/* <NewModal/> */}
                 </div>
             </React.Fragment>
@@ -55,11 +50,11 @@ const mapStateToProps = state => {
         users: state.userModule.users,
         loggedInUser: state.userModule.loggedInUser,
         isLoading: state.systemModule.isLoading
-      }
     }
+}
 
 const mapDispatchToProps = {
-    onloginprop:onLogin
+    onloginprop: onLogin
     // onSignup,
 }
 

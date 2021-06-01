@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import {cloudService} from '../services/cloudinaryService.js';
+import { cloudService } from '../services/cloudinaryService.js';
 
 
-export  class Upload extends Component {
+export class Upload extends Component {
     state = {
         imgUrl: null,
         height: 100,
@@ -11,9 +11,9 @@ export  class Upload extends Component {
     }
 
     uploadImg = async (ev) => {
-        this.setState({isUploading: true })
-        const {secure_url, height ,width} = await cloudService.uploadImg(ev)
-        this.setState({ isUploading : false, imgUrl : secure_url, height, width})
+        this.setState({ isUploading: true })
+        const { secure_url, height, width } = await cloudService.uploadImg(ev)
+        this.setState({ isUploading: false, imgUrl: secure_url, height, width })
     }
     get uploadMsg() {
         const { imgUrl, isUploading } = this.state
@@ -22,13 +22,13 @@ export  class Upload extends Component {
     }
 
     render() {
-        const {imgUrl, width, height} = this.state
-        const previewStyle = {backgroundImage: `url(${imgUrl})`, width, height}
+        const { imgUrl, width, height } = this.state
+        const previewStyle = { backgroundImage: `url(${imgUrl})`, width, height }
         return (
             <div className="upload-preview" style={previewStyle}>
-                <img src ="" alt="" />
+                <img src="" alt="" />
                 <label htmlFor="imgUpload"> {this.uploadMsg}</label>
-                <input type="file" onChange ={this.uploadImg} accept ="img/*" id="imgUpload" />
+                <input type="file" onChange={this.uploadImg} accept="img/*" id="imgUpload" />
             </div>
         )
     }

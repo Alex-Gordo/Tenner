@@ -51,8 +51,7 @@ export default function SimpleModal() {
 
     const body = (
         <div style={modalStyle} className={classes.paper}>
-        <LoginSignUp handleClose={handleClose} />
-
+            <LoginSignUp handleClose={handleClose} />
         </div>
     );
 

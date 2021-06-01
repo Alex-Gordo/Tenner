@@ -13,7 +13,6 @@ export class NavBar extends Component {
     render() {
 
         const onSignIn = () => {
-            
             console.log('sign iiiin');
             this.setState({ isOpenModal: true })
             console.log('sign oooooin');
@@ -25,7 +24,7 @@ export class NavBar extends Component {
                 <ul className="navbar-list flex">
                     <li><NavLink to="/about">About</NavLink></li>
                     <li><NavLink to="/gigs">Explore</NavLink></li>
-                    <li><NewModal/></li>
+                    <li><NewModal /></li>
                 </ul>
             </nav>
         )
