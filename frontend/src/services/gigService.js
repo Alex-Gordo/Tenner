@@ -25,12 +25,13 @@ function query(filterBy) {
             return gigs.gig
         });
     else {
+        getFilterBy(filterBy)
         //storageService.saveToStorage(KEY, gGigs)
         return Promise.resolve(gGigs.gig)
     }
 };
 
-//getFilterBy('design')
+getFilterBy('design')
 function getFilterBy(filterBy) {
     console.log('gGigs.gig', gGigs.gig);
     console.log('filterBy =', filterBy);

@@ -39,7 +39,7 @@ export class GigDetails extends Component {
                             </div>
                             <div className="btn-section">
                                 <NavLink to={`/gig/${gig._id}/checkout`}>
-                                    <button className="checkout-btn">Continue to Checkout (${gig.price})</button>
+                                    <button className="checkout-btn">Continue (${gig.price})</button>
                                 </NavLink>
                             </div>
                         </div>
@@ -50,8 +50,10 @@ export class GigDetails extends Component {
                             <div className="owner-details flex">
                                 <img className="sml-round-img"
                                     src={gig.gigOwner.imgUrl} alt="" />&nbsp;
-                            <p> &nbsp;{gig.gigOwner.fullname} &nbsp;</p>
-                                <p> &nbsp;⭐⭐⭐⭐{gig.reviews[0].rate} ({gig.reviews.length} reviews)</p>
+                                <p className="owner-name"> &nbsp;{gig.gigOwner.fullName} &nbsp;</p>
+                                <p>Level 2 Seller</p>
+                                <p> &nbsp; | ⭐⭐⭐⭐⭐{gig.reviews[0].rate} ({gig.reviews.length})</p>
+                                <p className="orders-queue">| 7 Orders in Queue</p>
                             </div>
                             <img className="gig-details-img"
                                 src={gig.imgUrl[0]} alt="" />
@@ -73,7 +75,7 @@ export class GigDetails extends Component {
                                     <img className="md-round-img"
                                         src={gig.gigOwner.imgUrl} alt="" />
                                     <div className="owner-card-right flex">
-                                        <h3>{gig.gigOwner.fullname}</h3>
+                                        <h3>{gig.gigOwner.fullName}</h3>
                                         <h4>⭐⭐⭐⭐ 5 ({gig.reviews.length} reviews)</h4>
                                         <button className="contact-owner">
                                             Contact Me

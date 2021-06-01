@@ -16,8 +16,9 @@ export class GigFilter extends Component {
         ev.preventDefault()
 
         this.setState({ searchTxt: ev.target.value })
-        console.log(ev.target.value);
-        // console.log('gigs', gigs);
+        console.log('input value', ev.target.value);
+        console.log('searchTxt', this.state.searchTxt);
+
     }
 
     render() {
