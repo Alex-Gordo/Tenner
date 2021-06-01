@@ -13,7 +13,6 @@
         "https://res.cloudinary.com/arikxl/image/upload/v1622495641/gig01/i17w5cz5tpksabtreqe5.jpg",
         "https://res.cloudinary.com/arikxl/image/upload/v1622495780/gig01/lywhsdmcvqnnng5xmomw.jpg",
         "https://res.cloudinary.com/arikxl/image/upload/v1622495719/gig01/z4vwtgy4vkv4ypalmsdl.png"
-        
       ],
       "features": ["High res", "3D", "Professional"],
       "gigOwner": {
@@ -186,7 +185,7 @@
         "https://res.cloudinary.com/arikxl/image/upload/v1622498973/gig05/s44l4opuvvjszmcn4pre.jpg",
         "https://res.cloudinary.com/arikxl/image/upload/v1622498995/gig05/cbkpxbhav1smbg0zarou.jpg",
         "https://res.cloudinary.com/arikxl/image/upload/v1622498981/gig05/laibdkzvssrw9owy3ptv.jpg"
-      ],gig04/
+      ],
       "features": ["Source file", "Responsive design"],
       "gigOwner": {
         "id": "o710",
@@ -559,7 +558,8 @@
           }
         }
       ]
-    },{
+    },
+    {
       "_id": "g162",
       "title": "I will make you a glitchy, trippy or psychedelic music video",
       "price": 200,
@@ -573,7 +573,11 @@
         "https://res.cloudinary.com/arikxl/image/upload/v1622501613/fgdylzjf4zcosn5dcmpz.jpg",
         "https://res.cloudinary.com/arikxl/image/upload/v1622501613/fgdylzjf4zcosn5dcmpz.jpg"
       ],
-      "features": ["Social Media Links","Include Lyrics","Multi-platform Optimization"],
+      "features": [
+        "Social Media Links",
+        "Include Lyrics",
+        "Multi-platform Optimization"
+      ],
       "gigOwner": {
         "id": "o712",
         "fullName": "Manasses Feinstein ",
@@ -601,7 +605,8 @@
           }
         }
       ]
-    },{
+    },
+    {
       "_id": "g163",
       "title": "I will write tantalizing bdsm erotic stories",
       "price": 69,
@@ -643,7 +648,8 @@
           }
         }
       ]
-    },{
+    },
+    {
       "_id": "g164",
       "title": "I will create a stunning commercial brand video",
       "price": 321,
@@ -657,7 +663,11 @@
         "https://res.cloudinary.com/arikxl/image/upload/v1622501613/fgdylzjf4zcosn5dcmpz.jpg",
         "https://res.cloudinary.com/arikxl/image/upload/v1622501613/fgdylzjf4zcosn5dcmpz.jpg"
       ],
-      "features": ["Script Writing","Licensed Voiceovers","Stock Clips & Pics"],
+      "features": [
+        "Script Writing",
+        "Licensed Voiceovers",
+        "Stock Clips & Pics"
+      ],
       "gigOwner": {
         "id": "o714",
         "fullName": "Stanley Luebke",
@@ -685,7 +695,8 @@
           }
         }
       ]
-    },{
+    },
+    {
       "_id": "g165",
       "title": "I will program in react, react native with AWS",
       "price": 81,
@@ -727,7 +738,8 @@
           }
         }
       ]
-    },{
+    },
+    {
       "_id": "g166",
       "title": "I will do javascript, html, css ,react program for you",
       "price": 34,
@@ -741,7 +753,11 @@
         "https://res.cloudinary.com/arikxl/image/upload/v1622501613/fgdylzjf4zcosn5dcmpz.jpg",
         "https://res.cloudinary.com/arikxl/image/upload/v1622501613/fgdylzjf4zcosn5dcmpz.jpg"
       ],
-      "features": ["Design Customization","Responsive Design","Include Source Code"],
+      "features": [
+        "Design Customization",
+        "Responsive Design",
+        "Include Source Code"
+      ],
       "gigOwner": {
         "id": "o716",
         "fullName": "Denise Basham",
@@ -769,7 +785,8 @@
           }
         }
       ]
-    },{
+    },
+    {
       "_id": "g167",
       "title": "I will help with your python programming problems",
       "price": 42,
@@ -783,7 +800,11 @@
         "https://res.cloudinary.com/arikxl/image/upload/v1622501613/fgdylzjf4zcosn5dcmpz.jpg",
         "https://res.cloudinary.com/arikxl/image/upload/v1622501613/fgdylzjf4zcosn5dcmpz.jpg"
       ],
-      "features": ["Include Source Code", "Database Integration","Detailed Code Comments"],
+      "features": [
+        "Include Source Code",
+        "Database Integration",
+        "Detailed Code Comments"
+      ],
       "gigOwner": {
         "id": "o717",
         "fullName": "Nicholas Leonard",
@@ -811,7 +832,8 @@
           }
         }
       ]
-    },{
+    },
+    {
       "_id": "g168",
       "title": "I will do django python, react javascript projects and programs",
       "price": 456,
@@ -825,7 +847,11 @@
         "https://res.cloudinary.com/arikxl/image/upload/v1622501613/fgdylzjf4zcosn5dcmpz.jpg",
         "https://res.cloudinary.com/arikxl/image/upload/v1622501613/fgdylzjf4zcosn5dcmpz.jpg"
       ],
-      "features": ["10 Pages","Responsive Design Customization", "Include Source Code"],
+      "features": [
+        "10 Pages",
+        "Responsive Design Customization",
+        "Include Source Code"
+      ],
       "gigOwner": {
         "id": "o612",
         "fullName": "Oshra  Zeev",
@@ -853,7 +879,8 @@
           }
         }
       ]
-    },{
+    },
+    {
       "_id": "g169",
       "title": "I will draw digital portrait art in oil painting from photo",
       "price": 73,
@@ -895,7 +922,8 @@
           }
         }
       ]
-    },{
+    },
+    {
       "_id": "g170",
       "title": "I will do professional digital menu or TV menu board for restaurant",
       "price": 95,
@@ -909,7 +937,7 @@
         "https://res.cloudinary.com/arikxl/image/upload/v1622501613/fgdylzjf4zcosn5dcmpz.jpg",
         "https://res.cloudinary.com/arikxl/image/upload/v1622501613/fgdylzjf4zcosn5dcmpz.jpg"
       ],
-      "features": ["Photo Editing","Custom Graphics"],
+      "features": ["Photo Editing", "Custom Graphics"],
       "gigOwner": {
         "id": "o512",
         "fullName": "Janie  Rosenberg",
@@ -937,7 +965,8 @@
           }
         }
       ]
-    },{
+    },
+    {
       "_id": "g171",
       "title": "I will write youtube scripts ,comedy ,jokes, sketch, skit, standup",
       "price": 90,
@@ -979,7 +1008,8 @@
           }
         }
       ]
-    },{
+    },
+    {
       "_id": "g172",
       "title": "I will record professional guitars for you",
       "price": 111,
@@ -993,7 +1023,7 @@
         "https://res.cloudinary.com/arikxl/image/upload/v1622501613/fgdylzjf4zcosn5dcmpz.jpg",
         "https://res.cloudinary.com/arikxl/image/upload/v1622501613/fgdylzjf4zcosn5dcmpz.jpg"
       ],
-      "features": ["HQ Audio File","Commercial Use"],
+      "features": ["HQ Audio File", "Commercial Use"],
       "gigOwner": {
         "id": "o781",
         "fullName": "Frida  Lehrer",
@@ -1021,7 +1051,8 @@
           }
         }
       ]
-    },{
+    },
+    {
       "_id": "g173",
       "title": "I will rap original hip hop lyrics for your project",
       "price": 85,
@@ -1035,7 +1066,7 @@
         "https://res.cloudinary.com/arikxl/image/upload/v1622501613/fgdylzjf4zcosn5dcmpz.jpg",
         "https://res.cloudinary.com/arikxl/image/upload/v1622501613/fgdylzjf4zcosn5dcmpz.jpg"
       ],
-      "features": ["Lyrics Writing","Vocals Recording","2 Verses"],
+      "features": ["Lyrics Writing", "Vocals Recording", "2 Verses"],
       "gigOwner": {
         "id": "o512",
         "fullName": "Tupac Shakur",
