@@ -64,11 +64,16 @@
     border: 1px solid $clr1;
     margin: 0;
     margin-bottom: 30px;
-  }
-  .info-left,
-  .info-right {
     flex-direction: column;
-    margin: 20px;
+    .info-left,
+    .info-right {
+      flex-direction: row;
+      margin: 20px;
+    }
+    .owner-summary {
+      margin: 20px;
+      color: red;
+    }
   }
 
   .info-left {

@@ -29,7 +29,7 @@ export class GigCheckout extends Component {
             <React.Fragment>
                 <div className="main-layout">
                     <div className="order-summary-container flex ">
-                        <side className="order-summary">
+                        <div className="order-summary">
                             <h2>Summary</h2>
                             <div className="price flex">
                                 <h3>Subtotal:</h3>
@@ -49,7 +49,7 @@ export class GigCheckout extends Component {
                                 <h3>{gig.deliveryTime} Day(s)</h3>
                             </div>
                             <button className="btn-purchase">Purchase now</button>
-                        </side>
+                        </div>
                         <img className="payment-img flex"
                             src={payment} alt="payment">
                         </img>

@@ -31,7 +31,7 @@ function query(filterBy) {
     }
 };
 
-getFilterBy('design')
+//getFilterBy('design')
 function getFilterBy(filterBy) {
     console.log('gGigs.gig', gGigs.gig);
     console.log('filterBy =', filterBy);

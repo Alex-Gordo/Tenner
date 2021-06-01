@@ -14,11 +14,9 @@ export class GigFilter extends Component {
     handleChange = (ev) => {
         const { search, gigs } = this.state
         ev.preventDefault()
-
         this.setState({ searchTxt: ev.target.value })
         console.log('input value', ev.target.value);
         console.log('searchTxt', this.state.searchTxt);
-
     }
 
     render() {

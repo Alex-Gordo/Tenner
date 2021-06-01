@@ -11,7 +11,6 @@ export class GigDetails extends Component {
 
     componentDidMount() {
         const gigId = this.props.match.params.gig
-        // console.log('gigId:', gigId)
         gigService.getById(gigId).then(gig => {
             this.setState({ gig })
         })
@@ -21,9 +20,6 @@ export class GigDetails extends Component {
     render() {
         const { gig } = this.state
         if (!gig) return 'no gigs';
-        console.log('gig:', gig)
-        console.log(gig.imgUrl)
-
         return (
             <React.Fragment>
                 <div className="main-layout">
@@ -80,7 +76,7 @@ export class GigDetails extends Component {
                                             src={gig.gigOwner.imgUrl} alt="" />
                                         <div className="owner-card-right flex">
                                             <h3>{gig.gigOwner.fullName}</h3>
-                                            <h4>⭐⭐⭐⭐ 5 ({gig.reviews.length} reviews)</h4>
+                                            <h4>⭐⭐⭐⭐⭐ 5 ({gig.reviews.length} reviews)</h4>
                                             <button className="contact-owner">
                                                 Contact Me
                                     </button>
@@ -95,6 +91,8 @@ export class GigDetails extends Component {
                                             <p>Member Since<br /><b>2 month ago</b></p>
                                             <p>Last Delivery<br /><b>About 2 Hours ago</b></p>
                                         </div>
+                                        <p className="owner-summary flex">Hi, everybody! My name is Stefano Castro, and I am a expert WebDesigner with over 5 years of experience. I've been passionate in create amazing website for anytype of business, especially in Ecommerce Stores with Shopify and Wix Platforms.
+                                            What I love is bring businesses to the next level giving a boost thanks to eye catching and amazing functionality website design, satisfying and overcoming the expectation of my clients!</p>
                                     </div>
                                 </article>
                             </section>
@@ -103,7 +101,7 @@ export class GigDetails extends Component {
                                 <p>render more from same category</p>
                             </div>
                             <section className="reviews">
-                                <h3 className="reviews-headline" >⭐⭐⭐⭐{gig.reviews[0].rate} ({gig.reviews.length} reviews)</h3>
+                                <h3 className="reviews-headline" >⭐⭐⭐⭐⭐{gig.reviews[0].rate} ({gig.reviews.length} reviews)</h3>
                                 <div className="reviews-rate-bars"></div>
                                 {gig.reviews.map(review => {
                                     return <article>
