@@ -22,10 +22,12 @@ export class GigFilter extends Component {
 
     render() {
         return (
-            <div className="search-bar">
-                <label htmlFor="text-input">🔍</label>
-                <input name="text" type="text" id="text-input" placeholder="Search..." onChange={this.handleChange} />
-            </div>
+            <form className="search-form">
+                <div className="search-bar flex">
+                    <input className="search-input" name="text" type="text" id="text-input" placeholder='Try "Design"' onChange={this.handleChange} />
+                    <button className="search-btn btn">Search</button>
+                </div>
+            </form>
         )
     }
 }
