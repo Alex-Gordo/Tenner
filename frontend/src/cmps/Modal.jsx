@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
+import { LoginSignUp } from './LoginSignUp';
 
 export function NewModal() {
     return (
@@ -50,18 +51,14 @@ export default function SimpleModal() {
 
     const body = (
         <div style={modalStyle} className={classes.paper}>
-            <h2 id="simple-modal-title">Text in a modal</h2>
-            <p id="simple-modal-description">
-                Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-        </p>
-
+            <LoginSignUp handleClose={handleClose} />
         </div>
     );
 
     return (
         <div>
             <button type="button" onClick={handleOpen}>
-                Open Modal
+                Sign In
         </button>
             <Modal
                 open={open}

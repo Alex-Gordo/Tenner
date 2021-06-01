@@ -29,9 +29,11 @@ export function removeUser(userId) {
 }
 
 
-export function login(userCreds) {
+export function onLogin(userCreds) {
+  console.log('onloginaction11111', userCreds);
   return async dispatch => {
     try {
+      console.log('2222222222222222');
       const user = await userService.login(userCreds)
       dispatch({ type: 'SET_USER', user })
     } catch (err) {
@@ -39,7 +41,7 @@ export function login(userCreds) {
     }
   }
 }
-export function signup(userCreds) {
+export function onSignup(userCreds) {
   return async dispatch => {
     try {
       const user = await userService.signup(userCreds)

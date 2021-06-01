@@ -16,18 +16,18 @@ export class GigDetails extends Component {
             this.setState({ gig })
         })
     }
-    
-    
+
+
     render() {
         const { gig } = this.state
         if (!gig) return 'no gigs';
         console.log('gig:', gig)
-        console.log( gig.imgUrl)
+        console.log(gig.imgUrl)
 
         return (
             <React.Fragment>
                 <div className="main-layout">
-                    <side className="call-to-action">
+                    <div className="call-to-action">
                         <div className="">
                             <h3>Package Price: &nbsp; ${gig.price}</h3>
                             <p>{gig.title}</p>
@@ -43,25 +43,25 @@ export class GigDetails extends Component {
                                 </NavLink>
                             </div>
                         </div>
-                    </side>
+                    </div>
                     <main className="gig-details">
                         <section className="gig-info">
                             <h1>{gig.title}</h1>
                             <div className="owner-details flex">
                                 <img className="sml-round-img"
-                                    src={gig.gigOwner.imgUrl} alt=""/>&nbsp;
+                                    src={gig.gigOwner.imgUrl} alt="" />&nbsp;
                             <p> &nbsp;{gig.gigOwner.fullname} &nbsp;</p>
                                 <p> &nbsp;⭐⭐⭐⭐{gig.reviews[0].rate} ({gig.reviews.length} reviews)</p>
                             </div>
                             <img className="gig-details-img"
-                                src={gig.imgUrl[0]} alt=""/>
+                                src={gig.imgUrl[0]} alt="" />
                             <div className="gig-gallery flex">
                                 <img className="gig-gallery-img"
-                                    src={gig.imgUrl[1]} alt=""/>
+                                    src={gig.imgUrl[1]} alt="" />
                                 <img className="gig-gallery-img"
-                                    src={gig.imgUrl[2]} alt=""/>
+                                    src={gig.imgUrl[2]} alt="" />
                                 <img className="gig-gallery-img"
-                                    src={gig.imgUrl[3]} alt=""/>
+                                    src={gig.imgUrl[3]} alt="" />
                             </div>
                         </section>
                         <section className="about-details flex ">
@@ -71,7 +71,7 @@ export class GigDetails extends Component {
                                 <h3 className="about-title">About this Seller</h3>
                                 <div className="owner-card flex">
                                     <img className="md-round-img"
-                                        src={gig.gigOwner.imgUrl} alt=""/>
+                                        src={gig.gigOwner.imgUrl} alt="" />
                                     <div className="owner-card-right flex">
                                         <h3>{gig.gigOwner.fullname}</h3>
                                         <h4>⭐⭐⭐⭐ 5 ({gig.reviews.length} reviews)</h4>

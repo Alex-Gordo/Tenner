@@ -1,4 +1,4 @@
-export const cloudService = { uploadImg};
+export const cloudService = { uploadImg };
 
 function uploadImg(ev) {
     const CLOUD_NAME = 'arikxl';
@@ -9,15 +9,15 @@ function uploadImg(ev) {
     formData.append('file', ev.target.files[0])
     formData.append('upload_preset', PRESET_NAME);
 
-    return fetch(UPLOAD_URL, { 
+    return fetch(UPLOAD_URL, {
         method: 'POST',
         body: formData
     })
-    .then(res => res.json())
-    .then(res => {
-        console.log(res)
+        .then(res => res.json())
+        .then(res => {
+            console.log(res)
 
-        return res
-    })
-    .catch(err => console.error(err))
+            return res
+        })
+        .catch(err => console.error(err))
 }

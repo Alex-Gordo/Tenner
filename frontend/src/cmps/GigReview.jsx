@@ -18,9 +18,9 @@ export class GigReview extends Component {
                         <h3>&nbsp;⭐{review.rate}</h3>
                     </div>
                 </article>
-                    <div className="review-txt">
-                        <p >{review.txt}</p>
-                    </div>
+                <div className="review-txt">
+                    <p >{review.txt}</p>
+                </div>
             </React.Fragment>
         )
     }

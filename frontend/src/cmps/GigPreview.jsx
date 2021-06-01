@@ -12,8 +12,18 @@ export function GigPreview({ gig }) {
                         src={gig.imgUrl[0]} alt="" />
                     <section className="owner-name-pic flex">
                         <img className="sml-round-img"
+<<<<<<< HEAD
                             src={gig.gigOwner.imgUrl} alt="" />
                         <p className="owner-name">{gig.gigOwner.fullName}</p>
+=======
+                            src={gig.gigOwner.imgUrl} alt="">
+                            {/* src={`https://robohash.org/${~~(Math.random() * 100)}?set=set5`} alt=""> */}
+                        </img>
+                        <section className="owner-details flex">
+                            <p className="owner-name">{gig.gigOwner.fullName}</p>
+                            <p className="owner-rating">Level 2 Seller</p>
+                        </section>
+>>>>>>> a4a8832329f8398e47dbefc3f6e7d13592f60f30
                     </section>
                     <div className="owner-details flex">
                         <p className="owner-rating">Level 2 Seller</p>

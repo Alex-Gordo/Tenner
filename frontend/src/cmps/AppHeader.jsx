@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import { NavBar } from './NavBar.jsx';
+import { NewModal } from './Modal'
 
 
 class AppHeader extends Component {
@@ -34,8 +35,8 @@ class AppHeader extends Component {
                 <header className={`header ${isScrolled || this.props.location.pathname !== '/' ? 'header-colored' : ''}`}>
                     <div className="header-content main-layout">
                         <NavLink to="/"><h1 className="header-logo">tenner</h1></NavLink>
-                        <NavBar className="nav flex">
-                            {loggedInUser && <>
+                        <NavBar className="nav flex" >
+                            {/* {loggedInUser && <>
                                 <li className="user-logIn">
                                     <span>aaaa{`Hi ${loggedInUser.fullname}.`}</span>
                                     <NavLink to="/user"></NavLink>
@@ -47,8 +48,9 @@ class AppHeader extends Component {
                                     <li><NavLink to="/login">Login</NavLink></li>
                                     <li><NavLink to="/signup">Signup</NavLink></li>
                                 </>
-                            }
+                            } */}
                         </NavBar >
+
                     </div >
                 </header >
             </React.Fragment >

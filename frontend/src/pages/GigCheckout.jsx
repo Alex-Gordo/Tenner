@@ -15,9 +15,8 @@ export class GigCheckout extends Component {
         })
     }
 
-    calculateTotalPrice(){
+    calculateTotalPrice() {
         var totalPrice = this.state.gig.price;
-        
         console.log('totalPrice:', totalPrice)
         return totalPrice
     }
@@ -82,8 +81,8 @@ export class GigCheckout extends Component {
                         </div>
                         <h3>add extra</h3>
                         <div className="extra-container flex">
-                                <label>
-                            <input type="checkbox"></input>
+                            <label>
+                                <input type="checkbox"></input>
                             Extra Fast 12 Hours Delivery</label>
                             <p>${gig.price}</p>
                         </div>

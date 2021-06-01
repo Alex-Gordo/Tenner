@@ -27,7 +27,6 @@ class _TennerApp extends Component {
                 <div className="search-container">
                     <GigFilter onSetFilter={this.onSetFilter} />
                 </div>
-
                 <GigList gigs={this.props.gigs} />
             </main>
         )
