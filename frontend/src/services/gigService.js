@@ -14,27 +14,36 @@ var gGigs = require('../data/tenner.json')
 const KEY = 'gigs';
 
 // // const BASE_URL = process.env.NODE_ENV === 'my-app/src/services/gigs.json'
-// query()
-function query() {
 
+function query(filterBy) {
     // console.table( gGigs)
-
     // console.table( gGigs.gig)
-    // if (!filterBy) return Promise.resolve(gGigs)
+    if (!filterBy) return Promise.resolve(gGigs)
     if (!gGigs) return storageService.getFromStorage(KEY)
         .then((gigs) => {
             gGigs = gigs
             return gigs.gig
         });
-        else {
-            storageService.saveToStorage(KEY, gGigs)
-            return Promise.resolve(gGigs.gig)
-        } 
+    else {
+        //storageService.saveToStorage(KEY, gGigs)
+        return Promise.resolve(gGigs.gig)
+    }
 };
 
+//getFilterBy('design')
+function getFilterBy(filterBy) {
+    console.log('gGigs.gig', gGigs.gig);
+    console.log('filterBy =', filterBy);
+
+    const text = filterBy;
+    console.log('text=', text);
+
+    if (text) return Promise.resolve(gGigs.gig.filter(gig => gig.category.toLowerCase().includes(text)))
+    else return Promise.resolve(gGigs.gig);
+
+}
+
 function getById(gigId) {
-    console.log('gigId:', gigId)
-    console.log('gGigs:', gGigs)
     const gig = gGigs.gig.find(gig => gig._id === gigId);
     return Promise.resolve(gig)
 };

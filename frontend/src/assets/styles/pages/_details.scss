@@ -20,7 +20,6 @@
     }
 
     .gig-info{
-        border-bottom: 5px solid $clr1;
         margin-top: 100px;
     }
 
@@ -28,9 +27,9 @@
         color:$clr4;
     }
     .about-details{
+        margin: 0;
         margin-top:10px;
         width:100%;
-        // background-color:red;
         flex-direction: column;
     }
 
@@ -57,7 +56,17 @@
 
     .owner-info{
         border: 1px solid $clr1;
-        display: grid;
+        margin:0;
+        margin-bottom: 30px;
+        
+    }
+    .info-left, .info-right{
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .info-left{
+        margin-right: 200px;
     }
 
     .reviews-headline{
@@ -77,7 +86,7 @@
 
 .call-to-action{
     position: fixed;
-    right: 5%;
+    right: 9%;
     top: 17%;
     padding:10px;
     width:25%;
