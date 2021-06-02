@@ -26,6 +26,8 @@ export class NavBar extends Component {
                     <li><NavLink to="/gigs">Explore</NavLink></li>
                     <li><NavLink to="/user/dashboard">Dashboard</NavLink></li>
                     <li><NewModal /></li>
+                    {/* <li><NewModal /></li> */}
+                    
                 </ul>
             </nav>
         )

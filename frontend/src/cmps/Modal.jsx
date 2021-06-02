@@ -40,25 +40,36 @@ export default function SimpleModal() {
     // getModalStyle is not a pure function, we roll the style only on the first render
     const [modalStyle] = React.useState(getModalStyle);
     const [open, setOpen] = React.useState(false);
+    const [pageMode, setPageMode] = React.useState('');
 
-    const handleOpen = () => {
+
+
+    const handleOpenSignIn = () => {
+        setPageMode('login')
+        setOpen(true);
+
+    };
+    const handleOpenJoin = () => {
+        setPageMode('join')
         setOpen(true);
     };
-
     const handleClose = () => {
         setOpen(false);
     };
 
     const body = (
         <div style={modalStyle} className={classes.paper}>
-            <LoginSignUp handleClose={handleClose} />
+        <LoginSignUp handleClose={handleClose} pageMode={pageMode} />
         </div>
     );
 
     return (
         <div>
-            <button type="button" onClick={handleOpen}>
+            <button type="button" onClick={handleOpenSignIn}>
                 Sign In
+        </button>
+        <button type="button" onClick={handleOpenJoin}>
+                Join
         </button>
             <Modal
                 open={open}
