@@ -15,9 +15,9 @@ export  class Dashboard extends Component {
                 <main className ="stats-container flex">
                     <nav className="stats">
                         <div fieldset="sss">CCC</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                        <div>Alisa</div>
+                        <div>Alex</div>
+                        <div>Arik</div>
                     </nav>
 
                 </main>
