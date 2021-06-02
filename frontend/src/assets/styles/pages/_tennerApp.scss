@@ -1,5 +1,20 @@
 .tenner-app {
   padding-top: 100px;
+  .search-container {
+    align-items: center;
+    justify-content: space-around;
+    .sort-btn {
+      font-size: 1.1rem;
+      background-color: $clr3;
+      color: #62646a;
+      margin-bottom: 1rem;
+      border: 1px solid #62646a;
+      .fas {
+        color: #62646a;
+      }
+    }
+  }
+
   .search-bar {
     margin-bottom: 1.5rem;
     label {
