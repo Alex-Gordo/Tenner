@@ -10,3 +10,12 @@ form > * {
   display: block;
   margin: 10px 0px;
 }
+
+.search-btn {
+  font-size: 1.4rem;
+  padding: 6px 20px;
+  &:hover {
+    background-color: #19a463;
+    transition: all 0.3s;
+  }
+}

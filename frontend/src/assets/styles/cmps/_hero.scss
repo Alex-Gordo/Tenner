@@ -1,5 +1,5 @@
 .hero {
-  background-image: url(../../img/bg-hero-1.png);
+  animation: 25s hero-animation infinite;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,10 +18,6 @@
   }
 
   .search-bar {
-    .search-btn {
-      font-size: 1.4rem;
-      padding: 6px 20px;
-    }
     input {
       width: 32rem;
       padding: 10px 45px;
@@ -39,5 +35,26 @@
           center / contain no-repeat;
       }
     }
+  }
+}
+
+@keyframes hero-animation {
+  0% {
+    background-image: url(../../img/bg-hero-1.png);
+  }
+  20% {
+    background-image: url(../../img/bg-hero-2.png);
+  }
+  40% {
+    background-image: url(../../img/bg-hero-3.png);
+  }
+  60% {
+    background-image: url(../../img/bg-hero-4.png);
+  }
+  80% {
+    background-image: url(../../img/bg-hero-5.png);
+  }
+  100% {
+    background-image: url(../../img/bg-hero-1.png);
   }
 }

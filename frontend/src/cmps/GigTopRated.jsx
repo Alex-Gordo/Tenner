@@ -3,8 +3,8 @@ import { GigPreview } from '../cmps/GigPreview.jsx';
 
 
 export function GigTopRated({ gigs }) {
-    // TODO: filter top gigs and slice them to get 4 top gigs
-    const topGigs = gigs.slice(0, 4)
+    // TODO: filter top gigs and slice them to get 5 top gigs
+    const topGigs = gigs.slice(0, 5)
 
     return (
         <React.Fragment>

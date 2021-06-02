@@ -28,7 +28,6 @@
   }
 
   .gig-img {
-    width: 100%;
     margin-bottom: 0;
     height: 200px;
     object-fit: cover;
@@ -38,7 +37,7 @@
     .owner-rating {
       color: $clr7;
       font-size: 0.8rem;
-      font-weight: 550;
+      margin-bottom: 0px;
     }
   }
 
@@ -46,15 +45,17 @@
     font-size: 0.8rem;
     color: black;
     font-weight: 800;
+    margin-bottom: 0px;
   }
   .owner-name-pic {
     justify-content: start;
   }
   .gig-title {
+    color: #222325;
     padding: 0 5px;
     margin: 3px 3px 0 3px;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   .sml-round-img {
@@ -78,6 +79,7 @@
     border-top: 0.5px solid lightgray;
     justify-content: space-between;
     font-size: 1rem;
+    align-items: center;
 
     .h4 {
       margin: 0 10px;
@@ -96,13 +98,13 @@
     }
 
     .fav-btn {
-      margin: 0 3px;
       color: $clr7;
+      font-size: 1.2rem;
     }
     .fav-btn:hover {
       color: $clr2;
     }
-    .fav-btn:active {
+    .fav-btn .active {
       color: red;
     }
   }
