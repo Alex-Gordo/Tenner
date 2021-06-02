@@ -15,34 +15,18 @@ const KEY = 'gigs';
 
 // // const BASE_URL = process.env.NODE_ENV === 'my-app/src/services/gigs.json'
 
-function query(filterBy) {
-    // console.table( gGigs)
-    // console.table( gGigs.gig)
-    if (!filterBy) return Promise.resolve(gGigs)
+async function query(filterBy) {
+    const gigs = await storageService.getFromStorage(KEY)
+    if (!filterBy) return Promise.resolve(gigs.gig)
     if (!gGigs) return storageService.getFromStorage(KEY)
         .then((gigs) => {
             gGigs = gigs
             return gigs.gig
         });
-    else {
-        getFilterBy(filterBy)
-        storageService.saveToStorage(KEY, gGigs)
-        return Promise.resolve(gGigs.gig)
-    }
+    const filterRegex = new RegExp(filterBy, 'i')
+    return Promise.resolve(gigs.gig.filter(gig => filterRegex.test(gig.category)))
 };
 
-//getFilterBy('design')
-function getFilterBy(filterBy) {
-    console.log('gGigs.gig', gGigs.gig);
-    console.log('filterBy =', filterBy);
-
-    const text = filterBy;
-    console.log('text=', text);
-
-    if (text) return Promise.resolve(gGigs.gig.filter(gig => gig.category.toLowerCase().includes(text)))
-    else return Promise.resolve(gGigs.gig);
-
-}
 
 function getById(gigId) {
     const gig = gGigs.gig.find(gig => gig._id === gigId);

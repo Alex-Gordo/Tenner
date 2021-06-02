@@ -1,33 +1,36 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 
-export class GigFilter extends Component {
+class GigFilter extends Component {
 
     state = {
-        filteryBy: {
-            searchTxt: '',
-            category: '',
-            budget: '',
-        }
+        searchTxt: '',
+    }
+
+    onSearch = (ev) => {
+        ev.preventDefault()
+        this.props.history.push(`/gigs?q=${this.state.searchTxt}`);
     }
 
     handleChange = (ev) => {
-        const { search, gigs } = this.state
         ev.preventDefault()
         this.setState({ searchTxt: ev.target.value })
-        console.log('input value', ev.target.value);
-        console.log('searchTxt', this.state.searchTxt);
     }
 
     render() {
         return (
-            <form className="search-form">
+            <form className="search-form" onSubmit={this.onSearch}>
                 <div className="search-bar flex">
-                    <input className="search-input" name="text" type="text" id="text-input" placeholder='Try "Design"' onChange={this.handleChange} />
+                    <label>
+                        <input className="search-input" name="text" type="text" id="text-input" placeholder='Try "Design"' onChange={this.handleChange} />
+                    </label>
                     <button className="search-btn btn">Search</button>
                 </div>
             </form>
         )
     }
 }
+
+export default withRouter(GigFilter)
 

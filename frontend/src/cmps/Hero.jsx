@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import React from 'react'
-import { GigFilter } from './GigFilter';
+import GigFilter from './GigFilter';
 import { connect } from 'react-redux';
 import { loadGigs } from '../store/actions/gigActions.js';
 

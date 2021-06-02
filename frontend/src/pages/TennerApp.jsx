@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import { loadGigs } from '../store/actions/gigActions.js';
 import { GigList } from '../cmps/GigList.jsx'
-import { GigFilter } from '../cmps/GigFilter';
+import GigFilter from '../cmps/GigFilter';
 
 class _TennerApp extends Component {
 
@@ -11,13 +11,26 @@ class _TennerApp extends Component {
     }
 
     componentDidMount() {
-        this.props.loadGigs()
+        this.props.loadGigs(this.getQueryString())
     }
 
-    onSetFilter = (filterBy) => {
-        this.props.loadGigs(filterBy)
+    componentDidUpdate(prevProps, prevState) {
+        const currQuery = this.getQueryString()
+        let search = prevProps.location.search;
+        let params = new URLSearchParams(search);
+        let prevQuery = params.get('q');
+        if (currQuery !== prevQuery) this.props.loadGigs(currQuery)
+
     }
 
+
+    getQueryString = () => {
+        let search = this.props.location.search;
+        let params = new URLSearchParams(search);
+        let searchTxt = params.get('q');
+        return searchTxt
+        //console.log('searchTxt', searchTxt);
+    }
 
     render() {
         const { gigs } = this.props
@@ -25,7 +38,7 @@ class _TennerApp extends Component {
         return (
             <main className="tenner-app main-layout">
                 <div className="search-container">
-                    <GigFilter onSetFilter={this.onSetFilter} />
+                    <GigFilter />
                 </div>
                 <GigList gigs={this.props.gigs} />
             </main>
