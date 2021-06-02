@@ -12,12 +12,12 @@ export class NavBar extends Component {
 
     render() {
 
-        const onSignIn = () => {
-            console.log('sign iiiin');
-            this.setState({ isOpenModal: true })
-            console.log('sign oooooin');
-            console.log(this.state);
-        }
+        // const onSignIn = () => {
+        //     console.log('sign iiiin');
+        //     this.setState({ isOpenModal: true })
+        //     console.log('sign oooooin');
+        //     console.log(this.state);
+        // }
 
         return (
             <nav className="navbar">

@@ -6,7 +6,9 @@ header {
   width: 100vw;
   z-index: 1;
   border-color: transparent;
-  height: 70px;
+  height: 90px;
+  font-weight: 600;
+  transition: all 0.6s;
 
   .header-content {
     display: flex;
@@ -45,19 +47,32 @@ header {
       padding: 5px 0;
     }
     nav a {
-      font-weight: 500;
       color: $clr3;
       &:hover {
         color: $clr1;
+        transition: all 0.2s;
       }
     }
     nav .active {
       color: $clr1;
     }
     .navbar-list {
+      font-size: 1rem;
       list-style-type: none;
       align-items: center;
       margin: 0;
+      button {
+        background-color: transparent;
+        color: $clr3;
+        border: 2px $clr3 solid;
+        font-weight: 600;
+        padding: 9px 20px;
+        &:hover {
+          background-color: $clr1;
+          border-color: $clr1;
+          transition: all 0.2s;
+        }
+      }
       li {
         padding: 0 10px;
       }
@@ -67,13 +82,23 @@ header {
     background-color: $clr3;
     z-index: 10;
     border-bottom: 1px solid $clr7;
-    height: 55px;
+    height: 70px;
     transition: all 0.6s;
-    .navbar-list a {
-      color: $clr4;
+    .navbar-list {
+      button {
+        color: $clr1;
+        border: 2px $clr1 solid;
+        &:hover {
+          background-color: $clr1;
+          color: $clr3;
+        }
+      }
+      a {
+        color: #62646a;
+      }
     }
     .header-logo {
-      color: $clr4;
+      color: #62646a;
     }
   }
 }

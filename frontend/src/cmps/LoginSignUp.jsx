@@ -31,16 +31,16 @@ export class _LoginSignUp extends Component {
 
 
 
-    
+
     render() {
-        console.log("login render");
+        // console.log("login render");
         return (
             <React.Fragment>
                 <div>
                     <h3>Login</h3>
                     <input id="username" onChange={this.handleUsernameInput} type="text" placeholder="Username" />
                     <input id="password" onChange={this.handlePasswordInput} type="password" placeholder="Password" />
-                    <button className="btn-login" onClick={this.onLoginClick}>Login</button>
+                    <button className="btn-login button" onClick={this.onLoginClick}>Login</button>
                     {/* <NewModal/> */}
                 </div>
             </React.Fragment>
