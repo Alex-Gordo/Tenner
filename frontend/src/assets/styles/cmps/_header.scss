@@ -5,6 +5,7 @@ header {
   user-select: none;
   width: 100vw;
   z-index: 1;
+  // height: 80px;
   .header-content {
     display: flex;
     justify-content: space-between;
@@ -53,16 +54,23 @@ header {
     }
     .navbar-list {
       list-style-type: none;
+      align-items: center;
 
       li {
         padding: 0 10px;
       }
     }
   }
-}
-
-.header-colored {
-  background-color: #ecdfdf;
-  color: $clr1;
-  z-index: 10;
+  &.header-colored {
+    background-color: $clr3;
+    z-index: 10;
+    border-bottom: 1px solid $clr7;
+    // height: 40px;
+    .navbar-list a {
+      color: $clr4;
+    }
+    .header-logo {
+      color: $clr4;
+    }
+  }
 }
