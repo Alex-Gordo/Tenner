@@ -18,18 +18,14 @@ console.log('gGigs', gGigs);
 
 async function query(filterBy) {
     storageService.saveToStorage(KEY, gGigs)
-<<<<<<< HEAD
     const gigs = await storageService.getFromStorage(KEY)
-=======
-    const gigs =  await storageService.getFromStorage(KEY)
 
->>>>>>> 124d40db7d4271c357d7d50c69975c91c9dcd277
     if (!filterBy) return Promise.resolve(gigs.gig)
     if (!gGigs) return storageService.getFromStorage(KEY)
-    .then((gigs) => {
-        gGigs = gigs 
-        return gigs.gig
-    });
+        .then((gigs) => {
+            gGigs = gigs
+            return gigs.gig
+        });
     const filterRegex = new RegExp(filterBy, 'i')
     console.log('gigigigigigis', gigs);
     return Promise.resolve(gigs.gig.filter(gig => filterRegex.test(gig.category)))
