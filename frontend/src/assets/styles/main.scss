@@ -21,8 +21,10 @@
 @import "cmps/GigList";
 @import "cmps/Modal";
 @import "cmps/GigFilter";
+@import "cmps/LoginSignup";
 
 // Pages
+@import "pages/dashboard";
 @import "pages/gigDetails";
 @import "pages/home";
 @import "pages/tennerApp";

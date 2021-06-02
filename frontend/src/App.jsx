@@ -9,6 +9,7 @@ import { Home } from './pages/Home.jsx';
 import { About } from './pages/About';
 import { GigDetails } from './pages/GigDetails.jsx';
 import { GigCheckout } from './pages/GigCheckout.jsx'
+import { Dashboard } from './pages/Dashboard.jsx'
 import { LoginSignUp } from './cmps/LoginSignUp';
 
 // import { gigService } from '../../frontend/src/services/gigService.js';
@@ -28,6 +29,7 @@ class _App extends Component {
             <Route path='/gig/:gig' component={GigDetails} />
             <Route path="/about" component={About} />
             <Route path="/login-sign-up" component={LoginSignUp} />
+            <Route path="/user/dashboard" component={Dashboard} />
        
           </Switch>
         </Router>

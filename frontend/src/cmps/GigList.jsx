@@ -6,7 +6,6 @@ import { GigPreview } from '../cmps/GigPreview.jsx';
 
 
 export function GigList({ gigs }) {
-
     return (
         <React.Fragment>
             <main className="gig-list flex">

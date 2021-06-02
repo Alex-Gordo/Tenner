@@ -1,6 +1,7 @@
 .footer-container {
-  background-color: $clr4;
-  color: $clr3;
+  margin-top: 3rem;
+  background-color: white;
+  color: white;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -10,9 +11,9 @@
 
 .footer-logo {
   font-family: five;
-  color: $clr3;
+  color: $clr4;
   &::after {
     content: ".";
-    color: $clr1;
+    color: $clr4;
   }
 }

@@ -1,0 +1,46 @@
+.dashboard-container{
+    justify-content: space-between;
+    .user-stats{
+        margin-top: 100px;
+        background-color:red;
+        flex-direction:column;
+        width:20%;
+        align-items: center;
+        button{
+            margin-bottom:20px;
+            width: 50%;
+            font-size: 1rem;
+        }
+        
+        img{
+            margin-bottom:20px;
+            border-radius: 50px;
+            width:75px;
+            height: 75px;
+            background-color:orange;
+        }
+        
+        h5{
+            margin-bottom:20px;
+        }
+    }
+    
+    .stats-container{
+        margin-top: 100px;
+        background-color:blue;
+        width:75%;
+
+        .stats{ 
+            background-color:green;
+
+        }
+
+        card{
+            background-color: white;
+            width:20%;
+        }
+
+
+
+    }
+}

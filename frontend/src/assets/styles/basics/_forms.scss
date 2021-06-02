@@ -1,13 +1,21 @@
 button {
-    border:0;
-    background-color: $clr1;
-    color:whitesmoke;
-    padding: 5px 10px;
-    margin: 5px;
+  border: 0;
+  background-color: $clr1;
+  color: whitesmoke;
+  padding: 5px 10px;
+  border-radius: 7px;
 }
 
 form > * {
-    display: block;
-    width: 200px;
-    margin: 10px 0px;
+  display: block;
+  margin: 10px 0px;
+}
+
+.search-btn {
+  font-size: 1.4rem;
+  padding: 6px 20px;
+  &:hover {
+    background-color: #19a463;
+    transition: all 0.3s;
+  }
 }

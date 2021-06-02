@@ -38,16 +38,22 @@ export class _LoginSignUp extends Component {
 
 
     render() {
-        console.log("login render");
+        // console.log("login render");
         return (
             <React.Fragment>
                 <div>
                     { (this.props.pageMode=== 'login') ? 'login' : 'sigup'}
                     <h3>Login</h3>
                     <input id="username" onChange={this.handleUsernameInput} type="text" placeholder="Username" />
+<<<<<<< HEAD
                     <input id="password" onChange={this.handlePasswordInput} type="password" placeholder="Password" /> <br/>
                     <button className="btn-login" onClick={this.onLoginClick}>Login</button>
         
+=======
+                    <input id="password" onChange={this.handlePasswordInput} type="password" placeholder="Password" />
+                    <button className="btn-login button" onClick={this.onLoginClick}>Login</button>
+                    {/* <NewModal/> */}
+>>>>>>> c586fee65d614c82cf3a3565d7e2e6b0b8ecbbb8
                 </div>
             </React.Fragment>
         )

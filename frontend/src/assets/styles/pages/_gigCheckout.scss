@@ -1,109 +1,119 @@
-.package-details{
+.checkout-container{
+  align-items: flex-start;
+  position: relative;
+  
+  
+  .package-details {
     margin-top: 100px;
+    order: -1;
     flex-direction: column;
-
-    h1{
-        margin-top:10px;
-        color: $clr4;
+    width: 70%;
+    h1 {
+      margin-top: 10px;
+      color: $clr4;
     }
-
     
-    .package-info{
-        width: 65%;
-        justify-content: space-between;
+    .package-info {
+      justify-content: space-between;
     }
-    img{
-        width: 190px;
+    img {
+      width: 190px;
     }
-
-    .gig-info{
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .title{
-         color:$clr4;
-    }
-
-    select{
-        height: 30px;
-        font-size: 1rem;
-    }
-
-    button, .view-line
-    {
-        color: $clr1;
-        background-color:white;
-    }
-
-    .more-details{
-        flex-direction: column;
-        margin:  20px 0;
     
+    .gig-info {
+      flex-direction: column;
+      justify-content: space-between;
     }
-
+    .title {
+      color: $clr4;
+    }
+    
+    select {
+      height: 30px;
+      font-size: 1rem;
+    }
+    
+    button,
+    .view-line {
+      color: $clr1;
+      background-color: white;
+    }
+    
+    .more-details {
+      flex-direction: column;
+      margin: 20px 0;
+    }
+    
     span {
-        color:$clr1;
-    }
-
-    .extra-container{
-        border: 1px solid $clr2;
-        width: 65%;
-        justify-content: space-between;
-        padding:20px;
-    }
-
-    input{
-        width:30px;
-        height: 30px;
-    }
-
-    label{
-        padding-bottom: 10px;
-        line-height:1rem;
-    }
-
-}
-
-p{
-    margin: 0;
-}
-h4{ margin-bottom: 15px;}
-
-
-
-
-.order-summary{
-    position: fixed;
-    right: 10%;
-    top: 14%;
-    padding:20px;
-    width:25%;
-    border: 1px double $clr1;
-    margin-bottom: 10px;
-    h2{
-        color: $clr4;
-        margin-bottom:30px;
+      color: $clr1;
     }
     
-    .price, .fee, hr, .total, .delivery{ 
-        justify-content: space-between;
-        margin-bottom:20px;
-    }
-    .total{ 
-        color: $clr4;
-    }
+    .extra-container {
+      border: 1px solid $clr2;
+      width: 65%;
+      justify-content: space-between;
+      padding: 20px;
+  }
+  
+  input {
+    width: 30px;
+    height: 30px;
+  }
+  
+  label {
+    padding-bottom: 10px;
+    align-items: center;
+  }
+  }
 
-    .btn-purchase{
-        font-size:1.5rem;
-        width:100%;
-        padding: 15px;
-        border-radius:5px;
+  p {
+  margin: 0;
+  }
+  h4 {
+  margin-bottom: 15px;
+  }
+
+  .order-summary-container{
+    // right:100px;
+    // top: 14%;
+    // order: 1;
+    // position: sticky;
+    // right:-100px;
+    margin-top: 100px;
+  }
+
+  .order-summary {
+
+    padding: 20px;
+   border: 1px double $clr1;
+   h2 {
+    color: $clr4;
+    margin-bottom: 30px;
     }
-}
-.payment-img{
-    position: fixed;
-    right: 10%;
-    top: 75%;
-    width: 25%;
-        
+  
+   .price,
+   .fee,
+   hr,
+    .total,
+    .delivery {
+    justify-content: space-between;
+    margin-bottom: 20px;
+    }
+    .total {
+    color: $clr4;
+    }
+  
+    .btn-purchase {
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    }
+  }
+  .payment-img {
+  position: fixed;
+  right: 10%;
+  top: 75%;
+  width: 25%;
+  }
 }

@@ -27,9 +27,9 @@ export class GigCheckout extends Component {
 
         return (
             <React.Fragment>
-                <div className="main-layout">
+                <div className="checkout-container main-layout flex">
                     <div className="order-summary-container flex ">
-                        <side className="order-summary">
+                        <div className="order-summary">
                             <h2>Summary</h2>
                             <div className="price flex">
                                 <h3>Subtotal:</h3>
@@ -49,7 +49,7 @@ export class GigCheckout extends Component {
                                 <h3>{gig.deliveryTime} Day(s)</h3>
                             </div>
                             <button className="btn-purchase">Purchase now</button>
-                        </side>
+                        </div>
                         <img className="payment-img flex"
                             src={payment} alt="payment">
                         </img>
@@ -81,7 +81,7 @@ export class GigCheckout extends Component {
                         </div>
                         <h3>add extra</h3>
                         <div className="extra-container flex">
-                            <label>
+                            <label className="flex">
                                 <input type="checkbox"></input>
                             Extra Fast 12 Hours Delivery</label>
                             <p>${gig.price}</p>
