@@ -30,7 +30,8 @@
   .gig-img {
     width: 100%;
     margin-bottom: 0;
-    height: 158px;
+    height: 200px;
+    object-fit: cover;
   }
   .owner-details {
     flex-direction: column;
