@@ -37,8 +37,11 @@ class _TennerApp extends Component {
         if (!gigs) return <h1>Loading...</h1> //TODO : loading component
         return (
             <main className="tenner-app main-layout">
-                <div className="search-container">
+                <div className="search-container flex">
                     <GigFilter />
+                    <button className="sort-btn">Price <i className='fas fa-arrow-down'></i></button>
+                    <button className="sort-btn">Rating <i className='fas fa-arrow-down'></i></button>
+                    <button className="sort-btn">Seller level <i className='fas fa-arrow-down'></i></button>
                 </div>
                 <GigList gigs={this.props.gigs} />
             </main>
