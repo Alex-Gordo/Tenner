@@ -27,7 +27,7 @@ export class GigCheckout extends Component {
 
         return (
             <React.Fragment>
-                <div className="main-layout">
+                <div className="checkout-container main-layout flex">
                     <div className="order-summary-container flex ">
                         <div className="order-summary">
                             <h2>Summary</h2>
@@ -81,7 +81,7 @@ export class GigCheckout extends Component {
                         </div>
                         <h3>add extra</h3>
                         <div className="extra-container flex">
-                            <label>
+                            <label className="flex">
                                 <input type="checkbox"></input>
                             Extra Fast 12 Hours Delivery</label>
                             <p>${gig.price}</p>
