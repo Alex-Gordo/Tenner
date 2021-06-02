@@ -14,10 +14,10 @@ export  class Dashboard extends Component {
                 </aside>
                 <main className ="stats-container flex">
                     <nav className="stats">
-                        <legend fieldset="sss">CCC</legend>
-                        <card></card>
-                        <card></card>
-                        <card></card>
+                        <div fieldset="sss">CCC</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </nav>
 
                 </main>
