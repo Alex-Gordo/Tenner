@@ -1,3 +1,14 @@
 .tenner-app {
   padding-top: 100px;
+  .search-bar {
+    margin-bottom: 1.5rem;
+    label {
+      width: 26rem;
+      border: 1px solid #62646a;
+      border-right: none;
+    }
+    .search-btn {
+      font-size: 1.1rem;
+    }
+  }
 }
