@@ -1,11 +1,11 @@
 .hero {
   animation: 25s hero-animation infinite;
-  background-position: center;
+  background-position: 0% 15%;
   background-repeat: no-repeat;
   background-size: cover;
   color: $clr3;
   margin-bottom: 3rem;
-  height: 80vh;
+  height: 85vh;
   span {
     font-family: caveat;
   }
