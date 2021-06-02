@@ -6,13 +6,18 @@ import { onLogin, onSignup } from '../store/actions/userActions.js'
 
 export class _LoginSignUp extends Component {
 
-    state = {
-        username: "",
-        password: ""
-    }
+    state ={ 
+    username: "",
+    password: "",
+    pagemode: ''
+}
 
     componentDidMount() {
         console.log("login did mount");
+        console.log('pagemode', this.props.pageMode);
+        this.setState({pagemode: this.props.pageMode})
+        console.log('pagemode', this.state.pageMode);
+    
     }
 
     handleUsernameInput = event => {
@@ -31,17 +36,18 @@ export class _LoginSignUp extends Component {
 
 
 
-    
+
     render() {
         console.log("login render");
         return (
             <React.Fragment>
                 <div>
+                    { (this.props.pageMode=== 'login') ? 'login' : 'sigup'}
                     <h3>Login</h3>
                     <input id="username" onChange={this.handleUsernameInput} type="text" placeholder="Username" />
-                    <input id="password" onChange={this.handlePasswordInput} type="password" placeholder="Password" />
+                    <input id="password" onChange={this.handlePasswordInput} type="password" placeholder="Password" /> <br/>
                     <button className="btn-login" onClick={this.onLoginClick}>Login</button>
-                    {/* <NewModal/> */}
+        
                 </div>
             </React.Fragment>
         )
