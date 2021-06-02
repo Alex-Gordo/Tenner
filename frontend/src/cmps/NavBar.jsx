@@ -24,6 +24,7 @@ export class NavBar extends Component {
                 <ul className="navbar-list flex">
                     <li><NavLink to="/about">About</NavLink></li>
                     <li><NavLink to="/gigs">Explore</NavLink></li>
+                    <li><NavLink to="/user/dashboard">Dashboard</NavLink></li>
                     <li><NewModal /></li>
                 </ul>
             </nav>
