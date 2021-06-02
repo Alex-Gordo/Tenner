@@ -11,11 +11,12 @@ export const gigService = {
 }
 
 var gGigs = require('../data/tenner.json')
-const KEY = 'gigs';
+const KEY = 'gigs'
 
 // // const BASE_URL = process.env.NODE_ENV === 'my-app/src/services/gigs.json'
 
 async function query(filterBy) {
+    storageService.saveToStorage(KEY, gGigs)
     const gigs = await storageService.getFromStorage(KEY)
     if (!filterBy) return Promise.resolve(gigs.gig)
     if (!gGigs) return storageService.getFromStorage(KEY)
@@ -56,3 +57,4 @@ function remove(gigId) {
     //     return status.data;
     // })
 }
+

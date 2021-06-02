@@ -11,7 +11,7 @@ export function loadGigs(filterBy = {
             const gigs = await gigService.query(filterBy)
             dispatch({ type: 'SET_GIGS', gigs })
         } catch (err) {
-            console.log('GigsActions: err in loadGigs', err)
+            console.log('GigActions: err in loadGigs', err)
         }
     }
 }

@@ -42,12 +42,22 @@ export class _LoginSignUp extends Component {
         return (
             <React.Fragment>
                 <div>
-                    { (this.props.pageMode=== 'login') ? 'login' : 'sigup'}
-                    <h3>Login</h3>
+                    {(this.props.pageMode=== 'join') && <> 
+                    
+                    <h3>Signup</h3>
+                    
+                    <input id="fullname" onChange={this.handleFullnameInput} type="text" placeholder="Full Name" />
+                    <input id="username" onChange={this.handleUsernameInput} type="text" placeholder="Username" />
+                    <input id="password" onChange={this.handlePasswordInput} type="password" placeholder="Password" /> <br/> 
+                    <button className="btn-login" onClick={this.onSignupClick}>Continue</button>  
+                    </>  }
+                  {(this.props.pageMode=== 'login') && <> 
+                    <h3>Login</h3> 
+
                     <input id="username" onChange={this.handleUsernameInput} type="text" placeholder="Username" />
                     <input id="password" onChange={this.handlePasswordInput} type="password" placeholder="Password" /> <br/>
-                    <button className="btn-login" onClick={this.onLoginClick}>Login</button>
-        
+                    <button className="btn-login" onClick={this.onLoginClick}>Login</button> 
+                    </> }
                 </div>
             </React.Fragment>
         )
