@@ -61,6 +61,10 @@ header {
       list-style-type: none;
       align-items: center;
       margin: 0;
+      margin-right: 0.5rem;
+      a {
+        margin-left: 1rem;
+      }
       button {
         font-family: montserrat;
         font-size: 1rem;
@@ -91,15 +95,12 @@ header {
           }
         }
       }
-      li {
-        padding: 0 10px;
-      }
     }
   }
   &.header-colored {
     background-color: $clr3;
     z-index: 10;
-    border-bottom: 1px solid $clr7;
+    border-bottom: 1px solid $clr8;
     height: 70px;
     transition: all 0.6s;
     .navbar-list {
@@ -111,6 +112,9 @@ header {
           color: $clr3;
         }
         &.sign-in-btn {
+          color: #62646a;
+        }
+        &.logout-btn {
           color: #62646a;
         }
       }
