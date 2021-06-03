@@ -12,6 +12,10 @@
     width: 7.5rem;
     i {
       color: $clr4;
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
     }
   }
   p {
