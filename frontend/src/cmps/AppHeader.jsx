@@ -11,8 +11,6 @@ class _AppHeader extends Component {
         isScrolled: false,
     }
 
-
-
     componentDidMount() {
         window.addEventListener("scroll", (e) => this.handleNavigation(e));
     }
@@ -30,11 +28,8 @@ class _AppHeader extends Component {
 
     }
 
-
     render() {
 
-     
-        
         const { isScrolled } = this.state
         return (
             <React.Fragment>
