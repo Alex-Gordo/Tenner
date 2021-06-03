@@ -63,7 +63,6 @@ class _AppHeader extends Component {
 
 
 function mapStateToProps(state) {
-    console.log('header', state.userModule.loggedInUser);
     return {
       loggedInUser: state.userModule.loggedInUser
     }
