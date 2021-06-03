@@ -13,18 +13,12 @@ class _NavBar extends Component {
  
     }
 
-<<<<<<< HEAD
  
     onLogoutClick = () => {
         userService.logout()
         // this.props.onLogoutprop(this.state)
         // console.log("User: " + this.state.username + " password: " + this.state.password)
         // this.props.handleClose()
-=======
-    onLogout = () => {
-        userService.logout()
-        this.setState({ isLoggedIn: false })
->>>>>>> 8994bb1dd1abe687cd94709a3243703fbb35333b
     }
 
     render() {
@@ -40,22 +34,10 @@ class _NavBar extends Component {
                     </>}
 
                     {!(this.props.loggedInUser === null) && <>
-<<<<<<< HEAD
                     <li><NavLink to="/user/dashboard">Dashboard</NavLink></li>
                     <button onClick={this.onLogoutClick}>Logout</button>
                     </> } 
                
-=======
-                        <h2>Hi {this.props.loggedInUser.fullname} </h2>
-                        <li><NavLink to="/user/dashboard">Dashboard</NavLink></li>
-                        <button onClick={() => this.onLogout()}>Logout</button>
-                    </>}
-
-
-
-                    {/* <li><NewModal /></li> */}
-
->>>>>>> 8994bb1dd1abe687cd94709a3243703fbb35333b
                 </ul>
             </nav>
         )
