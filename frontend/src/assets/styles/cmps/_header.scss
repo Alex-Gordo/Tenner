@@ -110,6 +110,9 @@ header {
           background-color: $clr1;
           color: $clr3;
         }
+        &.sign-in-btn {
+          color: #62646a;
+        }
       }
       a {
         color: #62646a;
