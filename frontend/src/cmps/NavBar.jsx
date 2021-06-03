@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { NewModal } from './Modal'
-import { userService } from '../services/userService'
+// import { userService } from '../services/userService'
 import { logout } from '../store/actions/userActions'
 
 class _NavBar extends Component {
@@ -25,14 +25,15 @@ class _NavBar extends Component {
         return (
             <nav className="navbar">
                 <ul className="navbar-list flex">
-                    {/* <li><NavLink to="/about">About</NavLink></li> */}
                     <li><NavLink to="/gigs">Explore</NavLink></li>
+
                     {(!this.props.loggedInUser) && <>
                         <li><NewModal /></li>
                     </>}
+
                     {(this.props.loggedInUser) && <>
                         <li><NavLink to="/user/dashboard">Dashboard</NavLink></li>
-                        <button onClick={this.onLogoutClick}>Logout</button>
+                        <button className="logout-btn" onClick={this.onLogoutClick}>Logout</button>
                     </>}
 
                 </ul>

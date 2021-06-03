@@ -62,6 +62,7 @@ header {
       align-items: center;
       margin: 0;
       button {
+        font-family: montserrat;
         font-size: 1rem;
         background-color: transparent;
         color: $clr3;
@@ -72,6 +73,22 @@ header {
           background-color: $clr1;
           border-color: $clr1;
           transition: all 0.2s;
+        }
+        &.logout-btn {
+          color: $clr3;
+          border: none;
+          &:hover {
+            color: $clr1;
+            background-color: transparent;
+          }
+        }
+        &.sign-in-btn {
+          color: $clr3;
+          border: none;
+          &:hover {
+            color: $clr1;
+            background-color: transparent;
+          }
         }
       }
       li {
