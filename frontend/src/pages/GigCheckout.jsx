@@ -49,10 +49,11 @@ export class GigCheckout extends Component {
                                 <h3>{gig.deliveryTime} Day(s)</h3>
                             </div>
                             <button className="btn-purchase">Purchase now</button>
+                            <img className="payment-img flex"
+                                src={payment} alt="payment">
+                            </img>
                         </div>
-                        <img className="payment-img flex"
-                            src={payment} alt="payment">
-                        </img>
+
                     </div>
                     <main className="package-details flex">
                         <h1>Customize Your Package</h1>
@@ -63,14 +64,14 @@ export class GigCheckout extends Component {
                                 <p>⭐⭐⭐⭐{gig.reviews[0].rate} ({gig.reviews.length} reviews)</p>
                                 <p className="view-line">View what's included <button>V</button></p>
                             </div>
-                            <span>Qty</span>
+                            {/* <span>Qty</span>
                             <select>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
-                            </select>
+                            </select> */}
                             <p>${gig.price}</p>
                         </div>
                         <div className="more-details flex">
@@ -86,6 +87,7 @@ export class GigCheckout extends Component {
                             Extra Fast 12 Hours Delivery</label>
                             <p>${gig.price}</p>
                         </div>
+
                     </main>
                 </div>
             </React.Fragment>
