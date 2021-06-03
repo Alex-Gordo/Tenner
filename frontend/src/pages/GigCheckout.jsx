@@ -5,7 +5,9 @@ import payment from '../assets/img/payment.png';
 export class GigCheckout extends Component {
 
     state = {
-        gig: null
+        gig: null,
+        isExtraPrice: false,
+        isMoreDetailsShown: false
     }
 
     componentDidMount() {
@@ -15,14 +17,18 @@ export class GigCheckout extends Component {
         })
     }
 
-    calculateTotalPrice() {
-        var totalPrice = this.state.gig.price;
-        console.log('totalPrice:', totalPrice)
-        return totalPrice
+    showMoreDetails = () => {
+        this.setState({ isMoreDetailsShown: !this.state.isMoreDetailsShown })
+    }
+
+    calculateTotalPrice = () => {
+        var gigCopy = this.state.gig
+        gigCopy.price = (this.state.isExtraPrice) ? gigCopy.price / 2 : gigCopy.price * 2;
+        this.setState({ gig: gigCopy, isExtraPrice: !this.state.isExtraPrice })
     }
 
     render() {
-        const { gig } = this.state
+        const { gig, isMoreDetailsShown } = this.state
         if (!gig) return 'no gigs';
 
         return (
@@ -62,7 +68,11 @@ export class GigCheckout extends Component {
                             <div className="gig-info flex">
                                 <p className="title"><b>{gig.title}</b></p>
                                 <p>⭐⭐⭐⭐{gig.reviews[0].rate} ({gig.reviews.length} reviews)</p>
-                                <p className="view-line">View what's included <button>V</button></p>
+                                <p className="view-line">
+                                    <button onClick={this.showMoreDetails}>
+                                        {isMoreDetailsShown ? 'Hide what\'s included ' : 'View what\'s included '}
+                                    </button>
+                                </p>
                             </div>
                             {/* <span>Qty</span>
                             <select>
@@ -74,20 +84,23 @@ export class GigCheckout extends Component {
                             </select> */}
                             <p>${gig.price}</p>
                         </div>
-                        <div className="more-details flex">
+
+                        {isMoreDetailsShown && <div className="more-details flex">
                             <h4>{gig.category}</h4>
                             <h4>{gig.features[0]} + {gig.features[1]} + {gig.features[2]}</h4>
                             <h4><span>✔ </span>{gig.revisions} revisions</h4>
                             <h4><span>✔ </span>{gig.deliveryTime} Day(s) Delivery</h4>
-                        </div>
+                        </div>}
+
+
+
                         <h3>add extra</h3>
                         <div className="extra-container flex">
                             <label className="flex">
-                                <input type="checkbox"></input>
+                                <input type="checkbox" onChange={this.calculateTotalPrice}></input>
                             Extra Fast 12 Hours Delivery</label>
                             <p>${gig.price}</p>
                         </div>
-
                     </main>
                 </div>
             </React.Fragment>
