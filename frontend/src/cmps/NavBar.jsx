@@ -1,20 +1,19 @@
-
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { NewModal } from './Modal'
 import { userService } from '../services/userService'
-import {logout} from '../store/actions/userActions'
+import { logout } from '../store/actions/userActions'
 
 class _NavBar extends Component {
 
     state = {
         isOpenModal: false,
         // isLoggedIn: this.props.loggedInUser
- 
+
     }
 
- 
+
     onLogoutClick = () => {
         // userService.logout()
         this.props.logout()
@@ -22,31 +21,28 @@ class _NavBar extends Component {
     }
 
     render() {
-    //    console.log('user', this.state.isLoggedIn )
-            return (
+        //    console.log('user', this.state.isLoggedIn )
+        return (
             <nav className="navbar">
                 <ul className="navbar-list flex">
                     {/* <li><NavLink to="/about">About</NavLink></li> */}
                     <li><NavLink to="/gigs">Explore</NavLink></li>
-
                     {(!this.props.loggedInUser) && <>
                         <li><NewModal /></li>
                     </>}
-
                     {(this.props.loggedInUser) && <>
-                    <li><NavLink to="/user/dashboard">Dashboard</NavLink></li>
-                    <button onClick={this.onLogoutClick}>Logout</button>
-                    </> } 
-               
+                        <li><NavLink to="/user/dashboard">Dashboard</NavLink></li>
+                        <button onClick={this.onLogoutClick}>Logout</button>
+                    </>}
+
                 </ul>
             </nav>
         )
     }
 }
 
-
 function mapStateToProps(state) {
-    console.log('header', state.userModule.loggedInUser);
+    // console.log('header', state.userModule.loggedInUser);
     return {
         loggedInUser: state.userModule.loggedInUser
     }
