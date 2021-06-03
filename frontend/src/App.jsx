@@ -17,7 +17,7 @@ import { LoginSignUp } from './cmps/LoginSignUp';
 
 class _App extends Component {
   render() {
-    const { onLogout, loggedInUser } = this.props
+    // const { onLogout, loggedInUser } = this.props
     return (
       <div className="app" >
         <Router>

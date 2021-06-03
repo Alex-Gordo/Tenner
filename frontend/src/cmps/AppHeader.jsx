@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { NavLink, withRouter } from 'react-router-dom';
 import { NavBar } from './NavBar.jsx';
 import { NewModal } from './Modal'
 
 
-class AppHeader extends Component {
+
+class _AppHeader extends Component {
     state = {
-        loggedInUser: 'aaa',
         isScrolled: false,
     }
+
     componentDidMount() {
         window.addEventListener("scroll", (e) => this.handleNavigation(e));
     }
@@ -26,9 +28,8 @@ class AppHeader extends Component {
 
     }
 
-
     render() {
-        const { onLogout, loggedInUser } = this.props
+
         const { isScrolled } = this.state
         return (
             <React.Fragment>
@@ -60,4 +61,16 @@ class AppHeader extends Component {
 
 // const AppHeaderWithHistory = withRouter(AppHeader);
 
+
+function mapStateToProps(state) {
+    console.log('header', state.userModule.loggedInUser);
+    return {
+      loggedInUser: state.userModule.loggedInUser
+    }
+  }
+
+// const mapDispatchToProps = {
+//     loadGigs
+// }
+export const AppHeader = connect(mapStateToProps, null)(_AppHeader)
 export default withRouter(AppHeader)

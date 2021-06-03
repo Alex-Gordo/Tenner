@@ -7,6 +7,7 @@ import { onLogin, onSignup } from '../store/actions/userActions.js'
 export class _LoginSignUp extends Component {
 
     state ={ 
+    fullname: "",
     username: "",
     password: "",
     pagemode: ''
@@ -28,10 +29,18 @@ export class _LoginSignUp extends Component {
         this.setState({ password: event.target.value });
     };
 
+    handleSignupInput = event => {
+        this.setState({ fullname: event.target.value });
+    };
+
     onLoginClick = () => {
-        this.props.onloginprop(this.state)
+        this.props.onLoginprop(this.state)
         console.log("User: " + this.state.username + " password: " + this.state.password)
         this.props.handleClose()
+    }
+    onSignupClick = () => {
+        this.props.onSignprop(this.state)
+        console.log("User: " + this.state.username + " password: " + this.state.password + "fullname: " + this.state.fullname ) 
     }
 
 
@@ -51,6 +60,7 @@ export class _LoginSignUp extends Component {
                     <input id="password" onChange={this.handlePasswordInput} type="password" placeholder="Password" /> <br/> 
                     <button className="btn-login" onClick={this.onSignupClick}>Continue</button>  
                     </>  }
+
                   {(this.props.pageMode=== 'login') && <> 
                     <h3>Login</h3> 
 
@@ -73,8 +83,9 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = {
-    onloginprop: onLogin
-    // onSignup,
+    onLoginprop: onLogin,
+    onSignprop: onSignup
+   
 }
 
 export const LoginSignUp = connect(null, mapDispatchToProps)(_LoginSignUp)

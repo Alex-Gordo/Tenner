@@ -7,6 +7,21 @@
   justify-content: space-between;
   font-size: 1rem;
   user-select: none;
+  .social-container {
+    justify-content: space-between;
+    width: 7.5rem;
+    i {
+      color: $clr4;
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+  }
+  p {
+    color: $clr4;
+    font-size: 0.8rem;
+  }
 }
 
 .footer-logo {
