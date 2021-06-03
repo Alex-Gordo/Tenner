@@ -1,21 +1,25 @@
 .tenner-app {
   padding-top: 100px;
+  .gig-list {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
   .search-container {
     align-items: center;
-    justify-content: space-around;
     margin-bottom: 2rem;
     .sort-btn {
-      font-size: 1.1rem;
+      font-size: 0.9rem;
       background-color: $clr3;
-      color: #62646a;
+      color: $clr7;
       margin-bottom: 1rem;
-      border: 1px solid #62646a;
+      margin-left: 1rem;
+      border: 1px solid $clr7;
       &:hover {
         color: $clr1;
         transition: color 0.2s;
       }
       .fas {
-        color: #62646a;
+        color: $clr8;
       }
     }
   }
@@ -24,7 +28,7 @@
     margin-bottom: 1.5rem;
     label {
       width: 26rem;
-      border: 1px solid #62646a;
+      border: 1px solid $clr8;
       border-right: none;
       border-radius: 4px 0px 0px 4px;
     }
