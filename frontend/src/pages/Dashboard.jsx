@@ -4,16 +4,17 @@ import React, { Component } from 'react'
 export class Dashboard extends Component {
     render() {
         return (
-            <div className="main-layout">
+            <div className="main-layout dashboard-container flex">
+                <aside className="user-stats flex">
+                    {/* <button>Logout</button> */}
+                    <img src="" alt="" />
+                    <h3>user.name</h3>
+                    <h5>level 2 seller</h5>
+                    <h2>Notifications</h2>
+                </aside>
 
-                <div className="dashboard-container main-layout flex">
-                    <aside className="user-stats flex">
-                        <button>Logout</button>
-                        <img src="" alt="" />
-                        <h3>user.name</h3>
-                        <h5>level 2 seller</h5>
-                        <h2>Notifications</h2>
-                    </aside>
+
+                <div className="dashboard-main flex">
                     <main className="orders-container">
                         <ul className="order-ul flex">
                             <li className="order-container">
@@ -48,17 +49,47 @@ export class Dashboard extends Component {
                                     </div>
                                 </section>
                             </li>
-
-
-
-
                         </ul>
                     </main>
 
-                </div>
-                    <table className="flex">
-
+                    <table className="">
+                        <thead>
+                            <th>Name</th>
+                            <th>Date</th>
+                            <th>Delivery Time</th>
+                            <th>Actions</th>
+                            <th>Price</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Asaf</td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <button>Approve</button>
+                                    <button>Cancel</button>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Yaron</td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <button>Approve</button>
+                                    <button>Cancel</button>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
                     </table>
+
+                    <div className="graphs-container flex">
+                        <div className="pie-graph"></div>
+                        <div className="columns-graph"></div>
+                    </div>
+
+                </div>
 
             </div>
         )

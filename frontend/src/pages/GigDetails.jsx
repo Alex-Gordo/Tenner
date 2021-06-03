@@ -96,13 +96,13 @@ export class GigDetails extends Component {
                                     </div>
                                 </article>
                             </section>
-                            <div className="suggested">
+                            {/* <div className="suggested">
                                 <h3>For You</h3>
                                 <p>render more from same category</p>
-                            </div>
+                            </div> */}
                             <section className="reviews">
                                 <h3 className="reviews-headline" >⭐⭐⭐⭐⭐{gig.reviews[0].rate} ({gig.reviews.length} reviews)</h3>
-                                <div className="reviews-rate-bars"></div>
+                                {/* <div className="reviews-rate-bars"></div> */}
                                 {gig.reviews.map(review => {
                                     return <article>
                                         <GigReview key={review.id} review={review} />
