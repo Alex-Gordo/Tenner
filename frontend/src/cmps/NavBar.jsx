@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { NewModal } from './Modal'
 import { userService } from '../services/userService'
+import {logout} from '../store/actions/userActions'
 
 class _NavBar extends Component {
 
@@ -15,25 +16,24 @@ class _NavBar extends Component {
 
  
     onLogoutClick = () => {
-        userService.logout()
-        // this.props.onLogoutprop(this.state)
+        // userService.logout()
+        this.props.logout()
         // console.log("User: " + this.state.username + " password: " + this.state.password)
-        // this.props.handleClose()
     }
 
     render() {
-       console.log('user', this.state.isLoggedIn )
+    //    console.log('user', this.state.isLoggedIn )
             return (
             <nav className="navbar">
                 <ul className="navbar-list flex">
                     {/* <li><NavLink to="/about">About</NavLink></li> */}
                     <li><NavLink to="/gigs">Explore</NavLink></li>
 
-                    {(this.props.loggedInUser === null) && <>
+                    {(!this.props.loggedInUser) && <>
                         <li><NewModal /></li>
                     </>}
 
-                    {!(this.props.loggedInUser === null) && <>
+                    {(this.props.loggedInUser) && <>
                     <li><NavLink to="/user/dashboard">Dashboard</NavLink></li>
                     <button onClick={this.onLogoutClick}>Logout</button>
                     </> } 
@@ -52,7 +52,7 @@ function mapStateToProps(state) {
     }
 }
 
-// const mapDispatchToProps = {
-//     onLogoutprop: onLogout
-// }
-export const NavBar = connect(mapStateToProps, null)(_NavBar)
+const mapDispatchToProps = {
+    logout
+}
+export const NavBar = connect(mapStateToProps, mapDispatchToProps)(_NavBar)

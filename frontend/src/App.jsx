@@ -1,7 +1,7 @@
 import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { onLogout } from './store/actions/userActions'
+import { logout } from './store/actions/userActions'
 import AppHeader from './cmps/AppHeader.jsx';
 import { AppFooter } from './cmps/AppFooter';
 import { TennerApp } from './pages/TennerApp';
@@ -46,7 +46,7 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-  onLogout
+  logout
 }
 
 export const App = connect(mapStateToProps, mapDispatchToProps)(_App)

@@ -51,7 +51,7 @@ export function onSignup(userCreds) {
     }
   }
 }
-export function onLogout() {
+export function logout() {
   return async dispatch => {
     try {
       await userService.logout()
