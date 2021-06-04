@@ -8,7 +8,7 @@ export class GigCheckout extends Component {
         gig: null,
         isExtraPrice: false,
         isMoreDetailsShown: false,
-        numberOfItems:1
+        numberOfItems: 1
     }
 
     componentDidMount() {
@@ -29,7 +29,7 @@ export class GigCheckout extends Component {
     }
 
     addMoreItems = (ev) => {
-        this.setState({numberOfItems: ev.target.value})
+        this.setState({ numberOfItems: ev.target.value })
     }
 
 
@@ -54,11 +54,11 @@ export class GigCheckout extends Component {
                             <hr />
                             <div className="total flex">
                                 <h3>Total:</h3>
-                                <h3>${gig.price * this.state.numberOfItems /20 + gig.price * this.state.numberOfItems}</h3>
+                                <h3>${gig.price * this.state.numberOfItems / 20 + gig.price * this.state.numberOfItems}</h3>
                             </div>
                             <div className="delivery flex">
                                 <h3>Delivery Time:</h3>
-                                {!isExtraPrice && <h3>{gig.deliveryTime} Day{gig.deliveryTime >1 &&<>s</>}</h3>}
+                                {!isExtraPrice && <h3>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>}</h3>}
                                 {isExtraPrice && <h3>12 Hours</h3>}
                             </div>
                             <button className="btn-purchase">Purchase now</button>
@@ -83,7 +83,7 @@ export class GigCheckout extends Component {
                             </div>
                             <span>Qty</span>
                             <select defaultValue="1" onChange={this.addMoreItems}
-                             value={this.state.numberOfItems} >
+                                value={this.state.numberOfItems} >
                                 <option value="1" >1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>

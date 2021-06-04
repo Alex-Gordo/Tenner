@@ -1,10 +1,17 @@
 .gig-details {
   width: 66%;
-  h1 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: $clr4;
+    line-height: normal;
   }
   .owner-details {
     font-size: 0.9rem;
+    align-items: center;
     .owner-name {
       color: black;
       font-weight: 1000;
@@ -15,20 +22,25 @@
   }
   .sml-round-img {
     width: 30px;
-    height: 30px;
     border-radius: 50px;
     margin-bottom: 1rem;
   }
 
   .img-container {
     width: 80%;
+    .gig-details-img {
+      object-fit: cover;
+      height: 400px;
+      width: 100%;
+    }
   }
   .gig-gallery {
     justify-content: space-between;
   }
   .gig-gallery-img {
-    width: 32%;
-    object-fit: contain;
+    width: 33%;
+    object-fit: cover;
+    height: 80px;
   }
 
   .gig-info {
@@ -56,10 +68,7 @@
     flex-direction: column;
     margin-left: 20px;
   }
-  .contact-owner {
-    margin: 0 0 10px;
-    font-size: 1.2rem;
-  }
+
   .owner-info {
     border: 1px solid $clr8;
     margin: 0;
@@ -101,9 +110,10 @@
 .call-to-action {
   position: fixed;
   right: 7%;
-  top: 27%;
+  top: 12%;
   padding: 10px;
-  width: 25%;
+  width: 27%;
+  height: 62%;
   border: 1px double $clr8;
   background-color: white;
   span {
@@ -112,17 +122,22 @@
   p {
     font-size: 1rem;
   }
-  .checkout-btn {
+
+  .btn {
     font-size: 1.5rem;
     width: 100%;
     padding: 15px;
     border-radius: 5px;
-  }
-}
-
-button {
-  &:hover {
-    background-color: #19a463;
-    transition: all 0.3s;
+    margin-bottom: 1rem;
+    &.contact-owner {
+      background-color: #fff;
+      color: $clr7;
+      border: 1px solid $clr7;
+      &:hover {
+        background-color: $clr7;
+        color: $clr3;
+        transition: all 0.6s;
+      }
+    }
   }
 }
