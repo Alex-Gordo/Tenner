@@ -1,9 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import design from '../assets/img/design.jpg'
-import programming from '../assets/img/programming.jpg'
-import digital from '../assets/img/digital.jpg'
-import video from '../assets/img/video.jpg'
+// import design from '../assets/img/design.jpg'
+// import programming from '../assets/img/programming.jpg'
+// import digital from '../assets/img/digital.jpg'
+// import video from '../assets/img/video.jpg'
 
 export function GigCategories() {
     return (

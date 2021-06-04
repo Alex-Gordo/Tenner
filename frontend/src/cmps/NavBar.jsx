@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { NewModal } from './Modal'
-import { userService } from '../services/userService'
+// import { userService } from '../services/userService'
 import { logout } from '../store/actions/userActions'
 import { UserMenu } from '../cmps/UserMenu'
 

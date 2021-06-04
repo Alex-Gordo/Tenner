@@ -28,7 +28,7 @@ export class GigDetails extends Component {
                         <div className="">
                             <h3>Package Price: &nbsp; ${gig.price}</h3>
                             <p>{gig.title}</p>
-                            <h5>{gig.deliveryTime} Day(s) Delivery</h5>
+                            <h5>{gig.deliveryTime} Day{gig.deliveryTime>1 &&<>s</>} Delivery</h5>
                             <div className="features">
                                 {gig.features.map(feature => {
                                     return <h5><span>✔</span> {feature}</h5>

@@ -7,7 +7,8 @@ export class GigCheckout extends Component {
     state = {
         gig: null,
         isExtraPrice: false,
-        isMoreDetailsShown: false
+        isMoreDetailsShown: false,
+        numberOfItems: 1
     }
 
     componentDidMount() {
@@ -27,8 +28,13 @@ export class GigCheckout extends Component {
         this.setState({ gig: gigCopy, isExtraPrice: !this.state.isExtraPrice })
     }
 
+    addMoreItems = (ev) => {
+        this.setState({ numberOfItems: ev.target.value })
+    }
+
+
     render() {
-        const { gig, isMoreDetailsShown } = this.state
+        const { gig, isMoreDetailsShown, numberOfItems, isExtraPrice } = this.state
         if (!gig) return 'no gigs';
 
         return (
@@ -39,20 +45,21 @@ export class GigCheckout extends Component {
                             <h2>Summary</h2>
                             <div className="price flex">
                                 <h3>Subtotal:</h3>
-                                <h3>${gig.price}</h3>
+                                <h3>${gig.price * this.state.numberOfItems}</h3>
                             </div>
                             <div className="fee flex">
                                 <h3>Service Fee:</h3>
-                                <h3>${gig.price / 5}</h3>
+                                <h3>${gig.price * this.state.numberOfItems / 20}</h3>
                             </div>
                             <hr />
                             <div className="total flex">
                                 <h3>Total:</h3>
-                                <h3>${gig.price / 5 + gig.price}</h3>
+                                <h3>${gig.price * this.state.numberOfItems / 20 + gig.price * this.state.numberOfItems}</h3>
                             </div>
                             <div className="delivery flex">
                                 <h3>Delivery Time:</h3>
-                                <h3>{gig.deliveryTime} Day(s)</h3>
+                                {!isExtraPrice && <h3>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>}</h3>}
+                                {isExtraPrice && <h3>12 Hours</h3>}
                             </div>
                             <button className="btn-purchase">Purchase now</button>
                             <img className="payment-img flex"
@@ -67,22 +74,23 @@ export class GigCheckout extends Component {
                             <img src={gig.imgUrl[0]} alt="" />
                             <div className="gig-info flex">
                                 <p className="title"><b>{gig.title}</b></p>
-                                <p><i class="fa fa-star filled"></i>{gig.reviews[0].rate} ({gig.reviews.length} reviews)</p>
+                                <p><i className="fa fa-star filled"></i>{gig.reviews[0].rate} ({gig.reviews.length} reviews)</p>
                                 <p className="view-line">
                                     <button onClick={this.showMoreDetails}>
                                         {isMoreDetailsShown ? 'Hide what\'s included ' : 'View what\'s included '}
                                     </button>
                                 </p>
                             </div>
-                            {/* <span>Qty</span>
-                            <select>
-                                <option value="1">1</option>
+                            <span>Qty</span>
+                            <select defaultValue="1" onChange={this.addMoreItems}
+                                value={this.state.numberOfItems} >
+                                <option value="1" >1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
-                            </select> */}
-                            <p>${gig.price}</p>
+                            </select>
+                            <p>${gig.price * this.state.numberOfItems}</p>
                         </div>
 
                         {isMoreDetailsShown && <div className="more-details flex">
@@ -99,7 +107,7 @@ export class GigCheckout extends Component {
                             <label className="flex">
                                 <input type="checkbox" onChange={this.calculateTotalPrice}></input>
                             Extra Fast 12 Hours Delivery</label>
-                            <p>${gig.price}</p>
+                            <p>${gig.price * this.state.numberOfItems}</p>
                         </div>
                     </main>
                 </div>
