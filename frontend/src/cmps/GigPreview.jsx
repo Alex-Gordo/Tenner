@@ -3,7 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 
 export function GigPreview({ gig }) {
-
+    const avrRate = gig.reviews.reduce((currentTotal, rate) => {
+        return rate.rate + currentTotal;
+    }, 0)/gig.reviews.length;
+    
     return (
         <React.Fragment>
             <article className="gig-card flex">
@@ -12,9 +15,7 @@ export function GigPreview({ gig }) {
                         src={gig.imgUrl[0]} alt="" />
                     <section className="owner-name-pic flex">
                         <img className="sml-round-img"
-                            src={gig.gigOwner.imgUrl} alt="">
-                            {/* src={`https://robohash.org/${~~(Math.random() * 100)}?set=set5`} alt=""> */}
-                        </img>
+                            src={gig.gigOwner.imgUrl} alt="" />
                         <section className="owner-details flex">
                             <p className="owner-name">{gig.gigOwner.fullName}</p>
                             <p className="owner-rating">Level 2 Seller</p>
@@ -23,9 +24,11 @@ export function GigPreview({ gig }) {
                     <p className="gig-title">{gig.title.substr(0, 75)}...</p>
                 </NavLink>
                 <h3 className="flex review-line">
-                    <i class="fa fa-star filled"></i>
-                    <span className="review-rate"> {gig.reviews[0].rate}.0</span>
+                    <i className="fa fa-star filled"></i>
+
+                    <span className="review-rate"> {avrRate}</span>
                     <span className="review-count"> ({gig.reviews.length})</span>
+
                 </h3>
                 <section className="flex card-fav-price">
                     <button className="fav-btn flex">❤</button>

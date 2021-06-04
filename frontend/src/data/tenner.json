@@ -40,6 +40,15 @@
             "fullname": "Miri Ben Shushan",
             "imgUrl": "https://robohash.org/1?set=set2"
           }
+        },       {
+          "id": "madeId",
+          "txt": "Fantastic job!",
+          "rate": 5,
+          "by": {
+            "_id": "u120",
+            "fullname": "Barak Abu King",
+            "imgUrl": "https://robohash.org/8?set=set2"
+          }
         }
       ]
     },
