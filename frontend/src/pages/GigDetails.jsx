@@ -40,7 +40,7 @@ export class GigDetails extends Component {
                             <div className="cta-container">
                                 <h3 className="cta-price flex">Basic <span className="cta-price">${gig.price}</span></h3>
                                 <p>Contact for more details</p>
-                                <h5><i class='far fa-clock'> </i>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>} Delivery</h5>
+                                <h5><i class='far fa-clock'></i>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>} Delivery</h5>
                                 <div className="features">
                                     {gig.features.map(feature => {
                                         return <h5><span>✔</span> {feature}</h5>
