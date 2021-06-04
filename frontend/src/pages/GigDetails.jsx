@@ -22,7 +22,8 @@ export class GigDetails extends Component {
         if (!gig) return 'no gigs';
         return (
             <React.Fragment>
-                <div className="main-layout">
+                <div className="main-layout details-layout">
+
                     <div className="call-to-action">
                         <div className="">
                             <h3>Package Price: &nbsp; ${gig.price}</h3>
@@ -35,13 +36,17 @@ export class GigDetails extends Component {
                             </div>
                             <div className="btn-section">
                                 <NavLink to={`/gig/${gig._id}/checkout`}>
-                                    <button className="checkout-btn">Continue (${gig.price})</button>
+                                    <button className="checkout-btn btn">Continue (${gig.price})</button>
                                 </NavLink>
                             </div>
                         </div>
+                        <button className="contact-owner btn">
+                            Contact Seller
+                         </button>
                     </div>
-                    <main className="gig-details">
 
+
+                    <main className="gig-details">
                         <div className="left-container">
                             <section className="gig-info">
                                 <h1>{gig.title}</h1>
@@ -50,12 +55,14 @@ export class GigDetails extends Component {
                                         src={gig.gigOwner.imgUrl} alt="" />&nbsp;
                                 <p className="owner-name"> &nbsp;{gig.gigOwner.fullName} &nbsp;</p>
                                     <p>Level 2 Seller</p>
-                                    <p> &nbsp; | <i class="fa fa-star filled"></i>{gig.reviews[0].rate} ({gig.reviews.length})</p>
+                                    <p> &nbsp; | <i className="fa fa-star filled"></i>{gig.reviews[0].rate} ({gig.reviews.length})</p>
                                     <p className="orders-queue">| 7 Orders in Queue</p>
                                 </div>
+
                                 <div className="img-container">
                                     <img className="gig-details-img img"
                                         src={gig.imgUrl[0]} alt="" />
+
                                     <div className="gig-gallery flex">
                                         <img className="gig-gallery-img img"
                                             src={gig.imgUrl[1]} alt="" />
@@ -67,6 +74,8 @@ export class GigDetails extends Component {
                                 </div>
                             </section>
                             <section className="about-details flex ">
+
+
                                 <h3 className="about-title">About this Gig</h3>
                                 <h4 className="description">{gig.description}</h4>
                                 <article className="about-seller">
@@ -76,10 +85,8 @@ export class GigDetails extends Component {
                                             src={gig.gigOwner.imgUrl} alt="" />
                                         <div className="owner-card-right flex">
                                             <h3>{gig.gigOwner.fullName}</h3>
-                                            <h4><i class="fa fa-star filled"></i> 5.0 ({gig.reviews.length} reviews)</h4>
-                                            <button className="contact-owner">
-                                                Contact Me
-                                    </button>
+                                            <h4><i className="fa fa-star filled"></i> 5.0 ({gig.reviews.length} reviews)</h4>
+
                                         </div>
                                     </div>
                                     <div className="owner-info flex">
@@ -101,14 +108,14 @@ export class GigDetails extends Component {
                                 <p>render more from same category</p>
                             </div> */}
                             <section className="reviews">
-                                <h3 className="reviews-headline" ><i class="fa fa-star filled"></i>{gig.reviews[0].rate} ({gig.reviews.length} reviews)</h3>
+                                <h3 className="reviews-headline" ><i className="fa fa-star filled"></i>{gig.reviews[0].rate} ({gig.reviews.length} reviews)</h3>
                                 {/* <div className="reviews-rate-bars"></div> */}
                                 {gig.reviews.map(review => {
                                     return <article>
                                         <GigReview key={review.id} review={review} />
                                     </article>
                                 })}
-                                <button className="add-review">
+                                <button className="add-review-btn">
                                     Add review
                         </button>
                             </section>

@@ -23,7 +23,7 @@ export function GigPreview({ gig }) {
                     <p className="gig-title">{gig.title.substr(0, 75)}...</p>
                 </NavLink>
                 <h3 className="flex review-line">
-                    <i class="fa fa-star filled"></i>
+                    <i className="fa fa-star filled"></i>
                     <span className="review-rate"> {gig.reviews[0].rate}.0</span>
                     <span className="review-count"> ({gig.reviews.length})</span>
                 </h3>
