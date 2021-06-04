@@ -2,16 +2,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { NewModal } from './Modal'
-// import { userService } from '../services/userService'
+import { userService } from '../services/userService'
 import { logout } from '../store/actions/userActions'
 import { UserMenu } from '../cmps/UserMenu'
+import { LoginGoogle} from './LoginGoogle.jsx';
+
 
 class _NavBar extends Component {
 
     state = {
         isOpenModal: false,
-        // isLoggedIn: this.props.loggedInUser
-
+        user: null,
+        isLoggedIn: this.props.loggedInUser,
+        user: userService.getLoggedinUser()
     }
 
 
@@ -22,10 +25,13 @@ class _NavBar extends Component {
     }
 
     render() {
-        //    console.log('user', this.state.isLoggedIn )
         return (
             <nav className="navbar">
+
                 <ul className="navbar-list flex">
+                    <li>
+                        <LoginGoogle/>
+                    </li>
                     <li><NavLink to="/gigs">Explore</NavLink></li>
 
 
@@ -34,7 +40,8 @@ class _NavBar extends Component {
                     </>}
 
                     {(this.props.loggedInUser) && <>
-                        <li><NavLink to="/user/dashboard">Dashboard</NavLink></li>
+                       
+                        <li><NavLink  to={`/user/${this.state.user._id}/dashboard`}>Dashboard</NavLink></li>
                         <button onClick={this.onLogoutClick}>Logout</button>
                     </>}
                     <UserMenu />

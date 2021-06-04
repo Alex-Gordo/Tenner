@@ -1,14 +1,28 @@
 
 import React, { Component } from 'react'
+import { userService } from '../services/userService'
+
+
+
+
 
 export class Dashboard extends Component {
+
+
+    state = {
+        user: userService.getLoggedinUser()
+    }
+
     render() {
+        if(!this.state.user) return 'no user loaded'
+
         return (
+            
             <div className="main-layout dashboard-container flex">
                 <aside className="user-stats flex">
                     {/* <button>Logout</button> */}
-                    <img src="" alt="" />
-                    <h3>user.name</h3>
+                    <img src={this.state.user.imgUrl} alt="" />
+                    <h3>{this.state.user.fullname}</h3>
                     <h5>level 2 seller</h5>
                     <h2>Notifications</h2>
                 </aside>
@@ -20,7 +34,7 @@ export class Dashboard extends Component {
                             <li className="order-container">
                                 <section className="order-card flex">
                                     <div className="flex order-details">
-                                        <h2>Total Price</h2>
+                                        <h2>Revenue</h2>
                                         <h3>$33</h3>
                                     </div>
                                 </section>
@@ -28,7 +42,7 @@ export class Dashboard extends Component {
                             <li className="order-container">
                                 <section className="order-card flex">
                                     <div className="flex order-details">
-                                        <h2>Total Orders</h2>
+                                        <h2>No. of Orders</h2>
                                         <h3>2</h3>
                                     </div>
                                 </section>
@@ -36,7 +50,7 @@ export class Dashboard extends Component {
                             <li className="order-container">
                                 <section className="order-card flex">
                                     <div className="flex order-details">
-                                        <h2>Avg. Price</h2>
+                                        <h2>Avg. Income</h2>
                                         <h3>$11</h3>
                                     </div>
                                 </section>
@@ -44,7 +58,7 @@ export class Dashboard extends Component {
                             <li className="order-container">
                                 <section className="order-card flex">
                                     <div className="flex order-details">
-                                        <h2>Best Buyer</h2>
+                                        <h2>Fav. Buyer</h2>
                                         <h3>Asaf</h3>
                                     </div>
                                 </section>
