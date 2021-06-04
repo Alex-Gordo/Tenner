@@ -1,18 +1,16 @@
-.review-card{
+.review-card {
+  .sml-review-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+  }
 
-    .sml-review-img{
-        width:30px;
-        height: 30px;
-        border-radius: 50px;
-        border: 1px solid $clr2;
-    }
-
-    h3{
-        color: gold;
-        font-size:1.5rem;
-        line-height:1.5rem;
-    }
-    .review-txt{
-        display:block;
-    }
+  h3 {
+    color: $clr6;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+  .review-txt {
+    display: block;
+  }
 }

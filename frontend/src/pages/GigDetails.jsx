@@ -31,21 +31,28 @@ export class GigDetails extends Component {
                 <div className="main-layout details-layout">
 
                     <div className="call-to-action flex">
+                        <section className="package-choice flex">
+                            <button className="btn active">Basic</button>
+                            <button className="btn">Standard</button>
+                            <button className="btn">Premium</button>
+                        </section>
                         <div className="">
-                            <h3>Package Price: &nbsp; ${gig.price}</h3>
-                            <p>{gig.title}</p>
-                            <h5>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>} Delivery</h5>
-                            <div className="features">
-                                {gig.features.map(feature => {
-                                    return <h5><span>✔</span> {feature}</h5>
-                                })}
-                            </div>
-                            <NavLink to={`/gig/${gig._id}/checkout`}>
-                                <button className="checkout-btn btn">Continue (${gig.price})</button>
-                            </NavLink>
-                            <button className="contact-owner btn">
-                                Contact Seller
+                            <div className="cta-container">
+                                <h3 className="cta-price flex">Basic <span className="cta-price">${gig.price}</span></h3>
+                                <p>Contact for more details</p>
+                                <h5><i class='far fa-clock'> </i>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>} Delivery</h5>
+                                <div className="features">
+                                    {gig.features.map(feature => {
+                                        return <h5><span>✔</span> {feature}</h5>
+                                    })}
+                                </div>
+                                <NavLink to={`/gig/${gig._id}/checkout`}>
+                                    <button className="checkout-btn btn">Continue (${gig.price})</button>
+                                </NavLink>
+                                <button className="contact-owner btn">
+                                    Contact Seller
                          </button>
+                            </div>
                         </div>
                     </div>
 
