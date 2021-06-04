@@ -30,7 +30,7 @@ export class GigDetails extends Component {
             <React.Fragment>
                 <div className="main-layout details-layout">
 
-                    <div className="call-to-action">
+                    <div className="call-to-action flex">
                         <div className="">
                             <h3>Package Price: &nbsp; ${gig.price}</h3>
                             <p>{gig.title}</p>
@@ -40,15 +40,13 @@ export class GigDetails extends Component {
                                     return <h5><span>✔</span> {feature}</h5>
                                 })}
                             </div>
-                            <div className="btn-section">
-                                <NavLink to={`/gig/${gig._id}/checkout`}>
-                                    <button className="checkout-btn btn">Continue (${gig.price})</button>
-                                </NavLink>
-                            </div>
-                        </div>
-                        <button className="contact-owner btn">
-                            Contact Seller
+                            <NavLink to={`/gig/${gig._id}/checkout`}>
+                                <button className="checkout-btn btn">Continue (${gig.price})</button>
+                            </NavLink>
+                            <button className="contact-owner btn">
+                                Contact Seller
                          </button>
+                        </div>
                     </div>
 
 
@@ -121,7 +119,7 @@ export class GigDetails extends Component {
                                         <GigReview key={review.id} review={review} />
                                     </article>
                                 })}
-                                <button className="add-review-btn">
+                                <button className="add-review-btn btn">
                                     Add review
                         </button>
                             </section>
