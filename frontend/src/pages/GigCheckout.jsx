@@ -36,6 +36,10 @@ export class GigCheckout extends Component {
     render() {
         const { gig, isMoreDetailsShown, numberOfItems, isExtraPrice } = this.state
         if (!gig) return 'no gigs';
+        
+        const avrRate = this.state.gig.reviews.reduce((currentTotal, rate) => {
+            return rate.rate + currentTotal;
+        }, 0) / gig.reviews.length;
 
         return (
             <React.Fragment>
@@ -74,7 +78,7 @@ export class GigCheckout extends Component {
                             <img src={gig.imgUrl[0]} alt="" />
                             <div className="gig-info flex">
                                 <p className="title"><b>{gig.title}</b></p>
-                                <p><i className="fa fa-star filled"></i>{gig.reviews[0].rate} ({gig.reviews.length} reviews)</p>
+                                <p><i className="fa fa-star filled"></i>{avrRate} ({gig.reviews.length} reviews)</p>
                                 <p className="view-line">
                                     <button onClick={this.showMoreDetails}>
                                         {isMoreDetailsShown ? 'Hide what\'s included ' : 'View what\'s included '}

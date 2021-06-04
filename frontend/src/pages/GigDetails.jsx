@@ -17,9 +17,15 @@ export class GigDetails extends Component {
     }
 
 
+
     render() {
         const { gig } = this.state
         if (!gig) return 'no gigs';
+
+
+        const avrRate = gig.reviews.reduce((currentTotal, rate) => {
+            return rate.rate + currentTotal;
+        }, 0) / gig.reviews.length;
         return (
             <React.Fragment>
                 <div className="main-layout details-layout">
@@ -28,7 +34,7 @@ export class GigDetails extends Component {
                         <div className="">
                             <h3>Package Price: &nbsp; ${gig.price}</h3>
                             <p>{gig.title}</p>
-                            <h5>{gig.deliveryTime} Day{gig.deliveryTime>1 &&<>s</>} Delivery</h5>
+                            <h5>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>} Delivery</h5>
                             <div className="features">
                                 {gig.features.map(feature => {
                                     return <h5><span>✔</span> {feature}</h5>
@@ -55,7 +61,7 @@ export class GigDetails extends Component {
                                         src={gig.gigOwner.imgUrl} alt="" />&nbsp;
                                 <p className="owner-name"> &nbsp;{gig.gigOwner.fullName} &nbsp;</p>
                                     <p>Level 2 Seller</p>
-                                    <p> &nbsp; | <i className="fa fa-star filled"></i>{gig.reviews[0].rate} ({gig.reviews.length})</p>
+                                    <p> &nbsp; | <i className="fa fa-star filled"></i>{avrRate} ({gig.reviews.length} reviews)</p>
                                     <p className="orders-queue">| 7 Orders in Queue</p>
                                 </div>
 
@@ -85,7 +91,7 @@ export class GigDetails extends Component {
                                             src={gig.gigOwner.imgUrl} alt="" />
                                         <div className="owner-card-right flex">
                                             <h3>{gig.gigOwner.fullName}</h3>
-                                            <h4><i className="fa fa-star filled"></i> 5.0 ({gig.reviews.length} reviews)</h4>
+                                            <h4><i className="fa fa-star filled"></i>{avrRate} ({gig.reviews.length} reviews)</h4>
 
                                         </div>
                                     </div>
@@ -108,7 +114,7 @@ export class GigDetails extends Component {
                                 <p>render more from same category</p>
                             </div> */}
                             <section className="reviews">
-                                <h3 className="reviews-headline" ><i className="fa fa-star filled"></i>{gig.reviews[0].rate} ({gig.reviews.length} reviews)</h3>
+                                <h3 className="reviews-headline" ><i className="fa fa-star filled"></i>{avrRate} ({gig.reviews.length} reviews)</h3>
                                 {/* <div className="reviews-rate-bars"></div> */}
                                 {gig.reviews.map(review => {
                                     return <article>
