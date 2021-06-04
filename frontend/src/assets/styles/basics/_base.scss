@@ -60,3 +60,11 @@ input {
   width: 41%;
   outline: none;
 }
+
+.fa-star {
+  margin-right: 0.2rem;
+  color: transparent;
+  &.filled {
+    color: $clr6;
+  }
+}

@@ -50,7 +50,7 @@ export class GigDetails extends Component {
                                         src={gig.gigOwner.imgUrl} alt="" />&nbsp;
                                 <p className="owner-name"> &nbsp;{gig.gigOwner.fullName} &nbsp;</p>
                                     <p>Level 2 Seller</p>
-                                    <p> &nbsp; | ⭐⭐⭐⭐⭐{gig.reviews[0].rate} ({gig.reviews.length})</p>
+                                    <p> &nbsp; | <i class="fa fa-star filled"></i>{gig.reviews[0].rate} ({gig.reviews.length})</p>
                                     <p className="orders-queue">| 7 Orders in Queue</p>
                                 </div>
                                 <div className="img-container">
@@ -76,7 +76,7 @@ export class GigDetails extends Component {
                                             src={gig.gigOwner.imgUrl} alt="" />
                                         <div className="owner-card-right flex">
                                             <h3>{gig.gigOwner.fullName}</h3>
-                                            <h4>⭐⭐⭐⭐⭐ 5 ({gig.reviews.length} reviews)</h4>
+                                            <h4><i class="fa fa-star filled"></i> 5.0 ({gig.reviews.length} reviews)</h4>
                                             <button className="contact-owner">
                                                 Contact Me
                                     </button>
@@ -101,7 +101,7 @@ export class GigDetails extends Component {
                                 <p>render more from same category</p>
                             </div> */}
                             <section className="reviews">
-                                <h3 className="reviews-headline" >⭐⭐⭐⭐⭐{gig.reviews[0].rate} ({gig.reviews.length} reviews)</h3>
+                                <h3 className="reviews-headline" ><i class="fa fa-star filled"></i>{gig.reviews[0].rate} ({gig.reviews.length} reviews)</h3>
                                 {/* <div className="reviews-rate-bars"></div> */}
                                 {gig.reviews.map(review => {
                                     return <article>

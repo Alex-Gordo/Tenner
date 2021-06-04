@@ -1,0 +1,8 @@
+.sign-in-btn {
+  color: $clr3;
+  border: none;
+  &:hover {
+    color: $clr1;
+    background-color: transparent;
+  }
+}
