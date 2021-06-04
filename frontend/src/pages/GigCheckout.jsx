@@ -67,7 +67,7 @@ export class GigCheckout extends Component {
                             <img src={gig.imgUrl[0]} alt="" />
                             <div className="gig-info flex">
                                 <p className="title"><b>{gig.title}</b></p>
-                                <p>⭐⭐⭐⭐{gig.reviews[0].rate} ({gig.reviews.length} reviews)</p>
+                                <p><i class="fa fa-star filled"></i>{gig.reviews[0].rate} ({gig.reviews.length} reviews)</p>
                                 <p className="view-line">
                                     <button onClick={this.showMoreDetails}>
                                         {isMoreDetailsShown ? 'Hide what\'s included ' : 'View what\'s included '}

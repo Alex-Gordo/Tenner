@@ -1,3 +1,10 @@
+// .app {
+//   max-height: 100vh;
+//   .footer-container {
+//     margin-top: 11rem;
+//   }
+// }
+
 .checkout-container {
   align-items: flex-start;
   position: relative;
@@ -48,15 +55,14 @@
     }
 
     .extra-container {
-      border: 1px solid $clr2;
+      border: 1px solid $clr8;
       width: 65%;
       justify-content: space-between;
       padding: 20px;
     }
 
     input {
-      width: 30px;
-      height: 30px;
+      height: 1rem;
     }
 
     label {
@@ -73,18 +79,13 @@
   }
 
   .order-summary-container {
-    // right:100px;
-    // top: 14%;
-    // order: 1;
-    // position: sticky;
-    // right:-100px;
     margin-top: 100px;
   }
 
   .order-summary {
     margin-left: 3rem;
     padding: 20px;
-    border: 1px double $clr1;
+    border: 1px double $clr8;
     h2 {
       color: $clr4;
       margin-bottom: 30px;

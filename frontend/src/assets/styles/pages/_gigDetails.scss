@@ -61,7 +61,7 @@
     font-size: 1.2rem;
   }
   .owner-info {
-    border: 1px solid $clr1;
+    border: 1px solid $clr8;
     margin: 0;
     margin-bottom: 30px;
     flex-direction: column;
@@ -104,7 +104,7 @@
   top: 27%;
   padding: 10px;
   width: 25%;
-  border: 1px double $clr1;
+  border: 1px double $clr8;
   background-color: white;
   span {
     color: $clr1;
@@ -113,8 +113,10 @@
     font-size: 1rem;
   }
   .checkout-btn {
-    margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
   }
 }
 

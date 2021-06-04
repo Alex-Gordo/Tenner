@@ -20,7 +20,6 @@ class _TennerApp extends Component {
         let params = new URLSearchParams(search);
         let prevQuery = params.get('q');
         if (currQuery !== prevQuery) this.props.loadGigs(currQuery)
-
     }
 
 
@@ -29,7 +28,6 @@ class _TennerApp extends Component {
         let params = new URLSearchParams(search);
         let searchTxt = params.get('q');
         return searchTxt
-        //console.log('searchTxt', searchTxt);
     }
 
     render() {

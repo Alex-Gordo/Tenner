@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import { LoginSignUp } from './LoginSignUp';
@@ -43,9 +43,6 @@ export default function SimpleModal() {
     const [open, setOpen] = React.useState(false);
     const [pageMode, setPageMode] = React.useState('');
 
-
-
-
     const handleOpenSignIn = () => {
         setPageMode('login')
         setOpen(true);
@@ -63,15 +60,13 @@ export default function SimpleModal() {
             <LoginSignUp handleClose={handleClose} pageMode={pageMode} />
         </div>
     );
-   
-    
 
     return (
         <div>
-            <button type="button" onClick={handleOpenSignIn}>
+            <button className="sign-in-btn" type="button" onClick={handleOpenSignIn}>
                 Sign In
             </button>
-            <button type="button" onClick={handleOpenJoin}>
+            <button className="join-btn" type="button" onClick={handleOpenJoin}>
                 Join
             </button>
             <Modal
