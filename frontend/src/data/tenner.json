@@ -1112,8 +1112,8 @@
   "user": [
     {
       "_id": "u101",
-      "fullname": "User 1",
-      "imgUrl": "/img/img1.jpg",
+      "fullname": "User One",
+      "imgUrl": "https://res.cloudinary.com/arikxl/image/upload/v1622835749/tenner/user%20face/beard-1845166_640_zedzaw.jpg",
       "username": "user1",
       "password": "secret",
       "isAdmin": false,
@@ -1122,7 +1122,7 @@
     {
       "_id": "u102",
       "fullname": "User 2",
-      "imgUrl": "/img/img2.jpg",
+      "imgUrl": "https://res.cloudinary.com/arikxl/image/upload/v1622835689/tenner/user%20face/happy-1836445_1920_umfa4l.jpg",
       "username": "user2",
       "password": "secret",
       "isAdmin": false,

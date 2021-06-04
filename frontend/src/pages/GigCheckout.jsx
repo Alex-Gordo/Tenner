@@ -34,7 +34,7 @@ export class GigCheckout extends Component {
 
 
     render() {
-        const { gig, isMoreDetailsShown, numberOfItems, isExtraPrice } = this.state
+        const { gig, isMoreDetailsShown, isExtraPrice } = this.state
         if (!gig) return 'no gigs';
         
         const avrRate = this.state.gig.reviews.reduce((currentTotal, rate) => {
