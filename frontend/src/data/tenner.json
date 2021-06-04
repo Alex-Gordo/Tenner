@@ -17,11 +17,7 @@
       "features": ["High res", "3D", "Professional"],
       "gigOwner": {
         "id": "o707",
-<<<<<<< HEAD
-        "fullName": "David Ben Pukovitz",
-=======
         "fullName": "Moshe Solomon",
->>>>>>> 376275c84993dd25108ec23cb4293b7aa8aaeaf4
         "imgUrl": "https://robohash.org/100?set=set5"
       },
       "reviews": [
