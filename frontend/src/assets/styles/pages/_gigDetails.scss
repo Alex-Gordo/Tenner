@@ -61,7 +61,6 @@
   .md-round-img {
     width: 100px;
     border-radius: 50px;
-    background-color: $clr1;
     margin: 0 0 10px;
   }
   .owner-card-right {
@@ -108,25 +107,57 @@
 }
 
 .call-to-action {
+  max-width: 400px;
   position: fixed;
-  right: 7%;
+  right: 10%;
   top: 12%;
   padding: 10px;
-  width: 27%;
-  height: 62%;
+  width: 21%;
+  height: 48%;
   border: 1px double $clr8;
-  background-color: white;
   flex-direction: column;
   align-items: center;
+  .package-choice {
+    width: 100%;
+    .btn {
+      height: 50px;
+      width: 34%;
+      background-color: #fafafa;
+      color: $clr2;
+      border: 1px solid $clr8;
+      border-radius: 0px;
+      &.active {
+        color: $clr1;
+        border-bottom: 3px solid $clr1;
+        background-color: #fff;
+      }
+    }
+  }
+}
+.cta-container {
+  margin-top: 3rem;
+  max-width: 350px;
+  .cta-price {
+    justify-content: space-between;
+    color: $clr4;
+    margin-bottom: 1rem;
+  }
   span {
     color: $clr1;
   }
+  i {
+    margin-right: 5px;
+  }
   p {
     font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  h5 {
+    margin-bottom: 3rem;
   }
   .btn {
     font-size: 1rem;
-    width: 90%;
+    width: 100%;
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 1rem;
