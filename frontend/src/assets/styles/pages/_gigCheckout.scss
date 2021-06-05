@@ -58,6 +58,10 @@
     .view-line {
       color: $clr1;
       background-color: white;
+      &:hover {
+        color: #19a463;
+        transition: all 0.3s;
+      }
     }
 
     .more-details {
@@ -114,6 +118,10 @@
         padding: 15px;
         border-radius: 5px;
         margin-bottom: 3rem;
+        &:hover {
+          background-color: #19a463;
+          transition: all 0.3s;
+        }
       }
     }
   }
