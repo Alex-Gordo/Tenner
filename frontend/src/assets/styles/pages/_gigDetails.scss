@@ -1,10 +1,17 @@
 .gig-details {
-  width: 66%;
-  h1 {
+  width: 54%;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: $clr4;
+    line-height: normal;
   }
   .owner-details {
     font-size: 0.9rem;
+    align-items: center;
     .owner-name {
       color: black;
       font-weight: 1000;
@@ -15,20 +22,25 @@
   }
   .sml-round-img {
     width: 30px;
-    height: 30px;
     border-radius: 50px;
     margin-bottom: 1rem;
   }
 
   .img-container {
     width: 80%;
+    .gig-details-img {
+      object-fit: cover;
+      height: 400px;
+      width: 100%;
+    }
   }
   .gig-gallery {
     justify-content: space-between;
   }
   .gig-gallery-img {
-    width: 32%;
-    object-fit: contain;
+    width: 33%;
+    object-fit: cover;
+    height: 80px;
   }
 
   .gig-info {
@@ -49,17 +61,13 @@
   .md-round-img {
     width: 100px;
     border-radius: 50px;
-    background-color: $clr1;
     margin: 0 0 10px;
   }
   .owner-card-right {
     flex-direction: column;
     margin-left: 20px;
   }
-  .contact-owner {
-    margin: 0 0 10px;
-    font-size: 1.2rem;
-  }
+
   .owner-info {
     border: 1px solid $clr8;
     margin: 0;
@@ -99,30 +107,77 @@
 }
 
 .call-to-action {
+  max-width: 400px;
   position: fixed;
-  right: 7%;
-  top: 27%;
+  right: 10%;
+  top: 12%;
   padding: 10px;
-  width: 25%;
+  width: 21%;
+  height: 48%;
   border: 1px double $clr8;
-  background-color: white;
+  flex-direction: column;
+  align-items: center;
+  .package-choice {
+    width: 100%;
+    .btn {
+      height: 50px;
+      width: 34%;
+      background-color: #fafafa;
+      color: $clr2;
+      border: 1px solid $clr8;
+      border-radius: 0px;
+      &.active {
+        color: $clr1;
+        border-bottom: 3px solid $clr1;
+        background-color: #fff;
+      }
+    }
+  }
+}
+.cta-container {
+  margin-top: 3rem;
+  max-width: 350px;
+  .cta-price {
+    justify-content: space-between;
+    color: $clr4;
+    margin-bottom: 1rem;
+  }
   span {
     color: $clr1;
   }
+  i {
+    margin-right: 5px;
+  }
   p {
     font-size: 1rem;
+    margin-bottom: 2rem;
   }
-  .checkout-btn {
-    font-size: 1.5rem;
+  h5 {
+    margin-bottom: 3rem;
+  }
+  .btn {
+    font-size: 1rem;
     width: 100%;
     padding: 15px;
     border-radius: 5px;
+    margin-bottom: 1rem;
+    &:hover {
+      background-color: #19a463;
+      transition: all 0.3s;
+    }
+    &.contact-owner {
+      background-color: #fff;
+      color: $clr7;
+      border: 1px solid $clr7;
+      &:hover {
+        background-color: $clr7;
+        color: $clr3;
+        transition: all 0.6s;
+      }
+    }
   }
 }
 
-button {
-  &:hover {
-    background-color: #19a463;
-    transition: all 0.3s;
-  }
+.add-review-btn {
+  width: 150px;
 }
