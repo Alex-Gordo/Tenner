@@ -14,16 +14,9 @@ class _NavBar extends Component {
 
     state = {
         isOpenModal: false,
-        user: null,
+        // user: null,
         isLoggedIn: this.props.loggedInUser,
-        user: userService.getLoggedinUser()
-    }
-
-
-    onLogoutClick = () => {
-        // userService.logout()
-        this.props.logout()
-        // console.log("User: " + this.state.username + " password: " + this.state.password)
+        // user: userService.getLoggedinUser()
     }
 
     render() {
@@ -42,9 +35,8 @@ class _NavBar extends Component {
                     </>}
 
                     {(this.props.loggedInUser) && <>
-                        <UserMenu user={this.state.user._id}/>
-                        {/* <li><NavLink  to={`/user/${this.state.user._id}/dashboard`}>Dashboard</NavLink></li> */}
-                        <button onClick={this.onLogoutClick}>Logout</button>
+                        <UserMenu user={this.props.loggedInUser} logoutFunc={this.props.logout}/>
+                        {/* <button onClick={this.onLogoutClick}>Logout</button> */}
                     </>}
                     
 

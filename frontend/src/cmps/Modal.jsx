@@ -1,5 +1,4 @@
 import React from 'react'
-// import { useSelector } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import { LoginSignUp } from './LoginSignUp';

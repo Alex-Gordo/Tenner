@@ -29,7 +29,7 @@ class _App extends Component {
             <Route path='/gig/:gig' component={GigDetails} />
             <Route path="/about" component={About} />
             <Route path="/login-sign-up" component={LoginSignUp} />
-            <Route path="/user/:user/dashboard" component={Dashboard} />
+            <Route path="/user/dashboard" component={Dashboard} />
        
           </Switch>
         </Router>
