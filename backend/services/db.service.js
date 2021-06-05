@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb').MongoClient
-const url = 'mongodb+srv://tennerapp:tennerapp@cluster0.romtt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const URL = 'mongodb+srv://tennerapp:tennerapp@cluster0.romtt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 
 const config = require('../config')
 
@@ -7,7 +7,8 @@ module.exports = {
     getCollection
 }
 
-const dbURL = 'mongodb://localhost:27017';
+// const dbURL = 'mongodb://localhost:27017';
+const dbURL = URL;
 const dbName = 'tenner_db'
 var dbConn = null
 
