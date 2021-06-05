@@ -11,7 +11,7 @@ export class GigDetails extends Component {
     }
 
     componentDidMount() {
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
         const gigId = this.props.match.params.gig
         gigService.getById(gigId).then(gig => {
             this.setState({ gig })
@@ -44,7 +44,7 @@ export class GigDetails extends Component {
                             <div className="cta-container">
                                 <h3 className="cta-price flex">Basic <span className="cta-price">${gig.price}</span></h3>
                                 <p>Contact for more details</p>
-                                <h5><i class='far fa-clock'></i>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>} Delivery</h5>
+                                <h5><i className='far fa-clock'></i>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>} Delivery</h5>
                                 <div className="features">
                                     {gig.features.map(feature => {
                                         return <h5><span>✔</span> {feature}</h5>
@@ -60,8 +60,8 @@ export class GigDetails extends Component {
                         </div>
                     </div>
                     <div>
-                    <ScrollUpButton />
-                </div>
+                        <ScrollUpButton />
+                    </div>
 
                     <main className="gig-details">
                         <div className="left-container">

@@ -15,7 +15,7 @@ export class GigReview extends Component {
                             src={review.by.imgUrl} alt="">
                         </img>&nbsp;
                         <h2>&nbsp;      {review.by.fullname}&nbsp;  </h2>
-                        <h3>&nbsp;<i class="fa fa-star filled"></i>{review.rate}</h3>
+                        <h3>&nbsp;<i className="fa fa-star filled"></i>{review.rate}</h3>
                     </div>
                 </article>
                 <div className="review-txt">
