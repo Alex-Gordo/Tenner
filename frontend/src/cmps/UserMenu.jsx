@@ -7,9 +7,9 @@ import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
-import {Link } from 'react-router-dom'
-import { GigDetails } from '../pages/GigDetails';
+import { Divider } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export  function UserMenu() {
+export function UserMenu(navBarParams) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
@@ -34,7 +34,14 @@ export  function UserMenu() {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;
     }
+    setOpen(false);
+  };
 
+  const handleLogout = (event) => {
+    navBarParams.logoutFunc()
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+      return;
+    }
     setOpen(false);
   };
 
@@ -58,7 +65,7 @@ export  function UserMenu() {
 
   return (
     <div className={classes.root}>
-  
+
       <div>
         <Button
           ref={anchorRef}
@@ -77,10 +84,11 @@ export  function UserMenu() {
               <Paper>
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                    <MenuItem onClick={handleClose}>Profile</MenuItem>
-                    {/* <MenuItem onClick={handleClose}>Dashboard</MenuItem> */}
-                    <MenuItem onClick={handleClose}><NavLink to={`/user/{this.props.user}/dashboard`}>Dashboard</NavLink></MenuItem>
-                    <MenuItem onClick={handleClose}>Logout</MenuItem>
+                    {/* <MenuItem onClick={handleClose}>Profile</MenuItem> */}
+                    <MenuItem onClick={handleClose}><NavLink to={`/user/dashboard`}>Dashboard</NavLink></MenuItem>
+                    <Divider variant="middle"/> 
+                    <MenuItem onClick={handleLogout}><NavLink to={`/`}>Logout {navBarParams.user.username}</NavLink></MenuItem>
+                    {/* <MenuItem onClick={handleLogout}>Logout {navBarParams.user.username}</MenuItem> */}
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
