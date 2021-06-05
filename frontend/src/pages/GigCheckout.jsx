@@ -12,6 +12,7 @@ export class GigCheckout extends Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0,0)
         const gigId = this.props.match.params.gig
         gigService.getById(gigId).then(gig => {
             this.setState({ gig })
