@@ -1,9 +1,9 @@
-// .app {
-//   max-height: 100vh;
-//   .footer-container {
-//     margin-top: 11rem;
-//   }
-// }
+.app {
+  max-height: 100vh;
+  .footer-container {
+    margin-top: 12rem;
+  }
+}
 
 .checkout-container {
   align-items: flex-start;
@@ -20,7 +20,8 @@
     }
 
     .package-info {
-      justify-content: space-between;
+      margin-bottom: 3rem;
+      margin-right: 1rem;
     }
     img {
       width: 190px;
@@ -32,8 +33,13 @@
     }
     .title {
       color: $clr4;
+      max-width: 300px;
     }
-
+    .extra-title {
+      border-top: 1px solid $clr8;
+      padding-top: 3rem;
+      color: $clr4;
+    }
     select {
       height: 30px;
       font-size: 1rem;
@@ -57,58 +63,47 @@
     .extra-container {
       border: 1px solid $clr8;
       width: 65%;
-      justify-content: space-between;
-      padding: 20px;
-    }
-
-    input {
-      height: 1rem;
-    }
-
-    label {
-      padding-bottom: 10px;
       align-items: center;
+      label {
+        color: #222325;
+      }
+      input {
+        height: 1rem;
+      }
     }
   }
 
   p {
     margin: 0;
   }
-  h4 {
-    margin-bottom: 15px;
-  }
-
   .order-summary-container {
     margin-top: 100px;
-  }
-
-  .order-summary {
-    margin-left: 3rem;
-    padding: 20px;
-    border: 1px double $clr8;
-    h2 {
-      color: $clr4;
-      margin-bottom: 30px;
-    }
-
-    .price,
-    .fee,
-    hr,
-    .total,
-    .delivery {
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-    .total {
-      color: $clr4;
-    }
-
-    .btn-purchase {
-      font-size: 1.5rem;
-      width: 100%;
-      padding: 15px;
-      border-radius: 5px;
-      margin-bottom: 3rem;
+    .order-summary {
+      margin-left: 3rem;
+      padding: 20px;
+      border: 1px double $clr8;
+      h2 {
+        color: $clr4;
+        margin-bottom: 30px;
+      }
+      .price,
+      .fee,
+      hr,
+      .total,
+      .delivery {
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .total {
+        color: $clr4;
+      }
+      .btn-purchase {
+        font-size: 1.5rem;
+        width: 100%;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 3rem;
+      }
     }
   }
 }

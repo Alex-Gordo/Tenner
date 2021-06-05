@@ -12,7 +12,7 @@ export class GigCheckout extends Component {
     }
 
     componentDidMount() {
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
         const gigId = this.props.match.params.gig
         gigService.getById(gigId).then(gig => {
             this.setState({ gig })
@@ -37,15 +37,15 @@ export class GigCheckout extends Component {
     render() {
         const { gig, isMoreDetailsShown, isExtraPrice } = this.state
         if (!gig) return 'no gigs';
-        
+
         const avrRate = this.state.gig.reviews.reduce((currentTotal, rate) => {
             return rate.rate + currentTotal;
         }, 0) / gig.reviews.length;
 
         return (
             <React.Fragment>
-                <div className="checkout-container main-layout flex">
-                    <div className="order-summary-container flex ">
+                <div className="checkout-container main-layout details-layout flex">
+                    <div className="order-summary-container flex">
                         <div className="order-summary">
                             <h2>Summary</h2>
                             <div className="price flex">
@@ -89,7 +89,7 @@ export class GigCheckout extends Component {
                             <span>Qty</span>
                             <select defaultValue="1" onChange={this.addMoreItems}
                                 value={this.state.numberOfItems} >
-                                <option value="1" >1</option>
+                                <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
@@ -99,15 +99,13 @@ export class GigCheckout extends Component {
                         </div>
 
                         {isMoreDetailsShown && <div className="more-details flex">
-                            <h4>{gig.category}</h4>
-                            <h4>{gig.features[0]} + {gig.features[1]} + {gig.features[2]}</h4>
-                            <h4><span>✔ </span>{gig.revisions} revisions</h4>
-                            <h4><span>✔ </span>{gig.deliveryTime} Day(s) Delivery</h4>
+                            <p>{gig.category}</p>
+                            <p>{gig.features[0]} + {gig.features[1]} + {gig.features[2]}</p>
+                            <p><span>✔ </span>{gig.revisions} revisions</p>
+                            <p><span>✔ </span>{gig.deliveryTime} Day(s) Delivery</p>
                         </div>}
 
-
-
-                        <h3>add extra</h3>
+                        <h5 className="extra-title">Add Extras</h5>
                         <div className="extra-container flex">
                             <label className="flex">
                                 <input type="checkbox" onChange={this.calculateTotalPrice}></input>
