@@ -40,8 +40,7 @@
             "fullname": "Miri Ben Shushan",
             "imgUrl": "https://robohash.org/1?set=set2"
           }
-        },
-        {
+        },       {
           "id": "madeId",
           "txt": "Fantastic job!",
           "rate": 5,
@@ -231,7 +230,7 @@
       "title": "I will do very fast internet research and accurate data entry",
       "price": 7,
       "description": "2 Hours High Quality Internet Research and Data Entry SMALL Task Delivery. 100% Satisfaction",
-      "category": "Design",
+      "category": "Data Entry",
       "deliveryTime": "1",
       "revisions": "1",
       "imgUrl": [
@@ -317,7 +316,7 @@
       "title": "I will code any indicator or strategy in tradingview pinescript",
       "price": 36,
       "description": "Welcome to my service, Get your strategy or indicators converted to in one Indicator script.If you have any Strategy based on indicators or price action or opening range breakout strategy, then get converted into one indicator on tradingview.",
-      "category": "Digital",
+      "category": "Data Entry",
       "deliveryTime": "3",
       "revisions": "2",
       "imgUrl": [
@@ -360,7 +359,7 @@
       "title": "I will do data entry, data mining and data collection",
       "price": 10,
       "description": "I will do Data Entry, Data Mining, Data Collection. We are a small freelance company with a perfect atmosphere to catch up your needs. We are pretty experienced in this field with a good client satisfaction rate. We are eagerly waiting for good clients to work with and I assure you will not be disappointed.you can see gig video for specifications of our services.",
-      "category": "Digital",
+      "category": "Data Entry",
       "deliveryTime": "3",
       "revisions": "1",
       "imgUrl": [
@@ -403,7 +402,7 @@
       "title": "I will be your virtual assistant for data entry, typing, copy paste and web research",
       "price": 100,
       "description": "I will do 6 hours of Data Entry, Data Mining, Web Research, Copy Paste & deliver on the next day.",
-      "category": "Digital",
+      "category": "Data Entry",
       "deliveryTime": "2",
       "revisions": "10",
       "imgUrl": [
@@ -446,7 +445,7 @@
       "title": "I will do data entry, copy paste and excel data entry work for you",
       "price": 85,
       "description": "I will do data entry. typing,copy paste, web research & product listing big project 16 hour work",
-      "category": "Digital",
+      "category": "Data Entry",
       "deliveryTime": "5",
       "revisions": "8",
       "imgUrl": [
@@ -618,6 +617,7 @@
       ]
     },
 
+   
     {
       "_id": "g164",
       "title": "I will create a stunning commercial brand video",
@@ -898,7 +898,7 @@
       "title": "I will do professional digital menu or TV menu board for restaurant",
       "price": 95,
       "description": "4k/ Ultra HD quality 3 animated movement Tvs Up to a minute video",
-      "category": "Design",
+      "category": "Digital",
       "deliveryTime": "7",
       "revisions": "Unlimited ",
       "imgUrl": [
@@ -984,7 +984,7 @@
       "title": "I will record professional guitars for you",
       "price": 111,
       "description": "I will record any kind of guitar for your choice - electric / nylon strings / acoustic.",
-      "category": "video",
+      "category": "Music",
       "deliveryTime": "3",
       "revisions": "2",
       "imgUrl": [
@@ -1092,229 +1092,8 @@
     {
       "_id": "o1225",
       "createdAt": 9898989,
-      "buyer": "Asaf",
+      "buyer": "mini-user",
       "price": 20,
-      "gigOwner": {
-        "_id": "v102",
-        "name": "Hapirat Hadebil",
-        "imgUrl": ""
-      },
-      "gig": {
-        "_id": "v140",
-        "title": "I will do 2 minimalist logo design for your business",
-        "price": 25
-      },
-      "status": "pending"
-    },
-    {
-      "_id": "o1226",
-      "createdAt": 9898989,
-      "buyer": "Yaron",
-      "price": 11,
-      "gigOwner": {
-        "_id": "v102",
-        "name": "Hapirat Hadebil",
-        "imgUrl": ""
-      },
-      "gig": {
-        "_id": "v140",
-        "title": "I will do 2 minimalist logo design for your business",
-        "price": 25
-      },
-      "status": "pending"
-    },
-    {
-      "_id": "o1227",
-      "createdAt": 9898989,
-      "buyer": "Moria",
-      "price": 45,
-      "gigOwner": {
-        "_id": "v102",
-        "name": "Hapirat Hadebil",
-        "imgUrl": ""
-      },
-      "gig": {
-        "_id": "v140",
-        "title": "I will do 2 minimalist logo design for your business",
-        "price": 25
-      },
-      "status": "pending"
-    },
-    {
-      "_id": "o1228",
-      "createdAt": 9898989,
-      "buyer": "Yaron",
-      "price": 201,
-      "gigOwner": {
-        "_id": "v102",
-        "name": "Hapirat Hadebil",
-        "imgUrl": ""
-      },
-      "gig": {
-        "_id": "v140",
-        "title": "I will do 2 minimalist logo design for your business",
-        "price": 25
-      },
-      "status": "pending"
-    },
-    {
-      "_id": "o1229",
-      "createdAt": 9898989,
-      "buyer": "Tamir",
-      "price": 44,
-      "gigOwner": {
-        "_id": "v102",
-        "name": "Hapirat Hadebil",
-        "imgUrl": ""
-      },
-      "gig": {
-        "_id": "v140",
-        "title": "I will do 2 minimalist logo design for your business",
-        "price": 25
-      },
-      "status": "pending"
-    },
-    {
-      "_id": "o1230",
-      "createdAt": 9898989,
-      "buyer": "Moria",
-      "price": 68,
-      "gigOwner": {
-        "_id": "v102",
-        "name": "Hapirat Hadebil",
-        "imgUrl": ""
-      },
-      "gig": {
-        "_id": "v140",
-        "title": "I will do 2 minimalist logo design for your business",
-        "price": 25
-      },
-      "status": "pending"
-    },
-    {
-      "_id": "o1231",
-      "createdAt": 9898989,
-      "buyer": "Alon",
-      "price": 99,
-      "gigOwner": {
-        "_id": "v102",
-        "name": "Hapirat Hadebil",
-        "imgUrl": ""
-      },
-      "gig": {
-        "_id": "v140",
-        "title": "I will do 2 minimalist logo design for your business",
-        "price": 25
-      },
-      "status": "pending"
-    },
-    {
-      "_id": "o1231",
-      "createdAt": 9898989,
-      "buyer": "Yaron",
-      "price": 31,
-      "gigOwner": {
-        "_id": "v102",
-        "name": "Hapirat Hadebil",
-        "imgUrl": ""
-      },
-      "gig": {
-        "_id": "v140",
-        "title": "I will do 2 minimalist logo design for your business",
-        "price": 25
-      },
-      "status": "pending"
-    },
-    {
-      "_id": "o1232",
-      "createdAt": 9898989,
-      "buyer": "Basya",
-      "price": 22,
-      "gigOwner": {
-        "_id": "v102",
-        "name": "Hapirat Hadebil",
-        "imgUrl": ""
-      },
-      "gig": {
-        "_id": "v140",
-        "title": "I will do 2 minimalist logo design for your business",
-        "price": 25
-      },
-      "status": "pending"
-    },
-    {
-      "_id": "o1233",
-      "createdAt": 9898989,
-      "buyer": "Yaron",
-      "price": 50,
-      "gigOwner": {
-        "_id": "v102",
-        "name": "Hapirat Hadebil",
-        "imgUrl": ""
-      },
-      "gig": {
-        "_id": "v140",
-        "title": "I will do 2 minimalist logo design for your business",
-        "price": 25
-      },
-      "status": "pending"
-    },
-    {
-      "_id": "o1234",
-      "createdAt": 9898989,
-      "buyer": "Asaf",
-      "price": 73,
-      "gigOwner": {
-        "_id": "v102",
-        "name": "Hapirat Hadebil",
-        "imgUrl": ""
-      },
-      "gig": {
-        "_id": "v140",
-        "title": "I will do 2 minimalist logo design for your business",
-        "price": 25
-      },
-      "status": "pending"
-    },
-    {
-      "_id": "o1235",
-      "createdAt": 9898989,
-      "buyer": "Yaron",
-      "price": 101,
-      "gigOwner": {
-        "_id": "v102",
-        "name": "Hapirat Hadebil",
-        "imgUrl": ""
-      },
-      "gig": {
-        "_id": "v140",
-        "title": "I will do 2 minimalist logo design for your business",
-        "price": 25
-      },
-      "status": "pending"
-    },
-    {
-      "_id": "o1236",
-      "createdAt": 9898989,
-      "buyer": "Moria",
-      "price": 80,
-      "gigOwner": {
-        "_id": "v102",
-        "name": "Hapirat Hadebil",
-        "imgUrl": ""
-      },
-      "gig": {
-        "_id": "v140",
-        "title": "I will do 2 minimalist logo design for your business",
-        "price": 25
-      },
-      "status": "pending"
-    },
-    {
-      "_id": "o1237",
-      "createdAt": 9898989,
-      "buyer": "Alon",
-      "price": 19,
       "gigOwner": {
         "_id": "v102",
         "name": "Hapirat Hadebil",
