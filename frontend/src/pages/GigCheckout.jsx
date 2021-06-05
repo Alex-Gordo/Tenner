@@ -86,7 +86,7 @@ export class GigCheckout extends Component {
                                     </button>
                                 </p>
                             </div>
-                            <span>Qty</span>
+                            <span className="qty">Qty</span>
                             <select defaultValue="1" onChange={this.addMoreItems}
                                 value={this.state.numberOfItems} >
                                 <option value="1">1</option>

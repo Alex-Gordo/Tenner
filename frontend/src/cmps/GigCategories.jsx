@@ -1,9 +1,5 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-// import design from '../assets/img/design.jpg'
-// import programming from '../assets/img/programming.jpg'
-// import digital from '../assets/img/digital.jpg'
-// import video from '../assets/img/video.jpg'
 
 export function GigCategories() {
     return (
@@ -12,7 +8,7 @@ export function GigCategories() {
             <div className="gig-list flex">
                 <NavLink to="/gigs?q=design" className="cat-link">
                     <img className="cat-img" src={'https://res.cloudinary.com/arikxl/image/upload/v1622785624/tenner/category/design_kx3xor.jpg'} alt="design" />
-                     <p className="cat-title">Design</p></NavLink>
+                    <p className="cat-title">Design</p></NavLink>
                 <NavLink to="/gigs?q=digital" className="cat-link">
                     <img className="cat-img" src={'https://res.cloudinary.com/arikxl/image/upload/v1622785624/tenner/category/digital_cvqyqy.jpg'} alt="digital" />
                     <p className="cat-title">Digital</p></NavLink>
