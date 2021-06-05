@@ -2,6 +2,7 @@ import { gigService } from '../services/gigService.js'
 import { GigReview } from '../cmps/GigReview'
 import { NavLink } from 'react-router-dom';
 import React, { Component } from 'react';
+import ScrollUpButton from "react-scroll-up-button";
 
 export class GigDetails extends Component {
 
@@ -10,6 +11,7 @@ export class GigDetails extends Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0,0)
         const gigId = this.props.match.params.gig
         gigService.getById(gigId).then(gig => {
             this.setState({ gig })
@@ -19,6 +21,8 @@ export class GigDetails extends Component {
 
 
     render() {
+
+
         const { gig } = this.state
         if (!gig) return 'no gigs';
 
@@ -55,7 +59,9 @@ export class GigDetails extends Component {
                             </div>
                         </div>
                     </div>
-
+                    <div>
+                    <ScrollUpButton />
+                </div>
 
                     <main className="gig-details">
                         <div className="left-container">

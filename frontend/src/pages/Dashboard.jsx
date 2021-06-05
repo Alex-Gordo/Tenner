@@ -13,6 +13,10 @@ export class Dashboard extends Component {
         user: userService.getLoggedinUser()
     }
 
+    componentDidMount() {
+        window.scrollTo(0,0)
+    }
+
     render() {
         if(!this.state.user) return 'no user loaded'
 

@@ -7,6 +7,10 @@ import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import { makeStyles } from '@material-ui/core/styles';
+import { NavLink } from 'react-router-dom';
+import {Link } from 'react-router-dom'
+import { GigDetails } from '../pages/GigDetails';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,6 +37,7 @@ export  function UserMenu() {
 
     setOpen(false);
   };
+
 
   function handleListKeyDown(event) {
     if (event.key === 'Tab') {
@@ -73,7 +78,8 @@ export  function UserMenu() {
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
                     <MenuItem onClick={handleClose}>Profile</MenuItem>
-                    <MenuItem onClick={handleClose}>Dashboard</MenuItem>
+                    {/* <MenuItem onClick={handleClose}>Dashboard</MenuItem> */}
+                    <MenuItem onClick={handleClose}><NavLink to={`/user/{this.props.user}/dashboard`}>Dashboard</NavLink></MenuItem>
                     <MenuItem onClick={handleClose}>Logout</MenuItem>
                   </MenuList>
                 </ClickAwayListener>

@@ -10,6 +10,8 @@ import { LoginGoogle} from './LoginGoogle.jsx';
 
 class _NavBar extends Component {
 
+
+
     state = {
         isOpenModal: false,
         user: null,
@@ -30,7 +32,7 @@ class _NavBar extends Component {
 
                 <ul className="navbar-list flex">
                     <li>
-                        <LoginGoogle/>
+                        {/* <LoginGoogle/> */}
                     </li>
                     <li><NavLink to="/gigs">Explore</NavLink></li>
 
@@ -40,11 +42,11 @@ class _NavBar extends Component {
                     </>}
 
                     {(this.props.loggedInUser) && <>
-                       
-                        <li><NavLink  to={`/user/${this.state.user._id}/dashboard`}>Dashboard</NavLink></li>
+                        <UserMenu user={this.state.user._id}/>
+                        {/* <li><NavLink  to={`/user/${this.state.user._id}/dashboard`}>Dashboard</NavLink></li> */}
                         <button onClick={this.onLogoutClick}>Logout</button>
                     </>}
-                    <UserMenu />
+                    
 
                 </ul>
             </nav>
