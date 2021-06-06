@@ -73,6 +73,15 @@ header {
         border: 2px $clr3 solid;
         font-weight: 600;
         padding: 7px 20px;
+        &.MuiButton-text {
+          border: none;
+          background-color: transparent;
+          &:hover {
+            background-color: transparent;
+            opacity: 0.8;
+            transition: all 0.2s;
+          }
+        }
         &:hover {
           background-color: $clr1;
           border-color: $clr1;
