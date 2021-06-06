@@ -3,3 +3,27 @@
     color: $clr4;
   }
 }
+
+@media (max-width: $mobile-breakpoint) {
+  .main-layout {
+    max-width: 320px;
+  }
+  .hero {
+    height: 60vh;
+    .hero-title-main {
+      font-size: 2rem;
+      margin-top: 15rem;
+    }
+    .hero-title-secondary {
+      font-size: 2rem;
+    }
+    .search-bar input {
+      width: 12rem;
+    }
+  }
+  .footer-container {
+    p {
+      display: none;
+    }
+  }
+}
