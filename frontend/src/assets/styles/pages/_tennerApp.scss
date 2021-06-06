@@ -37,3 +37,20 @@
     }
   }
 }
+
+@media (max-width: $large-breakpoint) {
+  .main-layout {
+    max-width: 950px;
+  }
+}
+@media (max-width: $normal-breakpoint) {
+  .main-layout {
+    max-width: 900px;
+  }
+  .tenner-app .search-bar {
+    margin-bottom: 1rem;
+    label {
+      width: 20rem;
+    }
+  }
+}
