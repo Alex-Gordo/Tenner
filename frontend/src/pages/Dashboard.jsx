@@ -1,8 +1,9 @@
 
 import React, { Component } from 'react'
 import { userService } from '../services/userService'
-
-
+import { Charts } from '../cmps/Charts.jsx';
+import { BarChartTest } from '../cmps/BarChartTest.jsx';
+import { Table } from '../cmps/Table.jsx';
 
 
 
@@ -14,14 +15,14 @@ export class Dashboard extends Component {
     }
 
     componentDidMount() {
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
     }
 
     render() {
-        if(!this.state.user) return 'no user loaded'
+        if (!this.state.user) return 'no user loaded'
 
         return (
-            
+
             <div className="main-layout dashboard-container flex">
                 <aside className="user-stats flex">
                     {/* <button>Logout</button> */}
@@ -70,43 +71,10 @@ export class Dashboard extends Component {
                         </ul>
                     </main>
 
-                    <table className="">
-                        <thead>
-                            <th>Name</th>
-                            <th>Date</th>
-                            <th>Delivery Time</th>
-                            <th>Actions</th>
-                            <th>Price</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Asaf</td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <button>Approve</button>
-                                    <button>Cancel</button>
-                                </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Yaron</td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <button>Approve</button>
-                                    <button>Cancel</button>
-                                </td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-
                     <div className="graphs-container flex">
-                        <div className="pie-graph"></div>
-                        <div className="columns-graph"></div>
+                        <Charts />
                     </div>
-
+                    <Table />
                 </div>
 
             </div>
