@@ -20,6 +20,9 @@ export class Dashboard extends Component {
 
     render() {
         if (!this.state.user) return 'no user loaded'
+        const { user } = this.state
+        console.log('user', user);
+        console.log('user.fullname', user.fullname);
 
         return (
 
@@ -48,7 +51,7 @@ export class Dashboard extends Component {
                                 <section className="order-card flex">
                                     <div className="flex order-details">
                                         <h2>No. of Orders</h2>
-                                        <h3>2</h3>
+                                        <h3>{user.orders.length}</h3>
                                     </div>
                                 </section>
                             </li>

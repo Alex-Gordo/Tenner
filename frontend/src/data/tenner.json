@@ -40,7 +40,8 @@
             "fullname": "Miri Ben Shushan",
             "imgUrl": "https://robohash.org/1?set=set2"
           }
-        },       {
+        },
+        {
           "id": "madeId",
           "txt": "Fantastic job!",
           "rate": 5,
@@ -617,7 +618,6 @@
       ]
     },
 
-   
     {
       "_id": "g164",
       "title": "I will create a stunning commercial brand video",
@@ -1069,7 +1069,6 @@
 
   "user": [
     {
-      "_id": "u101",
       "fullname": "User One",
       "imgUrl": "https://res.cloudinary.com/arikxl/image/upload/v1622835749/tenner/user%20face/beard-1845166_640_zedzaw.jpg",
       "username": "user1",
@@ -1078,8 +1077,7 @@
       "orders": []
     },
     {
-      "_id": "u102",
-      "fullname": "User 2",
+      "fullname": "David Guetta",
       "imgUrl": "https://res.cloudinary.com/arikxl/image/upload/v1622835689/tenner/user%20face/happy-1836445_1920_umfa4l.jpg",
       "username": "user2",
       "password": "secret",
