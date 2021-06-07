@@ -4,13 +4,18 @@
     height: 30px;
     border-radius: 50px;
   }
-
-  h3 {
-    color: $clr6;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
+  p {
+    color: $clr4;
   }
-  .review-txt {
-    display: block;
+  .fa-star {
+    margin-left: 1rem;
   }
+}
+.reviews-headline {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $clr8;
+  margin-bottom: 1rem;
+}
+span {
+  color: $clr6;
 }

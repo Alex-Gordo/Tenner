@@ -42,9 +42,9 @@ export class GigDetails extends Component {
                         </section>
                         <div className="">
                             <div className="cta-container">
-                                <h3 className="cta-price flex">Basic <span className="cta-price">${gig.price}</span></h3>
-                                <p>Contact for more details</p>
-                                <h5><i className='far fa-clock'></i>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>} Delivery</h5>
+                                <p className="cta-price flex">Basic <span className="cta-price">${gig.price}</span></p>
+                                <p>Graphic and Text. Use up to 3 Color Only. File Send in AI/PSD, PNG, JPG.</p>
+                                <p><i className='far fa-clock'></i>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>} Delivery</p>
                                 <div className="features">
                                     {gig.features.map(feature => {
                                         return <h5><span>✔</span> {feature}</h5>
@@ -75,11 +75,9 @@ export class GigDetails extends Component {
                                     <p> &nbsp; | <i className="fa fa-star filled"></i>{avrRate} ({gig.reviews.length} reviews)</p>
                                     <p className="orders-queue">| 7 Orders in Queue</p>
                                 </div>
-
                                 <div className="img-container">
                                     <img className="gig-details-img img"
                                         src={gig.imgUrl[0]} alt="" />
-
                                     <div className="gig-gallery flex">
                                         <img className="gig-gallery-img img"
                                             src={gig.imgUrl[1]} alt="" />
@@ -91,18 +89,23 @@ export class GigDetails extends Component {
                                 </div>
                             </section>
                             <section className="about-details flex ">
-
-
-                                <h3 className="about-title">About this Gig</h3>
-                                <h4 className="description">{gig.description}</h4>
+                                <p className="about-title">About this Gig</p>
+                                <p className="description">{gig.description}</p>
                                 <article className="about-seller">
-                                    <h3 className="about-title">About The Seller</h3>
+                                    <p className="about-title">About The Seller</p>
                                     <div className="owner-card flex">
                                         <img className="md-round-img"
                                             src={gig.gigOwner.imgUrl} alt="" />
                                         <div className="owner-card-right flex">
-                                            <h3>{gig.gigOwner.fullName}</h3>
-                                            <h4><i className="fa fa-star filled"></i>{avrRate} ({gig.reviews.length} reviews)</h4>
+                                            <p>{gig.gigOwner.fullName}</p>
+                                            <p><i className="fa fa-star filled">
+                                                <i className="fa fa-star filled">
+                                                    <i className="fa fa-star filled">
+                                                        <i className="fa fa-star filled">
+                                                            <i className="fa fa-star filled">
+                                                                {avrRate}</i></i></i></i></i>
+                                                {/* <span>({gig.reviews.length})</span> */}
+                                            </p>
 
                                         </div>
                                     </div>
@@ -115,23 +118,28 @@ export class GigDetails extends Component {
                                             <p>Member Since<br /><b>2 month ago</b></p>
                                             <p>Last Delivery<br /><b>About 2 Hours ago</b></p>
                                         </div>
-                                        <p className="owner-summary flex">Hi, everybody! My name is Stefano Castro, and I am a expert WebDesigner with over 5 years of experience. I've been passionate in create amazing website for anytype of business, especially in Ecommerce Stores with Shopify and Wix Platforms.
-                                            What I love is bring businesses to the next level giving a boost thanks to eye catching and amazing functionality website design, satisfying and overcoming the expectation of my clients!</p>
+                                        <p className="owner-summary flex">Hello I am Freelance Graphic Design and Illustrator based in Israel, I have working in graphic design industry for almost 6 years, I can do illustration, graphic design, and pattern design</p>
                                     </div>
                                 </article>
                             </section>
 
 
                             <section className="reviews">
-                                <h3 className="reviews-headline" > {gig.reviews.length} Reviews <i className="fa fa-star filled"></i> {avrRate}</h3>
+                                <p className="reviews-headline" > {gig.reviews.length} Reviews
+                                <i className="fa fa-star filled"></i>
+                                    <i className="fa fa-star filled"></i>
+                                    <i className="fa fa-star filled"></i>
+                                    <i className="fa fa-star filled"></i>
+                                    <i className="fa fa-star filled"></i>
+                                    <span>{avrRate}</span> </p>
                                 {gig.reviews.map(review => {
                                     return <article key={review.id}>
                                         <GigReview review={review} />
                                     </article>
                                 })}
-                                <button className="add-review-btn btn">
+                                {/* <button className="add-review-btn btn">
                                     Add review
-                                </button>
+                                </button> */}
                             </section>
                         </div>
                     </main>
