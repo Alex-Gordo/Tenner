@@ -30,11 +30,10 @@ export function removeUser(userId) {
 
 
 export function onLogin(userCreds) {
-  console.log('onloginaction11111', userCreds);
   return async dispatch => {
     try {
-      console.log('2222222222222222');
       const user = await userService.login(userCreds)
+      console.log('user', user);
       dispatch({ type: 'SET_USER', user })
     } catch (err) {
       console.log('UserActions: err in login', err)

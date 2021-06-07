@@ -96,7 +96,7 @@ export class GigDetails extends Component {
                                 <h3 className="about-title">About this Gig</h3>
                                 <h4 className="description">{gig.description}</h4>
                                 <article className="about-seller">
-                                    <h3 className="about-title">About this Seller</h3>
+                                    <h3 className="about-title">About The Seller</h3>
                                     <div className="owner-card flex">
                                         <img className="md-round-img"
                                             src={gig.gigOwner.imgUrl} alt="" />
@@ -128,8 +128,8 @@ export class GigDetails extends Component {
                                 <h3 className="reviews-headline" ><i className="fa fa-star filled"></i>{avrRate} ({gig.reviews.length} reviews)</h3>
                                 {/* <div className="reviews-rate-bars"></div> */}
                                 {gig.reviews.map(review => {
-                                    return <article>
-                                        <GigReview key={review.id} review={review} />
+                                    return <article key={review.id}>
+                                        <GigReview review={review} />
                                     </article>
                                 })}
                                 <button className="add-review-btn btn">
