@@ -120,13 +120,10 @@ export class GigDetails extends Component {
                                     </div>
                                 </article>
                             </section>
-                            {/* <div className="suggested">
-                                <h3>For You</h3>
-                                <p>render more from same category</p>
-                            </div> */}
+
+
                             <section className="reviews">
-                                <h3 className="reviews-headline" ><i className="fa fa-star filled"></i>{avrRate} ({gig.reviews.length} reviews)</h3>
-                                {/* <div className="reviews-rate-bars"></div> */}
+                                <h3 className="reviews-headline" > {gig.reviews.length} Reviews <i className="fa fa-star filled"></i> {avrRate}</h3>
                                 {gig.reviews.map(review => {
                                     return <article key={review.id}>
                                         <GigReview review={review} />
@@ -134,7 +131,7 @@ export class GigDetails extends Component {
                                 })}
                                 <button className="add-review-btn btn">
                                     Add review
-                        </button>
+                                </button>
                             </section>
                         </div>
                     </main>
