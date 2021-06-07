@@ -26,15 +26,24 @@
     }
   }
 
+.orders {
+  margin-top: 8rem;
+}
+
+.order-preview-container {
+  border-left: lightsalmon;
+}
+
+
   .dashboard-main {
     width: 80%;
     margin-top: 100px;
     // background-color: green;
     flex-direction: column;
 
-    .orders-container {
+    .orders{
       // width:80%;
-      margin-top: 0;
+      margin-top: 8rem;
       //   grid-column: 1/3;
       //   grid-row: 1/1;
     //   background-color: blue;
