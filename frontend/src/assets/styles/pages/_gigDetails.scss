@@ -4,7 +4,7 @@
     font-size: 0.9rem;
     align-items: center;
     .owner-name {
-      color: black;
+      color: $clr4;
       font-weight: 1000;
     }
     .orders-queue {
@@ -18,7 +18,7 @@
   }
 
   .img-container {
-    width: 80%;
+    width: 100%;
     .gig-details-img {
       object-fit: cover;
       height: 400px;
@@ -36,17 +36,19 @@
 
   .gig-info {
     margin-top: 100px;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
   }
   .description {
     color: $clr2;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     line-height: 1.4;
     font-family: Arial, Helvetica, sans-serif;
   }
   .about-title {
     color: $clr4;
-    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    font-weight: 1000;
+    margin-bottom: 1rem;
   }
   .about-details {
     margin: 0;
@@ -58,22 +60,18 @@
     margin-top: 20px;
   }
   .md-round-img {
-    width: 78px;
+    width: 100px;
     border-radius: 50px;
-    margin: 0 0 10px;
+    margin-bottom: 0.5rem;
   }
   .owner-card-right {
     flex-direction: column;
     margin-left: 20px;
     align-self: center;
-
-    h3 {
-      color: $clr4;
-      font-size: 1rem;
-    }
-    h4 {
-      color: $clr2;
-      font-size: 1rem;
+    color: $clr4;
+    span {
+      color: $clr7;
+      font-size: 0.9rem;
     }
   }
 
@@ -88,13 +86,15 @@
       margin-right: 7rem;
     }
     b {
-      color: $clr4;
+      color: #5e5f63;
     }
     .info-left,
     .info-right {
-      flex-direction: row;
-      margin: 20px;
+      margin: 1rem;
       justify-content: space-between;
+    }
+    .info-right {
+      border-bottom: 1px solid $clr8;
     }
     .owner-summary {
       margin: 20px;
@@ -128,7 +128,7 @@
   position: fixed;
   right: 10%;
   top: 12%;
-  padding: 15px;
+  // padding: 15px;
   border: 1px double $clr8;
   flex-direction: column;
   align-items: center;
@@ -137,6 +137,7 @@
   }
   .package-choice {
     width: 100%;
+    padding: 0px;
     .btn {
       height: 50px;
       width: 34%;
@@ -153,11 +154,14 @@
   }
 }
 .cta-container {
-  margin-top: 3rem;
-  max-width: 350px;
+  margin-top: 1rem;
+  width: 25rem;
+  padding: 1.1em;
   .cta-price {
     justify-content: space-between;
     color: $clr4;
+    font-size: 1.3rem;
+    font-weight: 1000;
     margin-bottom: 1rem;
   }
   span {
@@ -168,7 +172,7 @@
   }
   p {
     font-size: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .btn {
     font-size: 1rem;
