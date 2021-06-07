@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { PieChart, Pie, Sector, ResponsiveContainer } from 'recharts';
 import { BarChartTest } from '../cmps/BarChartTest.jsx';
+import { userService } from '../services/userService';
 
 
 
@@ -22,6 +23,9 @@ const data02 = [
     { name: 'Basya', order1: 40, order2: 22 }
 
 ];
+
+
+
 
 const renderActiveShape = (props) => {
     const RADIAN = Math.PI / 180;
@@ -69,12 +73,18 @@ const renderActiveShape = (props) => {
     );
 };
 
+// const orders =  userService.getLoggedinUser().orders
 
 
 export class Charts extends Component {
 
+    componentDidMount () {
+        this.setState({orders: userService.getLoggedinUser().orders})
+    }
+
     state = {
         activeIndex: 0,
+        orders: null
     };
 
     onPieEnter = (_, index) => {
@@ -84,6 +94,8 @@ export class Charts extends Component {
     };
 
     render() {
+        const {orders} = this.state
+        if (!orders) return <div>no orders yet</div>
         return (
             <>
                 <ResponsiveContainer width="100%" height="100%">
@@ -91,7 +103,7 @@ export class Charts extends Component {
                         <Pie
                             activeIndex={this.state.activeIndex}
                             activeShape={renderActiveShape}
-                            data={data01}
+                            data={orders}
                             cx="50%"
                             cy="50%"
                             innerRadius={60}

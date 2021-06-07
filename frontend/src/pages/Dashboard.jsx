@@ -80,7 +80,7 @@ class _Dashboard extends Component {
                     <div className="graphs-container flex">
                         {/* <Charts /> */}
                     </div>
-                    <Table />
+                    <Table user={this.state.user} />
                 </div>
 
             </div>
