@@ -3,7 +3,7 @@ import MaterialTable from 'material-table';
 import { userService } from '../services/userService';
 
 
-// const orders = [
+// export const orders = [
 //     { id: 1, name: 'Yaron Vitor', price: `$${18}`, date: new Date().toLocaleString(), status: 'new' },
 //     { id: 2, name: 'Moria Paras', price: `$${29}`, date: new Date(1620509929371).toLocaleString(), status: 'done' },
 //     { id: 3, name: 'Asaf Marguliz', price: `$${11}`, date: new Date(1622909220371).toLocaleString(), status: 'pending' },
@@ -25,13 +25,13 @@ import { userService } from '../services/userService';
 
 
 
-const orders =  userService.getLoggedinUser().orders
+// const orders =  userService.getLoggedinUser().orders
 
 
-export function Table() {
-    const [data, setData] = useState(orders);
-    if(!orders) return <div>No orders yet</div>
-    console.table( orders)
+export function Table({user}) {
+    const [data, setData] = useState(user.orders);
+    if(!user.orders) return <div>No orders yet</div>
+    console.table( user.orders)
 
 
     

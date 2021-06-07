@@ -7,6 +7,7 @@ import { Table } from '../cmps/Table.jsx';
 
 
 
+
 export class Dashboard extends Component {
 
     state = {
@@ -78,7 +79,7 @@ export class Dashboard extends Component {
                     <div className="graphs-container flex">
                         <Charts />
                     </div>
-                    <Table />
+                    <Table user= {this.state.user}/>
                 </div>
 
             </div>
