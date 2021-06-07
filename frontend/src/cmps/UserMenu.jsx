@@ -5,12 +5,9 @@ import Grow from '@material-ui/core/Grow';
 import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
-import ListItemIcon from '@material-ui/core/MenuItem';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import MenuList from '@material-ui/core/MenuList';
 import Avatar from '@material-ui/core/Avatar';
 import { makeStyles } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { Divider } from '@material-ui/core';
 
@@ -70,19 +67,19 @@ export function UserMenu(navBarParams) {
     <div className={classes.root}>
 
       <div>
-        
-         <Button
+
+        <Button
           ref={anchorRef}
           aria-controls={open ? 'menu-list-grow' : undefined}
           aria-haspopup="true"
           onClick={handleToggle}
-          
+
         >
           <Avatar alt={navBarParams.user.username} src={navBarParams.user.imgUrl}
-       
-        >
-        </Avatar>
-        </Button> 
+
+          >
+          </Avatar>
+        </Button>
         <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
           {({ TransitionProps, placement }) => (
             <Grow

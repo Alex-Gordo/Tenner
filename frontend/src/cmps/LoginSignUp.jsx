@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { onLogin, onSignup } from '../store/actions/userActions.js'
-// import { Modal, TextField } from '@material-ui/core'
-// import { NewModal } from './Modal'
 
 export class _LoginSignUp extends Component {
 
@@ -14,10 +12,7 @@ export class _LoginSignUp extends Component {
     }
 
     componentDidMount() {
-        // console.log("login did mount");
-        // console.log('pagemode', this.props.pageMode);
         this.setState({ pagemode: this.props.pageMode })
-        // console.log('pagemode', this.state.pageMode);
     }
 
     handleUsernameInput = event => {
@@ -43,10 +38,7 @@ export class _LoginSignUp extends Component {
     }
 
 
-
-
     render() {
-        // console.log("login render");
         return (
             <React.Fragment>
                 <div>

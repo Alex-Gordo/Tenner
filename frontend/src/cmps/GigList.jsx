@@ -1,13 +1,9 @@
 import React from "react";
-// import { connect } from 'react-redux'
 import { GigPreview } from '../cmps/GigPreview.jsx';
-// import { Link } from 'react-router-dom'
 import ScrollUpButton from "react-scroll-up-button";
 
 
 export function GigList({ gigs }) {
-
-
     return (
         <React.Fragment>
             <main className="gig-list flex">

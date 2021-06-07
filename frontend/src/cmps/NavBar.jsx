@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { NewModal } from './Modal'
-import { userService } from '../services/userService'
 import { logout } from '../store/actions/userActions'
 import { UserMenu } from '../cmps/UserMenu'
-import { LoginGoogle} from './LoginGoogle.jsx';
+// import { LoginGoogle} from './LoginGoogle.jsx';
 
 
 class _NavBar extends Component {
@@ -14,9 +13,7 @@ class _NavBar extends Component {
 
     state = {
         isOpenModal: false,
-        // user: null,
         isLoggedIn: this.props.loggedInUser,
-        // user: userService.getLoggedinUser()
     }
 
     render() {
@@ -35,10 +32,9 @@ class _NavBar extends Component {
                     </>}
 
                     {(this.props.loggedInUser) && <>
-                        <UserMenu user={this.props.loggedInUser} logoutFunc={this.props.logout}/>
-                        {/* <button onClick={this.onLogoutClick}>Logout</button> */}
+                        <UserMenu user={this.props.loggedInUser} logoutFunc={this.props.logout} />
                     </>}
-                    
+
 
                 </ul>
             </nav>
