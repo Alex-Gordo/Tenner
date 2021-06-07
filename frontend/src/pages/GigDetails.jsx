@@ -103,7 +103,8 @@ export class GigDetails extends Component {
                                                     <i className="fa fa-star filled">
                                                         <i className="fa fa-star filled">
                                                             <i className="fa fa-star filled">
-                                                                {avrRate}</i></i></i></i></i> <span>({gig.reviews.length})</span>
+                                                                {avrRate}</i></i></i></i></i>
+                                                {/* <span>({gig.reviews.length})</span> */}
                                             </p>
 
                                         </div>
@@ -117,23 +118,28 @@ export class GigDetails extends Component {
                                             <p>Member Since<br /><b>2 month ago</b></p>
                                             <p>Last Delivery<br /><b>About 2 Hours ago</b></p>
                                         </div>
-                                        <p className="owner-summary flex">Hi, everybody! My name is Stefano Castro, and I am a expert WebDesigner with over 5 years of experience. I've been passionate in create amazing website for anytype of business, especially in Ecommerce Stores with Shopify and Wix Platforms.
-                                            What I love is bring businesses to the next level giving a boost thanks to eye catching and amazing functionality website design, satisfying and overcoming the expectation of my clients!</p>
+                                        <p className="owner-summary flex">Hello I am Freelance Graphic Design and Illustrator based in Israel, I have working in graphic design industry for almost 6 years, I can do illustration, graphic design, and pattern design</p>
                                     </div>
                                 </article>
                             </section>
 
 
                             <section className="reviews">
-                                <h3 className="reviews-headline" > {gig.reviews.length} Reviews <i className="fa fa-star filled"></i> {avrRate}</h3>
+                                <p className="reviews-headline" > {gig.reviews.length} Reviews
+                                <i className="fa fa-star filled"></i>
+                                    <i className="fa fa-star filled"></i>
+                                    <i className="fa fa-star filled"></i>
+                                    <i className="fa fa-star filled"></i>
+                                    <i className="fa fa-star filled"></i>
+                                    <span>{avrRate}</span> </p>
                                 {gig.reviews.map(review => {
                                     return <article key={review.id}>
                                         <GigReview review={review} />
                                     </article>
                                 })}
-                                <button className="add-review-btn btn">
+                                {/* <button className="add-review-btn btn">
                                     Add review
-                                </button>
+                                </button> */}
                             </section>
                         </div>
                     </main>

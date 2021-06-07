@@ -9,9 +9,12 @@ export class GigReview extends Component {
                     <div className="flex">
                         <img className="sml-review-img flex"
                             src={review.by.imgUrl} alt="">
-                        </img>&nbsp;
-                        <h2>&nbsp;      {review.by.fullname}&nbsp;  </h2>
-                        <h3>&nbsp;<i className="fa fa-star filled"></i> <span className="review-rate">{review.rate}</span></h3>
+                        </img>
+                        <p>{review.by.fullname}</p>
+                        <p>
+                            <i className="fa fa-star filled"></i>
+                            <span className="review-rate">{review.rate}</span>
+                        </p>
                     </div>
                 </article>
                 <div className="review-txt">
