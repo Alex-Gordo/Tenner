@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { loadGigs } from '../store/actions/gigActions.js';
 import { GigList } from '../cmps/GigList.jsx'
 import GigFilter from '../cmps/GigFilter';
+import {ReactLoading} from 'react-loading';
 
 class _TennerApp extends Component {
 
@@ -33,7 +34,7 @@ class _TennerApp extends Component {
 
     render() {
         const { gigs } = this.props
-        if (!gigs) return <h1>Loading...</h1> //TODO : loading component
+        if (!gigs) return <ReactLoading type={"bubbles"} color="green" height={"50%"} width={"50%"} /> 
         return (
             <main className="tenner-app main-layout">
                 <div className="search-container flex">
