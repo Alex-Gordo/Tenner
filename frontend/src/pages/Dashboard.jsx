@@ -1,8 +1,8 @@
 
 import React, { Component } from 'react'
 import { userService } from '../services/userService'
-import { Charts } from '../cmps/Charts.jsx';
-import { BarChartTest } from '../cmps/BarChartTest.jsx';
+// import { Charts } from '../cmps/Charts.jsx';
+// import { BarChartTest } from '../cmps/BarChartTest.jsx';
 import { Table } from '../cmps/Table.jsx';
 
 
@@ -72,7 +72,7 @@ export class Dashboard extends Component {
                     </main>
 
                     <div className="graphs-container flex">
-                        <Charts />
+                        {/* <Charts /> */}
                     </div>
                     <Table />
                 </div>
