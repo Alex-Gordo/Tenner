@@ -1,39 +1,39 @@
 
 import React, { Component } from 'react'
-import { userService } from '../services/userService'
-import { Charts } from '../cmps/Charts.jsx';
+// import { Charts } from '../cmps/Charts.jsx';
 // import { BarChartTest } from '../cmps/BarChartTest.jsx';
 import { Table } from '../cmps/Table.jsx';
+import { connect } from 'react-redux';
 
 
 
-
-export class Dashboard extends Component {
+class _Dashboard extends Component {
 
     state = {
-        user: userService.getLoggedinUser()
+        // user: userService.getLoggedinUser()
     }
 
     componentDidMount() {
         window.scrollTo(0, 0)
+        console.log('this.props.loggedInUser', this.props.loggedInUser);
     }
 
     render() {
-        if (!this.state.user) return 'no user loaded'
-        const { user } = this.state;
-        const totalIncome = user.orders.reduce((currentTotal, price) => {
+        const { loggedInUser } = this.props;
+        if (!loggedInUser) return <div>no user loaded</div>
+        const totalIncome = loggedInUser.orders.reduce((currentTotal, price) => {
             return price.price + currentTotal;
         }, 0);
-        const avrPrice = totalIncome / user.orders.length;
+        const avrPrice = totalIncome / loggedInUser.orders.length;
 
         return (
 
             <div className="main-layout dashboard-container flex">
                 <aside className="user-stats flex">
                     {/* <button>Logout</button> */}
-                    <img src={this.state.user.imgUrl} alt="" />
-                    <h3>{this.state.user.fullname}</h3>
-                    <h5>level 2 seller</h5>
+                    <img src={loggedInUser.imgUrl} alt="" />
+                    <h3>{loggedInUser.fullname}</h3>
+                    <h5>Level 2 Seller</h5>
                     <h2>Notifications</h2>
                 </aside>
 
@@ -53,7 +53,7 @@ export class Dashboard extends Component {
                                 <section className="order-card flex">
                                     <div className="flex order-details">
                                         <h2>No. of Orders</h2>
-                                        <h3>{user.orders.length}</h3>
+                                        <h3>{loggedInUser.orders.length}</h3>
                                     </div>
                                 </section>
                             </li>
@@ -77,12 +77,24 @@ export class Dashboard extends Component {
                     </main>
 
                     <div className="graphs-container flex">
-                        <Charts />
+                        {/* <Charts /> */}
                     </div>
-                    <Table user= {this.state.user}/>
+                    <Table user={this.state.user} />
                 </div>
 
             </div>
         )
     }
 }
+
+function mapStateToProps({ userModule }) {
+    return {
+        loggedInUser: userModule.loggedInUser
+    }
+}
+
+const mapDispatchToProps = {
+    // loadGigs
+}
+
+export const Dashboard = connect(mapStateToProps, mapDispatchToProps)(_Dashboard)
