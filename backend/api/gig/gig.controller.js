@@ -5,7 +5,7 @@ const gigService = require('./gig.service')
 
 async function getGigs(req, res) {
     try {
-        const gigs = await gigService.query(req.query)
+        const gigs = await gigService.query()
         res.send(gigs)
     } catch (err) {
         logger.error('Cannot get gigs', err)
