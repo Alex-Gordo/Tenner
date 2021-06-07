@@ -1,5 +1,6 @@
 //import { storageService } from './storageService'
-import {storageService} from './asyncStorageService'
+import { storageService } from './asyncStorageService'
+import { httpService } from './httpService'
 // import { httpService } from './httpService'
 // const SCORE_FOR_REVIEW = 10
 
@@ -49,14 +50,8 @@ async function update(user) {
 // }
 
 async function login(userCred) {
-
-    const gigs = await storageService.query('gigs')
-    const users = gigs.user
-    const user = users.find(user => user.username === userCred.username && user.password === userCred.password)
-    if (user===undefined) alert('HEY STOP RIGHT THERE!!')
+    const user = await httpService.post('auth/login', userCred)
     return _saveLocalUser(user)
-
-    // const user = await httpService.post('auth/login', userCred)
     // if (user) return _saveLocalUser(user)
 }
 async function signup(userCred) {
@@ -69,7 +64,6 @@ async function logout() {
     // return await httpService.post('auth/logout')
 }
 function _saveLocalUser(user) {
-    console.log('savinggggg', user);
     sessionStorage.setItem('loggedinUser', JSON.stringify(user))
     return user
 }

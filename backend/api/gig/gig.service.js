@@ -1,6 +1,5 @@
 const dbService = require('../../services/db.service')
 const ObjectId = require('mongodb').ObjectId
-const asyncLocalStorage = require('../../services/als.service')
 
 async function query(filterBy = {}) {
     try {
@@ -8,7 +7,6 @@ async function query(filterBy = {}) {
         const collection = await dbService.getCollection('gig')
         // const reviews = await collection.find(criteria).toArray()
         const gigs = await collection.find().toArray()
-        console.log(gigs)
         return gigs
     } catch (err) {
         logger.error('cannot find gigs', err)
