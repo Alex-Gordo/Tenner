@@ -1,5 +1,5 @@
 .hero {
-  animation: 25s hero-animation infinite;
+  animation: 28s hero-animation infinite;
   background-position: 0% 15%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,21 +40,24 @@
 
 @keyframes hero-animation {
   0% {
-    background-image: url('https://res.cloudinary.com/arikxl/image/upload/v1622785584/tenner/heros/bg-hero-1_luk0k6.png');
+    background-image: url(https://res.cloudinary.com/arikxl/image/upload/v1623100830/tenner/heros/bg-hero-6_tislqc.png);
   }
-  20% {
-    background-image: url(https://res.cloudinary.com/arikxl/image/upload/v1622785583/tenner/heros/bg-hero-2_ym9ldn.webp);
+  17% {
+    background-image: url(https://res.cloudinary.com/arikxl/image/upload/v1623100821/tenner/heros/bg-hero-1_kecurm.png);
   }
-  40% {
-    background-image: url(https://res.cloudinary.com/arikxl/image/upload/v1622785583/tenner/heros/bg-hero-3_ro3neq.webp);
+  34% {
+    background-image: url(https://res.cloudinary.com/arikxl/image/upload/v1623100830/tenner/heros/bg-hero-3_sanxrj.png);
   }
-  60% {
-    background-image: url(https://res.cloudinary.com/arikxl/image/upload/v1622785583/tenner/heros/bg-hero-4_ilygfp.webp);
+  51% {
+    background-image: url(https://res.cloudinary.com/arikxl/image/upload/v1623100832/tenner/heros/bg-hero-4_ifmsun.png);
   }
-  80% {
-    background-image: url(https://res.cloudinary.com/arikxl/image/upload/v1622785583/tenner/heros/bg-hero-5_tv9wfd.webp);
+  68% {
+    background-image: url(https://res.cloudinary.com/arikxl/image/upload/v1623100821/tenner/heros/bg-hero-5_dymxuf.png);
+  }
+  84% {
+    background-image: url(https://res.cloudinary.com/arikxl/image/upload/v1623100828/tenner/heros/bg-hero-7_tbfevq.png);
   }
   100% {
-    background-image: url('https://res.cloudinary.com/arikxl/image/upload/v1622785584/tenner/heros/bg-hero-1_luk0k6.png');
+    background-image: url(https://res.cloudinary.com/arikxl/image/upload/v1623100830/tenner/heros/bg-hero-6_tislqc.png);
   }
 }
