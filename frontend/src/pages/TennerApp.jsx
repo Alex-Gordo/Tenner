@@ -11,7 +11,7 @@ class _TennerApp extends Component {
     }
 
     componentDidMount() {
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
         this.props.loadGigs(this.getQueryString())
     }
 
@@ -38,9 +38,11 @@ class _TennerApp extends Component {
             <main className="tenner-app main-layout">
                 <div className="search-container flex">
                     <GigFilter />
-                    <button className="sort-btn">Price <i className='fas fa-arrow-down'></i></button>
-                    <button className="sort-btn">Rating <i className='fas fa-arrow-down'></i></button>
-                    <button className="sort-btn">Seller level <i className='fas fa-arrow-down'></i></button>
+                    <div className="button-container flex">
+                        <button className="sort-btn">Price <i className='fas fa-arrow-down'></i></button>
+                        <button className="sort-btn">Rating <i className='fas fa-arrow-down'></i></button>
+                        <button className="sort-btn">Seller level <i className='fas fa-arrow-down'></i></button>
+                    </div>
                 </div>
                 <GigList gigs={this.props.gigs} />
             </main>
