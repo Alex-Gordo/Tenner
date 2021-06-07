@@ -1,14 +1,13 @@
 
 import React, { Component } from 'react'
 import { userService } from '../services/userService'
-// import { Charts } from '../cmps/Charts.jsx';
+import { Charts } from '../cmps/Charts.jsx';
 // import { BarChartTest } from '../cmps/BarChartTest.jsx';
 import { Table } from '../cmps/Table.jsx';
 
 
 
 export class Dashboard extends Component {
-
 
     state = {
         user: userService.getLoggedinUser()
@@ -20,9 +19,11 @@ export class Dashboard extends Component {
 
     render() {
         if (!this.state.user) return 'no user loaded'
-        const { user } = this.state
-        console.log('user', user);
-        console.log('user.fullname', user.fullname);
+        const { user } = this.state;
+        const totalIncome = user.orders.reduce((currentTotal, price) => {
+            return price.price + currentTotal;
+        }, 0);
+        const avrPrice = totalIncome / user.orders.length;
 
         return (
 
@@ -43,7 +44,7 @@ export class Dashboard extends Component {
                                 <section className="order-card flex">
                                     <div className="flex order-details">
                                         <h2>Revenue</h2>
-                                        <h3>$33</h3>
+                                        <h3>${totalIncome}</h3>
                                     </div>
                                 </section>
                             </li>
@@ -59,7 +60,7 @@ export class Dashboard extends Component {
                                 <section className="order-card flex">
                                     <div className="flex order-details">
                                         <h2>Avg. Income</h2>
-                                        <h3>$11</h3>
+                                        <h3>${avrPrice.toFixed(2)}</h3>
                                     </div>
                                 </section>
                             </li>
@@ -75,7 +76,7 @@ export class Dashboard extends Component {
                     </main>
 
                     <div className="graphs-container flex">
-                        {/* <Charts /> */}
+                        <Charts />
                     </div>
                     <Table />
                 </div>
