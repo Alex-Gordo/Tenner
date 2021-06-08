@@ -80,16 +80,24 @@
       width: 96%;
       align-items: center;
       justify-content: space-between;
+      width: 76%;
+      padding: 20px;
       label {
         color: #222325;
-        width: 12rem;
+        // width: 10rem;
+        width:100%;
       }
       input {
         height: 1rem;
+        width:20px;
         align-self: center;
       }
       p {
         margin-right: 1rem;
+      }
+      .extra-line{ 
+        justify-content:space-between;
+        width: 100%;
       }
     }
   }

@@ -9,10 +9,8 @@ export function CheckoutModal({ open }) {
     return (
         <NavLink to={`/gigs`}>
             <div className="checkout-modal">
-                <main className= "flex">
-
-                <p>Thank you for choosing Tenner.</p>
-                <img className="success-img" alt="" />
+                <main className="flex">
+                    <img className="success-img" alt="" />
                 </main>
             </div>
         </NavLink>
