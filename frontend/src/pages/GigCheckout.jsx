@@ -2,8 +2,10 @@ import { gigService } from '../services/gigService.js'
 import React, { Component } from 'react';
 import payment from '../assets/img/payment.png';
 import { CheckoutModal } from '../cmps/CheckoutModal.jsx'
+import { userService } from '../services/userService.js';
+import { connect } from 'react-redux';
 
-export class GigCheckout extends Component {
+class _GigCheckout extends Component {
 
     state = {
         gig: null,
@@ -13,12 +15,16 @@ export class GigCheckout extends Component {
         isOpen: false
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         window.scrollTo(0, 0)
         const gigId = this.props.match.params.gig
-        gigService.getById(gigId).then(gig => {
-            this.setState({ gig })
-        })
+        // gigService.getById(gigId).then(gig => {
+        //     this.setState({ gig })
+        // })
+        const gig = await gigService.getById(gigId)
+        this.setState({ gig })
+        // console.log(this.props.loggedInUser,'@@@@@@@@@@@');
+        // console.log(this.state.gig.gigOwner,'@@@@@@@@@@@');
     }
 
     showMoreDetails = () => {
@@ -37,12 +43,29 @@ export class GigCheckout extends Component {
 
     openCheckoutModal = () => {
         this.setState({ isOpen: true })
+
     }
 
+    onCheckout = async () => {
+        const { gig, numberOfItems } = this.state
+        const newOrder = {
+            id: '1111111',
+            name: this.props.loggedInUser.fullname,
+            price: gig.price * numberOfItems / 20 + gig.price * numberOfItems,
+            date: Date.now(),
+            status: 'new'
+        }
+        const gigOwner = await userService.getById(gig.gigOwner.id)
+        gigOwner.orders.unshift(newOrder)
+        const updatedUser = await userService.update(gigOwner)
+        console.log(updatedUser);
+        this.openCheckoutModal()
+
+    }
 
     render() {
         const { gig, isMoreDetailsShown, isExtraPrice } = this.state
-        if (!gig) return 'no gigs';
+        if (!gig) return <div>no gigs</div>;
 
         const avrRate = this.state.gig.reviews.reduce((currentTotal, rate) => {
             return rate.rate + currentTotal;
@@ -54,26 +77,27 @@ export class GigCheckout extends Component {
                 <div className="checkout-container main-layout details-layout flex">
                     <div className="order-summary-container flex">
                         <div className="order-summary">
-                            <h2>Summary</h2>
+                            <h3>Summary</h3>
                             <div className="price flex">
-                                <h3>Subtotal:</h3>
-                                <h3>${gig.price * this.state.numberOfItems}</h3>
+                                <p>Subtotal:</p>
+                                <p>${gig.price * this.state.numberOfItems}</p>
                             </div>
                             <div className="fee flex">
-                                <h3>Service Fee:</h3>
-                                <h3>${gig.price * this.state.numberOfItems / 20}</h3>
+                                <p>Service Fee:</p>
+                                <p>${gig.price * this.state.numberOfItems / 20}</p>
                             </div>
                             <hr className="summary-line" />
                             <div className="total flex">
-                                <h3>Total:</h3>
-                                <h3>${gig.price * this.state.numberOfItems / 20 + gig.price * this.state.numberOfItems}</h3>
+                                <p>Total:</p>
+                                <p>${gig.price * this.state.numberOfItems / 20 + gig.price * this.state.numberOfItems}</p>
                             </div>
                             <div className="delivery flex">
-                                <h3>Delivery Time:</h3>
-                                {!isExtraPrice && <h3>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>}</h3>}
-                                {isExtraPrice && <h3>12 Hours</h3>}
+                                <p>Delivery Time:</p>
+                                {!isExtraPrice && <p>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>}</p>}
+                                {isExtraPrice && <p>12 Hours</p>}
                             </div>
-                            <button className="btn-purchase" onClick={this.openCheckoutModal}
+                            <button className="btn-purchase" onClick={this.onCheckout}
+
                             >Purchase now</button>
                             <img className="payment-img flex"
                                 src={payment} alt="payment" />
@@ -81,11 +105,11 @@ export class GigCheckout extends Component {
                         <CheckoutModal open={this.state.isOpen} />
                     </div>
                     <main className="package-details flex">
-                        <h1>Customize Your Package</h1>
+                        <p className="checkout-headline">Customize Your Package</p>
                         <div className="package-info flex">
                             <img src={gig.imgUrl[0]} alt="" />
                             <div className="gig-info flex">
-                                <p className="title"><b>{gig.title}</b></p>
+                                <p className="title">{gig.title}</p>
                                 <p><i className="fa fa-star filled"></i>{avrRate} ({gig.reviews.length} reviews)</p>
                                 <p className="view-line">
                                     <button onClick={this.showMoreDetails}>
@@ -109,20 +133,20 @@ export class GigCheckout extends Component {
                             <p>{gig.category}</p>
                             <p>{gig.features[0]} + {gig.features[1]} + {gig.features[2]}</p>
                             <p><span>✔ </span>{gig.revisions} revisions</p>
-                            <p><span>✔ </span>{gig.deliveryTime} Day(s) Delivery</p>
+                            <p><span>✔ </span>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>} Delivery</p>
                         </div>}
 
-                        <h5 className="extra-title">Add Extras</h5>
+                        <p className="extra-title">Add Extras</p>
                         <div className="extra-container flex">
                             <label className="flex">
                                 <input type="checkbox" onChange={this.calculateTotalPrice}></input>
 
-                          <div className="extra-line flex">
-                          <p className="fast flex">Extra Fast 12 Hours Delivery</p>
-                            <p className="number flex">${gig.price * this.state.numberOfItems}</p>
-                          </div>
-                          </label> 
-                          
+                                <div className="extra-line flex">
+                                    <p className="fast flex">Extra Fast 12 Hours Delivery</p>
+                                    <p className="number flex">${gig.price * this.state.numberOfItems}</p>
+                                </div>
+                            </label>
+
                         </div>
                     </main>
                 </div>
@@ -131,6 +155,17 @@ export class GigCheckout extends Component {
     }
 }
 
+function mapStateToProps({ userModule }) {
+    return {
+        loggedInUser: userModule.loggedInUser
+    }
+}
+
+const mapDispatchToProps = {
+    // loadGigs
+}
+
+export const GigCheckout = connect(mapStateToProps, mapDispatchToProps)(_GigCheckout)
 
 
 

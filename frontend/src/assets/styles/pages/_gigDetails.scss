@@ -85,6 +85,7 @@
     margin-bottom: 4rem;
     flex-direction: column;
     width: 100%;
+    // font-size: 0.9rem;
     p {
       max-width: fit-content;
       margin-right: 7rem;
@@ -221,16 +222,21 @@
       width: 100%;
     }
     .call-to-action {
+      max-width: 59rem;
       position: relative;
       right: 0;
       top: 0;
       margin-bottom: 4rem;
+
       .cta-container {
         width: 100%;
       }
     }
   }
 }
+
+
+
 
 @media (max-width: $normal-breakpoint) {
   .main-layout {
@@ -241,5 +247,32 @@
 @media (max-width: $narrow-breakpoint) {
   .main-layout {
     max-width: 650px;
+  }
+}
+@media (max-width: 600px) {
+  .main-layout {
+    max-width: 580px;
+    .gig-info {
+      h1 {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+      }
+      max-width: 100%;
+      .gig-details-img {
+        height: 80%;
+      }
+      .owner-details {
+        flex-wrap: wrap;
+      }
+    }
+    .owner-info {
+      font-size: 0.9rem;
+    }
+  }
+  .gig-details .owner-info p {
+    margin-right: 0rem;
+  }
+  .reviews {
+    font-size: 0.9rem;
   }
 }

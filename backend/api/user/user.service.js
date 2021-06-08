@@ -1,6 +1,6 @@
 
 const dbService = require('../../services/db.service')
-// const logger = require('../../services/logger.service')
+const logger = require('../../services/logger.service')
 const reviewService = require('../review/review.service')
 const ObjectId = require('mongodb').ObjectId
 
@@ -72,16 +72,17 @@ async function remove(userId) {
 }
 
 async function update(user) {
+    const userToSave = {
+        ...user,
+        _id: ObjectId(user._id)
+    }
+    console.log('userToSave:', userToSave)
     try {
         // peek only updatable fields!
-        const userToSave = {
-            _id: ObjectId(user._id),
-            username: user.username,
-            fullname: user.fullname,
-            score: user.score
-        }
+        // delete userToSave.id
+
         const collection = await dbService.getCollection('user')
-        await collection.updateOne({ '_id': userToSave._id }, { $set: userToSave })
+        await collection.updateOne({ '_id':ObjectId(user._id) }, { $set: userToSave })
         return userToSave;
     } catch (err) {
         logger.error(`cannot update user ${user._id}`, err)
