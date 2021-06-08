@@ -6,6 +6,7 @@ import React, { Component } from 'react'
 // import { makeStyles } from '@material-ui/core/styles';
 // import Avatar from '@material-ui/core/Avatar';
 import { connect } from 'react-redux';
+// import { Charts } from '../cmps/Charts';
 import { OrderList } from '../cmps/OrderList'
 
 
@@ -32,7 +33,7 @@ class _Dashboard extends Component {
         const avrPrice = totalIncome / loggedInUser.orders.length;
 
         return (
-            
+
             <div className="main-layout dashboard-container flex">
                 <aside className="user-stats flex">
                     <img src={loggedInUser.imgUrl} alt="" />
@@ -44,7 +45,7 @@ class _Dashboard extends Component {
                 <div className="orders">
                     <OrderList orders={loggedInUser.orders} />
                 </div>
-                {/* <hr/> */}
+                {/* <Charts /> */}
             </div>
 
             //     <div className="dashboard-main flex">
