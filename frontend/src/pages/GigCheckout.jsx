@@ -10,8 +10,7 @@ export class GigCheckout extends Component {
         isExtraPrice: false,
         isMoreDetailsShown: false,
         numberOfItems: 1,
-        isOpen: false,
-        setIsOpen: false
+        isOpen: false
     }
 
     componentDidMount() {
@@ -37,13 +36,9 @@ export class GigCheckout extends Component {
     }
 
     openCheckoutModal = () => {
-        this.setState({ setIsOpen: true, isOpen: true })
-        console.log(this.state.setIsOpen)
+        this.setState({ isOpen: true })
     }
 
-    onCloseModal = () => {
-        this.setState({ setIsOpen: false, isOpen: false })
-    }
 
     render() {
         const { gig, isMoreDetailsShown, isExtraPrice } = this.state
@@ -55,6 +50,7 @@ export class GigCheckout extends Component {
 
         return (
             <React.Fragment>
+                <div></div>
                 <div className="checkout-container main-layout details-layout flex">
                     <div className="order-summary-container flex">
                         <div className="order-summary">
@@ -82,10 +78,7 @@ export class GigCheckout extends Component {
                             <img className="payment-img flex"
                                 src={payment} alt="payment" />
                         </div>
-                        <CheckoutModal open={this.state.isOpen}
-                            // onCloseModal={() => { this.state.isOpen=false}} 
-                            onClick={this.onCloseModal}
-                        />
+                        <CheckoutModal open={this.state.isOpen} />
                     </div>
                     <main className="package-details flex">
                         <h1>Customize Your Package</h1>

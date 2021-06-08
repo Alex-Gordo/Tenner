@@ -1,18 +1,19 @@
-import React from 'react'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 
 
 
 
-export function CheckoutModal({ open, onCloseModal }) {
+
+export function CheckoutModal({ open }) {
     if (!open) return null
     return (
-        <div>
-            <p>Thank you for choosing Tenner.</p>
-            <img className="success-img" alt=""
-            />
-            <button onClick={onCloseModal}
-            ></button>
-        </div>
+        <NavLink to={`/gigs`}>
+            <div>
+                <p>Thank you for choosing Tenner.</p>
+                <img className="success-img" alt="" />
+            </div>
+        </NavLink>
     )
 }

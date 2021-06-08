@@ -32,9 +32,7 @@ class _Dashboard extends Component {
         const avrPrice = totalIncome / loggedInUser.orders.length;
 
         return (
-
-
-
+            
             <div className="main-layout dashboard-container flex">
                 <aside className="user-stats flex">
                     <img src={loggedInUser.imgUrl} alt="" />

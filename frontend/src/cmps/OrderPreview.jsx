@@ -11,7 +11,7 @@ export function OrderPreview({ order }) {
         <div className="order-preview-container">
             <h3>{order.name}</h3>
             <p>Price: ${order.price}</p>
-            <p>Order recieved at: {order.date}</p>
+            <p>Order recieved at: {new Date (order.date).toLocaleString()}</p>
             <h5>status: {order.status}</h5>
             <ProgressButton status={order.status} />
             <hr />
@@ -19,5 +19,6 @@ export function OrderPreview({ order }) {
     )
 }
 
+    // <div>{new Date (loggedInUser.orders[0].date).toLocaleString()}</div>
 
 // id: 1, name: "Yaron Vitor", price: 18, date: "new Date().toLocaleString()", status: "new"
