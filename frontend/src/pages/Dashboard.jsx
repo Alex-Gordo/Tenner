@@ -9,6 +9,8 @@ import { connect } from 'react-redux';
 import { loadUser } from '../store/actions/userActions'
 import { OrderList } from '../cmps/OrderList';
 import { Charts } from '../cmps/Charts';
+import ReactLoading from 'react-loading';
+
 
 
 
@@ -36,8 +38,9 @@ class _Dashboard extends Component {
 
     render() {
         const { loggedInUser } = this.props;
+        if (!loggedInUser) return <ReactLoading type='spin' color='#1dbf73' height={'100%'} width={100} />;
+
         // console.log(loggedInUser);
-        if (!loggedInUser) return <div>no user loaded</div>
         const totalIncome = loggedInUser.orders.reduce((currentTotal, price) => {
             return price.price + currentTotal;
         }, 0);
