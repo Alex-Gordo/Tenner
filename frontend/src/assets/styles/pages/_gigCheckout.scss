@@ -143,3 +143,43 @@
     }
   }
 }
+
+
+
+@media (max-width: $normal-breakpoint) {
+  .main-layout {
+    max-width: 900px;
+  }
+
+ 
+
+}
+
+// @media (max-width: $narrow-breakpoint) {
+//   .main-layout {
+//     max-width: 650px;
+    
+//   }
+// }
+
+// @media (max-width: 600px) {
+//   .main-layout {
+//     max-width: 580px;
+    
+//     .package-details {
+//       justify-content: center;
+//       width: 100%;
+//       background-color:red;
+      
+//       .checkout-headline{
+//         font-size:1rem; 
+//         margin-bottom: 10px;
+//       }
+
+//       .package-info{
+//         flex-direction: column;
+        
+//       }
+//     }
+//   }
+// }
