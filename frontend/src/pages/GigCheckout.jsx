@@ -116,8 +116,13 @@ export class GigCheckout extends Component {
                         <div className="extra-container flex">
                             <label className="flex">
                                 <input type="checkbox" onChange={this.calculateTotalPrice}></input>
-                            Extra Fast 12 Hours Delivery</label>
-                            <p>${gig.price * this.state.numberOfItems}</p>
+
+                          <div className="extra-line flex">
+                          <p className="fast flex">Extra Fast 12 Hours Delivery</p>
+                            <p className="number flex">${gig.price * this.state.numberOfItems}</p>
+                          </div>
+                          </label> 
+                          
                         </div>
                     </main>
                 </div>
