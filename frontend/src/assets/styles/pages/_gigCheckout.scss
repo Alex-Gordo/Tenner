@@ -146,14 +146,29 @@
 
 
 
-@media (max-width: $normal-breakpoint) {
-  .main-layout {
-    max-width: 900px;
-  }
+// @media (max-width: $normal-breakpoint) {
+//   .main-layout {
+//     max-width: 900px;
+//   }
 
  
 
-}
+// }
+
+// @media (min-width: 970px) {
+
+//     .order-summary-container {
+//     margin-left: 0;
+//     padding: 0;
+//       .order-summary {
+//         margin-left: 0;
+//         padding: 0;
+//       }
+//     }
+
+// }
+
+
 
 // @media (max-width: $narrow-breakpoint) {
 //   .main-layout {
