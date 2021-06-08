@@ -40,17 +40,19 @@
     }
     .qty {
       margin-right: 1rem;
+      color: $clr2;
     }
     .extra-title {
       border-top: 1px solid $clr8;
       padding-top: 3rem;
       color: $clr4;
+      margin-bottom: 2rem;
     }
     select {
       height: 30px;
       font-size: 1rem;
       margin-right: 3rem;
-      width: 3rem;
+      width: 4rem;
       border-color: $clr8;
     }
 
@@ -75,13 +77,19 @@
 
     .extra-container {
       border: 1px solid $clr8;
-      width: 65%;
+      width: 96%;
       align-items: center;
+      justify-content: space-between;
       label {
         color: #222325;
+        width: 12rem;
       }
       input {
         height: 1rem;
+        align-self: center;
+      }
+      p {
+        margin-right: 1rem;
       }
     }
   }

@@ -1,7 +1,7 @@
 import { gigService } from '../services/gigService.js'
 import React, { Component } from 'react';
 import payment from '../assets/img/payment.png';
-import { CheckoutModal} from '../cmps/CheckoutModal.jsx'
+import { CheckoutModal } from '../cmps/CheckoutModal.jsx'
 
 export class GigCheckout extends Component {
 
@@ -37,12 +37,12 @@ export class GigCheckout extends Component {
     }
 
     openCheckoutModal = () => {
-        this.setState({setIsOpen :true, isOpen :true})
+        this.setState({ setIsOpen: true, isOpen: true })
         console.log(this.state.setIsOpen)
     }
-    
+
     onCloseModal = () => {
-        this.setState({setIsOpen :false, isOpen :false})
+        this.setState({ setIsOpen: false, isOpen: false })
     }
 
     render() {
@@ -67,7 +67,7 @@ export class GigCheckout extends Component {
                                 <h3>Service Fee:</h3>
                                 <h3>${gig.price * this.state.numberOfItems / 20}</h3>
                             </div>
-                            <hr />
+                            <hr className="summary-line" />
                             <div className="total flex">
                                 <h3>Total:</h3>
                                 <h3>${gig.price * this.state.numberOfItems / 20 + gig.price * this.state.numberOfItems}</h3>
@@ -80,12 +80,12 @@ export class GigCheckout extends Component {
                             <button className="btn-purchase" onClick={this.openCheckoutModal}
                             >Purchase now</button>
                             <img className="payment-img flex"
-                                src={payment} alt="payment"/>    
+                                src={payment} alt="payment" />
                         </div>
-                                    <CheckoutModal open={this.state.isOpen} 
-                                    // onCloseModal={() => { this.state.isOpen=false}} 
-                                    onClick={this.onCloseModal}
-                                    />
+                        <CheckoutModal open={this.state.isOpen}
+                            // onCloseModal={() => { this.state.isOpen=false}} 
+                            onClick={this.onCloseModal}
+                        />
                     </div>
                     <main className="package-details flex">
                         <h1>Customize Your Package</h1>
