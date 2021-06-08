@@ -44,6 +44,7 @@ class _Dashboard extends Component {
                 <div className="orders">
                     <OrderList orders={loggedInUser.orders} />
                 </div>
+                {/* <hr/> */}
             </div>
 
             //     <div className="dashboard-main flex">

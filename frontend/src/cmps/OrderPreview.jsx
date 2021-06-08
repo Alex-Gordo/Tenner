@@ -14,7 +14,7 @@ export function OrderPreview({ order }) {
             <p>Order recieved at: {new Date (order.date).toLocaleString()}</p>
             <h5>status: {order.status}</h5>
             <ProgressButton status={order.status} />
-            <hr />
+      
         </div>
     )
 }
