@@ -33,7 +33,7 @@
   .gig-gallery-img {
     width: 33%;
     object-fit: cover;
-    height: 80px;
+    height: 145px;
   }
 
   .gig-info {
@@ -234,9 +234,6 @@
     }
   }
 }
-
-
-
 
 @media (max-width: $normal-breakpoint) {
   .main-layout {
