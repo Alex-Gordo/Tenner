@@ -7,6 +7,7 @@ import React, { Component } from 'react'
 // import Avatar from '@material-ui/core/Avatar';
 import { connect } from 'react-redux';
 // import { Charts } from '../cmps/Charts';
+import {loadUser} from '../store/actions/userActions'
 import { OrderList } from '../cmps/OrderList'
 
 
@@ -16,12 +17,22 @@ class _Dashboard extends Component {
 
     state = {
         // user: userService.getLoggedinUser()
+        intervalId:null
     }
 
     componentDidMount() {
         window.scrollTo(0, 0)
-        console.log('this.props.loggedInUser', this.props.loggedInUser);
+        this.props.loadUser(this.props.loggedInUser._id)
+        const intervalId = setInterval(() => {
+            this.props.loadUser(this.props.loggedInUser._id)
+        }, 5000);
+        this.setState({intervalId})
     }
+
+    componentWillUnmount() {
+        clearInterval(this.state.intervalId)
+    }
+    
 
     render() {
         const { loggedInUser } = this.props;
@@ -104,7 +115,7 @@ function mapStateToProps({ userModule }) {
 }
 
 const mapDispatchToProps = {
-    // loadGigs
+    loadUser
 }
 
 export const Dashboard = connect(mapStateToProps, mapDispatchToProps)(_Dashboard)

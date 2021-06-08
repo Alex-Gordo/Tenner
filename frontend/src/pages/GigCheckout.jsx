@@ -2,8 +2,10 @@ import { gigService } from '../services/gigService.js'
 import React, { Component } from 'react';
 import payment from '../assets/img/payment.png';
 import { CheckoutModal } from '../cmps/CheckoutModal.jsx'
+import { userService } from '../services/userService.js';
+import { connect } from 'react-redux';
 
-export class GigCheckout extends Component {
+class _GigCheckout extends Component {
 
     state = {
         gig: null,
@@ -13,12 +15,16 @@ export class GigCheckout extends Component {
         isOpen: false
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         window.scrollTo(0, 0)
         const gigId = this.props.match.params.gig
-        gigService.getById(gigId).then(gig => {
-            this.setState({ gig })
-        })
+        // gigService.getById(gigId).then(gig => {
+        //     this.setState({ gig })
+        // })
+        const gig = await gigService.getById(gigId)
+        this.setState({ gig })
+        // console.log(this.props.loggedInUser,'@@@@@@@@@@@');
+        // console.log(this.state.gig.gigOwner,'@@@@@@@@@@@');
     }
 
     showMoreDetails = () => {
@@ -37,12 +43,29 @@ export class GigCheckout extends Component {
 
     openCheckoutModal = () => {
         this.setState({ isOpen: true })
+
     }
 
+    onCheckout = async () => {
+        const { gig, numberOfItems } = this.state
+        const newOrder = {
+            id: '1111111',
+            name: this.props.loggedInUser.fullname,
+            price: gig.price * numberOfItems / 20 + gig.price * numberOfItems,
+            date: Date.now(),
+            status: 'new'
+        }
+        const gigOwner = await userService.getById(gig.gigOwner.id)
+        gigOwner.orders.unshift(newOrder)
+        const updatedUser = await userService.update(gigOwner)
+        console.log(updatedUser);
+        this.openCheckoutModal()
+
+    }
 
     render() {
         const { gig, isMoreDetailsShown, isExtraPrice } = this.state
-        if (!gig) return 'no gigs';
+        if (!gig) return <div>no gigs</div>;
 
         const avrRate = this.state.gig.reviews.reduce((currentTotal, rate) => {
             return rate.rate + currentTotal;
@@ -73,7 +96,8 @@ export class GigCheckout extends Component {
                                 {!isExtraPrice && <p>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>}</p>}
                                 {isExtraPrice && <p>12 Hours</p>}
                             </div>
-                            <button className="btn-purchase" onClick={this.openCheckoutModal}
+                            <button className="btn-purchase" onClick={this.onCheckout}
+
                             >Purchase now</button>
                             <img className="payment-img flex"
                                 src={payment} alt="payment" />
@@ -117,12 +141,12 @@ export class GigCheckout extends Component {
                             <label className="flex">
                                 <input type="checkbox" onChange={this.calculateTotalPrice}></input>
 
-                          <div className="extra-line flex">
-                          <p className="fast flex">Extra Fast 12 Hours Delivery</p>
-                            <p className="number flex">${gig.price * this.state.numberOfItems}</p>
-                          </div>
-                          </label> 
-                          
+                                <div className="extra-line flex">
+                                    <p className="fast flex">Extra Fast 12 Hours Delivery</p>
+                                    <p className="number flex">${gig.price * this.state.numberOfItems}</p>
+                                </div>
+                            </label>
+
                         </div>
                     </main>
                 </div>
@@ -131,6 +155,17 @@ export class GigCheckout extends Component {
     }
 }
 
+function mapStateToProps({ userModule }) {
+    return {
+        loggedInUser: userModule.loggedInUser
+    }
+}
+
+const mapDispatchToProps = {
+    // loadGigs
+}
+
+export const GigCheckout = connect(mapStateToProps, mapDispatchToProps)(_GigCheckout)
 
 
 

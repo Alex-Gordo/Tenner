@@ -27,8 +27,8 @@ function getUsers() {
 }
 
 function getById(userId) {
-    return storageService.get('user', userId)
-    // return httpService.get(`user/${userId}`)
+    // return storageService.get('user', userId)
+    return httpService.get(`user/${userId}`)
 }
 function remove(userId) {
     return storageService.remove('user', userId)
@@ -36,9 +36,12 @@ function remove(userId) {
 }
 
 async function update(user) {
-    if (getLoggedinUser()._id === user._id) _saveLocalUser(user)
-    return storageService.put('user', user)
-    // user = await httpService.put(`user/${user._id}`, user)
+    // if (getLoggedinUser()._id === user._id) _saveLocalUser(user)
+    // return storageService.put('user', user)
+    user = await httpService.put(`user/${user.id}`, user)
+    console.log(user);
+    _saveLocalUser(user)
+    return user
     // Handle case in which admin updates other user's details
 }
 
