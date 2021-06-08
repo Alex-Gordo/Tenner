@@ -1,7 +1,7 @@
 import { gigService } from '../services/gigService.js'
 import React, { Component } from 'react';
 import payment from '../assets/img/payment.png';
-import { CheckoutModal } from './CheckoutModal.jsx';
+import { CheckoutModal} from '../cmps/CheckoutModal.jsx'
 
 export class GigCheckout extends Component {
 
@@ -41,9 +41,9 @@ export class GigCheckout extends Component {
         console.log(this.state.setIsOpen)
     }
     
-    // onCloseModal = () => {
-    //     this.setState({setIsOpen :false})
-    // }
+    onCloseModal = () => {
+        this.setState({setIsOpen :false, isOpen :false})
+    }
 
     render() {
         const { gig, isMoreDetailsShown, isExtraPrice } = this.state
@@ -77,17 +77,15 @@ export class GigCheckout extends Component {
                                 {!isExtraPrice && <h3>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>}</h3>}
                                 {isExtraPrice && <h3>12 Hours</h3>}
                             </div>
-
                             <button className="btn-purchase" onClick={this.openCheckoutModal}
                             >Purchase now</button>
-                                    <CheckoutModal open={this.state.isOpen} 
-                                    onCloseModal={() => { this.state.setIsOpen=false}} />
-
-
                             <img className="payment-img flex"
-                                src={payment} alt="payment"/>                                   
+                                src={payment} alt="payment"/>    
                         </div>
-
+                                    <CheckoutModal open={this.state.isOpen} 
+                                    // onCloseModal={() => { this.state.isOpen=false}} 
+                                    onClick={this.onCloseModal}
+                                    />
                     </div>
                     <main className="package-details flex">
                         <h1>Customize Your Package</h1>
