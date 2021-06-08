@@ -10,33 +10,33 @@
   position: relative;
 
   .package-details {
-    margin-top: 100px;
+    margin-top: 80px;
     order: -1;
     flex-direction: column;
     width: 70%;
-    h1 {
-      font-size: 1.7rem;
+    
+    .checkout-headline{
       margin-bottom: 2rem;
+      font-size: 1.7rem;
       color: $clr4;
     }
-
     .package-info {
       margin-bottom: 3rem;
       margin-right: 1rem;
+      width:100%;
       img {
         width: 190px;
         margin-right: 1rem;
       }
     }
-
+    
     .gig-info {
       flex-direction: column;
       justify-content: space-between;
-    }
-    .title {
-      color: $clr4;
-      max-width: 300px;
-      margin-right: 4rem;
+      .title {
+        color: $clr4;
+        margin-right: 2.7rem;
+      }
     }
     .qty {
       margin-right: 1rem;
@@ -45,20 +45,23 @@
     .extra-title {
       border-top: 1px solid $clr8;
       padding-top: 3rem;
-      color: $clr4;
       margin-bottom: 2rem;
+      font-size: 1.7rem;
+      color: $clr4;
     }
     select {
       height: 30px;
       font-size: 1rem;
-      margin-right: 3rem;
-      width: 4rem;
+      margin-right: 2.5rem;
+      width: 3rem;
       border-color: $clr8;
+      cursor: pointer;
     }
-
+    
     button,
     .view-line {
       color: $clr1;
+      font-size: 1rem;
       background-color: white;
       &:hover {
         color: #19a463;
@@ -77,14 +80,12 @@
 
     .extra-container {
       border: 1px solid $clr8;
-      width: 96%;
       align-items: center;
       justify-content: space-between;
-      width: 76%;
-      padding: 20px;
+      width: 100%;
+      padding:20px;
       label {
         color: #222325;
-        // width: 10rem;
         width:100%;
       }
       input {
@@ -109,11 +110,11 @@
   .order-summary-container {
     margin-top: 100px;
     .order-summary {
-      margin-left: 3rem;
+      margin-left: 10rem;
       padding: 20px;
       border: 1px solid $clr8;
-      max-width: 19rem;
-      h2 {
+      // max-width: 19rem;
+      h3 {
         color: $clr4;
         margin-bottom: 30px;
       }
