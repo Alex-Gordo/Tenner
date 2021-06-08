@@ -1,9 +1,8 @@
 import React, { PureComponent } from 'react';
-import { loadUser } from '../store/actions/userActions'
 import { userService } from '../services/userService';
 import { PieChart, Pie, Sector, ResponsiveContainer } from 'recharts';
 
-// const orders = [userService.getLoggedinUser().orders]
+const orders = [userService.getLoggedinUser().orders]
 // console.log('orders:', orders)
 
 const renderActiveShape = (props) => {
@@ -59,8 +58,8 @@ export class PieChartTest extends PureComponent {
         orders: null
     };
 
-    componentDidMount () {
-        this.setState({orders: userService.getLoggedinUser().orders})
+    componentDidMount() {
+        this.setState({ orders: userService.getLoggedinUser().orders })
     }
 
     onPieEnter = (_, index) => {
@@ -70,7 +69,7 @@ export class PieChartTest extends PureComponent {
     };
 
     render() {
-        const {orders} = this.state
+        const { orders } = this.state
 
         return (
             <ResponsiveContainer width="100%" height="100%">

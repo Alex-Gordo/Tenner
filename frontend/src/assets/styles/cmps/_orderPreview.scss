@@ -1,17 +1,18 @@
 h3 {
-    color: rgb(107, 107, 107);
+  color: rgb(107, 107, 107);
 }
 
 .order-preview-container {
-    width: 400px;
-    margin: 20px;
-    padding: 10px;
-    padding-left: 14px;
-    border: 0.3px solid rgb(204, 204, 204);
-    border-left: 4px solid #1dbf73;
+  width: 400px;
+  // margin: 20px;
+  padding: 10px;
+  padding-left: 14px;
+  border: 0.3px solid rgb(204, 204, 204);
+  border-left: 4px solid #1dbf73;
 
-    h3, p, h5 {
-        margin-bottom: 5px;
-    }
-
+  h3,
+  p,
+  h5 {
+    margin-bottom: 5px;
   }
+}

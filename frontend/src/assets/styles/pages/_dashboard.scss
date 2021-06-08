@@ -1,5 +1,5 @@
 .dashboard-container {
-//   background-color: red;
+  //   background-color: red;
   // justify-content: space-between;
   aside {
     margin-top: 115px;
@@ -26,74 +26,67 @@
     }
   }
 
-.orders {
-  margin-top: 6rem;
-  column-count: 2;
-}
-
-
-
+  .orders {
+    margin-top: 6rem;
+    column-count: 2;
+  }
 
   .dashboard-main {
     width: 80%;
     margin-top: 100px;
     // background-color: green;
     flex-direction: column;
+    ul {
+      justify-content: space-between;
+      list-style-type: none;
+      margin-top: 0;
+      section {
+        justify-content: center;
+        border: 1px double $clr7;
+        padding: 30px 20px;
+        width: 220px;
 
-    
+        div {
+          flex-direction: column;
+          text-align: center;
+          justify-content: space-between;
 
-      ul {
-        justify-content: space-between;
-        list-style-type: none;
-        margin-top: 0;
-        section {
-          justify-content: center;
-          border: 1px double $clr7;
-          padding: 30px 20px;
-          width: 220px;
+          h2,
+          h3 {
+            margin-bottom: 50px;
+            color: $clr4;
+          }
 
-          div {
-            flex-direction: column;
-            text-align: center;
-            justify-content: space-between;
-
-            h2,
-            h3 {
-              margin-bottom: 50px;
-              color: $clr4;
-            }
-
-            h3 {
-              border-bottom: 1px solid $clr1;
-            }
+          h3 {
+            border-bottom: 1px solid $clr1;
           }
         }
       }
     }
+  }
 
-    table {
-      height: 300px;
+  table {
+    height: 300px;
 
-      th {
-        //   text-align: left;
-      }
-      td {
-          text-align: center;
-        // border: 1px solid black;
-      }
+    th {
+      //   text-align: left;
     }
-
-    .graphs-container {
-      height: 300px;
-    //   background-color: gray;
-      justify-content: space-between;
-
-      .pie-graph,
-      .columns-graph {
-        width: 47%;
-        // background-color: purple;
-        height: 100%;
-      }
+    td {
+      text-align: center;
+      // border: 1px solid black;
     }
   }
 
+  .graphs-container {
+    height: 300px;
+    //   background-color: gray;
+    justify-content: space-between;
+
+    .pie-graph,
+    .columns-graph {
+      width: 47%;
+      // background-color: purple;
+      height: 100%;
+    }
+  }
+}

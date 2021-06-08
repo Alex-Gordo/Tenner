@@ -6,9 +6,9 @@ import React, { Component } from 'react'
 // import { makeStyles } from '@material-ui/core/styles';
 // import Avatar from '@material-ui/core/Avatar';
 import { connect } from 'react-redux';
-import {loadUser} from '../store/actions/userActions'
+import { loadUser } from '../store/actions/userActions'
 import { OrderList } from '../cmps/OrderList';
-import { Charts} from '../cmps/Charts';
+import { Charts } from '../cmps/Charts';
 
 
 
@@ -17,7 +17,7 @@ class _Dashboard extends Component {
 
     state = {
         // user: userService.getLoggedinUser()
-        intervalId:null
+        intervalId: null
     }
 
     componentDidMount() {
@@ -26,13 +26,13 @@ class _Dashboard extends Component {
         const intervalId = setInterval(() => {
             this.props.loadUser(this.props.loggedInUser._id)
         }, 5000);
-        this.setState({intervalId})
+        this.setState({ intervalId })
     }
 
     componentWillUnmount() {
         clearInterval(this.state.intervalId)
     }
-    
+
 
     render() {
         const { loggedInUser } = this.props;
@@ -54,7 +54,7 @@ class _Dashboard extends Component {
                     <p>Level 2 Seller</p>
                 </aside>
                 <div className="orders">
-                    <Charts/>
+                    {/* <Charts/> */}
                     <OrderList orders={loggedInUser.orders} />
                 </div>
             </div>
