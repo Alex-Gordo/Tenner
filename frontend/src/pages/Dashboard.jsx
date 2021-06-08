@@ -6,9 +6,9 @@ import React, { Component } from 'react'
 // import { makeStyles } from '@material-ui/core/styles';
 // import Avatar from '@material-ui/core/Avatar';
 import { connect } from 'react-redux';
-// import { Charts } from '../cmps/Charts';
 import {loadUser} from '../store/actions/userActions'
-import { OrderList } from '../cmps/OrderList'
+import { OrderList } from '../cmps/OrderList';
+import { Charts} from '../cmps/Charts';
 
 
 
@@ -36,7 +36,7 @@ class _Dashboard extends Component {
 
     render() {
         const { loggedInUser } = this.props;
-        console.log(loggedInUser);
+        // console.log(loggedInUser);
         if (!loggedInUser) return <div>no user loaded</div>
         const totalIncome = loggedInUser.orders.reduce((currentTotal, price) => {
             return price.price + currentTotal;
@@ -54,56 +54,11 @@ class _Dashboard extends Component {
                     <p>Level 2 Seller</p>
                 </aside>
                 <div className="orders">
+                    <Charts/>
                     <OrderList orders={loggedInUser.orders} />
                 </div>
-                {/* <Charts /> */}
             </div>
 
-            //     <div className="dashboard-main flex">
-            //         <main className="orders-container">
-            //             <ul className="order-ul flex">
-            //                 <li className="order-container">
-            //                     <section className="order-card flex">
-            //                         <div className="flex order-details">
-            //                             <h2>Revenue</h2>
-            //                             <h3>${totalIncome}</h3>
-            //                         </div>
-            //                     </section>
-            //                 </li>
-            //                 <li className="order-container">
-            //                     <section className="order-card flex">
-            //                         <div className="flex order-details">
-            //                             <h2>No. of Orders</h2>
-            //                             <h3>{loggedInUser.orders.length}</h3>
-            //                         </div>
-            //                     </section>
-            //                 </li>
-            //                 <li className="order-container">
-            //                     <section className="order-card flex">
-            //                         <div className="flex order-details">
-            //                             <h2>Avg. Income</h2>
-            //                             <h3>${avrPrice.toFixed(2)}</h3>
-            //                         </div>
-            //                     </section>
-            //                 </li>
-            //                 <li className="order-container">
-            //                     <section className="order-card flex">
-            //                         <div className="flex order-details">
-            //                             <h2>Fav. Buyer</h2>
-            //                             <h3>Asaf</h3>
-            //                         </div>
-            //                     </section>
-            //                 </li>
-            //             </ul>
-            //         </main>
-
-            //         <div className="graphs-container flex">
-            //             {/* <Charts /> */}
-            //         </div>
-            //         <Table user={this.state.user} />
-            //     </div>
-
-            // </div>
         )
     }
 }

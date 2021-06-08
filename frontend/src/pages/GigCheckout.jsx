@@ -43,7 +43,6 @@ class _GigCheckout extends Component {
 
     openCheckoutModal = () => {
         this.setState({ isOpen: true })
-
     }
 
     onCheckout = async () => {
@@ -58,7 +57,7 @@ class _GigCheckout extends Component {
         const gigOwner = await userService.getById(gig.gigOwner.id)
         gigOwner.orders.unshift(newOrder)
         const updatedUser = await userService.update(gigOwner)
-        console.log(updatedUser);
+        // console.log(updatedUser);
         this.openCheckoutModal()
 
     }

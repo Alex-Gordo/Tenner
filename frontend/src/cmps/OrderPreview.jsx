@@ -3,9 +3,9 @@ import { ProgressButton } from './ProgressButton'
 
 
 export function OrderPreview({ order }) {
-    console.log('order in preview', order);
+    // console.log('order in preview', order);
 
-    console.log('timeeeee',order.date, new Date(order.date).toLocaleString());
+    // console.log('timeeeee',order.date, new Date(order.date).toLocaleString());
 
     return (
         <div className="order-preview-container">
