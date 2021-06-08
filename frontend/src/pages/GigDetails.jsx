@@ -21,11 +21,8 @@ export class GigDetails extends Component {
 
 
     render() {
-
-
         const { gig } = this.state
         if (!gig) return 'no gigs';
-
 
         const avrRate = gig.reviews.reduce((currentTotal, rate) => {
             return rate.rate + currentTotal;
@@ -33,32 +30,6 @@ export class GigDetails extends Component {
         return (
             <React.Fragment>
                 <div className="main-layout details-layout">
-
-                    <div className="call-to-action flex">
-                        <section className="package-choice flex">
-                            <button className="btn active">Basic</button>
-                            <button className="btn">Standard</button>
-                            <button className="btn">Premium</button>
-                        </section>
-                        <div className="">
-                            <div className="cta-container">
-                                <p className="cta-price flex">Basic <span className="cta-price">${gig.price}</span></p>
-                                <p>Graphic and Text. Use up to 3 Color Only. File Send in AI/PSD, PNG, JPG.</p>
-                                <p><i className='far fa-clock'></i>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>} Delivery</p>
-                                <div className="features">
-                                    {gig.features.map(feature => {
-                                        return <h5><span>✔</span> {feature}</h5>
-                                    })}
-                                </div>
-                                <NavLink to={`/gig/${gig._id}/checkout`}>
-                                    <button className="checkout-btn btn">Continue (${gig.price})</button>
-                                </NavLink>
-                                <button className="contact-owner btn">
-                                    Contact Seller
-                         </button>
-                            </div>
-                        </div>
-                    </div>
                     <div>
                         <ScrollUpButton />
                     </div>
@@ -122,7 +93,31 @@ export class GigDetails extends Component {
                                     </div>
                                 </article>
                             </section>
-
+                            <div className="call-to-action flex">
+                                <section className="package-choice flex">
+                                    <button className="btn active">Basic</button>
+                                    <button className="btn">Standard</button>
+                                    <button className="btn">Premium</button>
+                                </section>
+                                <div className="">
+                                    <div className="cta-container">
+                                        <p className="cta-price flex">Basic <span className="cta-price">${gig.price}</span></p>
+                                        <p>Graphic and Text. Use up to 3 Color Only. File Send in AI/PSD, PNG, JPG.</p>
+                                        <p><i className='far fa-clock'></i>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>} Delivery</p>
+                                        <div className="features">
+                                            {gig.features.map(feature => {
+                                                return <h5><span>✔</span> {feature}</h5>
+                                            })}
+                                        </div>
+                                        <NavLink to={`/gig/${gig._id}/checkout`}>
+                                            <button className="checkout-btn btn">Continue (${gig.price})</button>
+                                        </NavLink>
+                                        <button className="contact-owner btn">
+                                            Contact Seller
+                                         </button>
+                                    </div>
+                                </div>
+                            </div>
 
                             <section className="reviews">
                                 <p className="reviews-headline" > {gig.reviews.length} Reviews
@@ -143,6 +138,9 @@ export class GigDetails extends Component {
                             </section>
                         </div>
                     </main>
+
+
+
                 </div>
             </React.Fragment>
         )
