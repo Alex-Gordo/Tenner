@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 export function GigCategories() {
     return (
         <section className="categories">
-            <h3>Popular professional services:</h3>
+            <h3>Popular professional services</h3>
             <div className="gig-list flex">
                 <NavLink to="/gigs?q=design" className="cat-link">
                     <img className="cat-img" src={'https://res.cloudinary.com/arikxl/image/upload/v1622785624/tenner/category/design_kx3xor.jpg'} alt="design" />

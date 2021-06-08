@@ -12,8 +12,10 @@
     }
   }
   .sml-round-img {
-    width: 30px;
-    border-radius: 50px;
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    border-radius: 50%;
     margin-bottom: 1rem;
   }
 
@@ -60,8 +62,10 @@
     margin-top: 20px;
   }
   .md-round-img {
-    width: 100px;
-    border-radius: 50px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 0.5rem;
   }
   .owner-card-right {
