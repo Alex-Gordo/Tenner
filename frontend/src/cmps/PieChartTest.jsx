@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { userService } from '../services/userService';
 import { PieChart, Pie, Sector, ResponsiveContainer } from 'recharts';
 
-const orders = [userService.getLoggedinUser().orders]
+// const orders = [userService.getLoggedinUser().orders]
 // console.log('orders:', orders)
 
 const renderActiveShape = (props) => {
