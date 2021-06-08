@@ -85,6 +85,7 @@
     margin-bottom: 4rem;
     flex-direction: column;
     width: 100%;
+    // font-size: 0.9rem;
     p {
       max-width: fit-content;
       margin-right: 7rem;
@@ -261,8 +262,14 @@
         flex-wrap: wrap;
       }
     }
+    .owner-info {
+      font-size: 0.9rem;
+    }
   }
   .gig-details .owner-info p {
     margin-right: 0rem;
+  }
+  .reviews {
+    font-size: 0.9rem;
   }
 }

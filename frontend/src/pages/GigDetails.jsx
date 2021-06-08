@@ -121,7 +121,7 @@ export class GigDetails extends Component {
 
                             <section className="reviews">
                                 <p className="reviews-headline" > {gig.reviews.length} Reviews
-                                <i className="fa fa-star filled"></i>
+                                    <i className="fa fa-star filled"></i>
                                     <i className="fa fa-star filled"></i>
                                     <i className="fa fa-star filled"></i>
                                     <i className="fa fa-star filled"></i>
