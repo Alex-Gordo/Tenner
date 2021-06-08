@@ -204,3 +204,42 @@
 .add-review-btn {
   width: 150px;
 }
+
+@media (max-width: 1250px) {
+  .main-layout {
+    max-width: 1230px;
+    .gig-details {
+      width: 47%;
+    }
+  }
+}
+
+@media (max-width: $large-breakpoint) {
+  .main-layout {
+    max-width: 1150px;
+    .gig-details {
+      width: 100%;
+    }
+    .call-to-action {
+      position: relative;
+      right: 0;
+      top: 0;
+      margin-bottom: 4rem;
+      .cta-container {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: $normal-breakpoint) {
+  .main-layout {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: $narrow-breakpoint) {
+  .main-layout {
+    max-width: 650px;
+  }
+}

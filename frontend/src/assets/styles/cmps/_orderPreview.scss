@@ -3,9 +3,15 @@ h3 {
 }
 
 .order-preview-container {
+    width: 550px;
     margin: 20px;
     padding: 10px;
     padding-left: 14px;
     border: 0.3px solid rgb(204, 204, 204);
     border-left: 4px solid #1dbf73;
+
+    h3, p, h5 {
+        margin-bottom: 5px;
+    }
+
   }
