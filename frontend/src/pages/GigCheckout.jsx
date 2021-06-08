@@ -54,24 +54,24 @@ export class GigCheckout extends Component {
                 <div className="checkout-container main-layout details-layout flex">
                     <div className="order-summary-container flex">
                         <div className="order-summary">
-                            <h2>Summary</h2>
+                            <h3>Summary</h3>
                             <div className="price flex">
-                                <h3>Subtotal:</h3>
-                                <h3>${gig.price * this.state.numberOfItems}</h3>
+                                <p>Subtotal:</p>
+                                <p>${gig.price * this.state.numberOfItems}</p>
                             </div>
                             <div className="fee flex">
-                                <h3>Service Fee:</h3>
-                                <h3>${gig.price * this.state.numberOfItems / 20}</h3>
+                                <p>Service Fee:</p>
+                                <p>${gig.price * this.state.numberOfItems / 20}</p>
                             </div>
                             <hr className="summary-line" />
                             <div className="total flex">
-                                <h3>Total:</h3>
-                                <h3>${gig.price * this.state.numberOfItems / 20 + gig.price * this.state.numberOfItems}</h3>
+                                <p>Total:</p>
+                                <p>${gig.price * this.state.numberOfItems / 20 + gig.price * this.state.numberOfItems}</p>
                             </div>
                             <div className="delivery flex">
-                                <h3>Delivery Time:</h3>
-                                {!isExtraPrice && <h3>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>}</h3>}
-                                {isExtraPrice && <h3>12 Hours</h3>}
+                                <p>Delivery Time:</p>
+                                {!isExtraPrice && <p>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>}</p>}
+                                {isExtraPrice && <p>12 Hours</p>}
                             </div>
                             <button className="btn-purchase" onClick={this.openCheckoutModal}
                             >Purchase now</button>
@@ -81,11 +81,11 @@ export class GigCheckout extends Component {
                         <CheckoutModal open={this.state.isOpen} />
                     </div>
                     <main className="package-details flex">
-                        <h1>Customize Your Package</h1>
+                        <p className="checkout-headline">Customize Your Package</p>
                         <div className="package-info flex">
                             <img src={gig.imgUrl[0]} alt="" />
                             <div className="gig-info flex">
-                                <p className="title"><b>{gig.title}</b></p>
+                                <p className="title">{gig.title}</p>
                                 <p><i className="fa fa-star filled"></i>{avrRate} ({gig.reviews.length} reviews)</p>
                                 <p className="view-line">
                                     <button onClick={this.showMoreDetails}>
@@ -109,10 +109,10 @@ export class GigCheckout extends Component {
                             <p>{gig.category}</p>
                             <p>{gig.features[0]} + {gig.features[1]} + {gig.features[2]}</p>
                             <p><span>✔ </span>{gig.revisions} revisions</p>
-                            <p><span>✔ </span>{gig.deliveryTime} Day(s) Delivery</p>
+                            <p><span>✔ </span>{gig.deliveryTime} Day{gig.deliveryTime > 1 && <>s</>} Delivery</p>
                         </div>}
 
-                        <h5 className="extra-title">Add Extras</h5>
+                        <p className="extra-title">Add Extras</p>
                         <div className="extra-container flex">
                             <label className="flex">
                                 <input type="checkbox" onChange={this.calculateTotalPrice}></input>
