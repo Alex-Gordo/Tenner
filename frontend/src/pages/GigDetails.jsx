@@ -3,6 +3,8 @@ import { GigReview } from '../cmps/GigReview'
 import { NavLink } from 'react-router-dom';
 import React, { Component } from 'react';
 import ScrollUpButton from "react-scroll-up-button";
+import ReactLoading from 'react-loading';
+
 
 export class GigDetails extends Component {
 
@@ -22,7 +24,7 @@ export class GigDetails extends Component {
 
     render() {
         const { gig } = this.state
-        if (!gig) return 'no gigs';
+        if (!gig) return <ReactLoading type='spin' color='#1dbf73' height={'100%'} width={100} />;
 
         const avrRate = gig.reviews.reduce((currentTotal, rate) => {
             return rate.rate + currentTotal;

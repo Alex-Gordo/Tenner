@@ -4,6 +4,8 @@ import payment from '../assets/img/payment.png';
 import { CheckoutModal } from '../cmps/CheckoutModal.jsx'
 import { userService } from '../services/userService.js';
 import { connect } from 'react-redux';
+import ReactLoading from 'react-loading';
+
 
 class _GigCheckout extends Component {
 
@@ -64,7 +66,7 @@ class _GigCheckout extends Component {
 
     render() {
         const { gig, isMoreDetailsShown, isExtraPrice } = this.state
-        if (!gig) return <div>no gigs</div>;
+        if (!gig) return <ReactLoading type='spin' color='#1dbf73' height={'100%'} width={100} />;
 
         const avrRate = this.state.gig.reviews.reduce((currentTotal, rate) => {
             return rate.rate + currentTotal;

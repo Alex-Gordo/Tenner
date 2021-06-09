@@ -47,13 +47,16 @@ class _TennerApp extends Component {
                 </div>
 
                 {(!gigs) && <>
-                    <ReactLoading type='bubbles' color='green' height={200} width={300} />
+                    <ReactLoading type='spin' color='#1dbf73' height={'100%'} width={100} />
                 </>}
 
 
                 {(gigs) && <>
                     <GigList gigs={this.props.gigs} />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 05ca63b8fc07f9c88e2cf36d374084bc17812b08
                 </>}
 
             </main>

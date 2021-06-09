@@ -5,6 +5,8 @@ import { GigTopRated } from '../cmps/GigTopRated.jsx';
 import { Hero } from '../cmps/Hero.jsx';
 import { loadGigs } from '../store/actions/gigActions.js';
 import { GigCategories } from '../cmps/GigCategories.jsx';
+import ReactLoading from 'react-loading';
+
 
 
 
@@ -32,6 +34,9 @@ class _Home extends Component {
 
 
 function mapStateToProps({ gigModule }) {
+    {(!gigModule) && <>
+        <ReactLoading type='spin' color='#1dbf73' height={'100%'} width={100} />
+    </>}
     return {
         gigs: gigModule.gigs
     }
