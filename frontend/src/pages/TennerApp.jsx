@@ -53,10 +53,6 @@ class _TennerApp extends Component {
 
                 {(gigs) && <>
                     <GigList gigs={this.props.gigs} />
-<<<<<<< HEAD
-
-=======
->>>>>>> 05ca63b8fc07f9c88e2cf36d374084bc17812b08
                 </>}
 
             </main>
