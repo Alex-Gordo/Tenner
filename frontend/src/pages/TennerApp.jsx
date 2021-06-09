@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { loadGigs } from '../store/actions/gigActions.js';
 import { GigList } from '../cmps/GigList.jsx'
 import GigFilter from '../cmps/GigFilter';
-import  ReactLoading  from 'react-loading';
+import ReactLoading from 'react-loading';
 
 class _TennerApp extends Component {
 
@@ -49,12 +49,11 @@ class _TennerApp extends Component {
                 {(!gigs) && <>
                     <ReactLoading type='bubbles' color='green' height={200} width={300} />
                 </>}
-         
+
 
                 {(gigs) && <>
-                
                     <GigList gigs={this.props.gigs} />
-       
+
                 </>}
 
             </main>
